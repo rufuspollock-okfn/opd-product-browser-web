@@ -1,0 +1,962 @@
+<pss version="0.01">
+   <manufacturer>
+      <name>Moulin de Valdonne</name>
+      <website>http://www.moulindevaldonne.com/</website>
+      <description>Liste de tous nos produits</description>
+      <image>http://www.moulindevaldonne.com/fileadmin/templates/moulin/img/blanc.gif</image>
+      <language>fr</language>
+      <pubDate>Sun, 15 Oct 2013 16:52:00 GMT</pubDate>
+      <lastBuildDate>Sun, 15 Oct 2013 17:35:23 GMT</lastBuildDate>
+      <managingEditor>mail@mail.com</managingEditor>
+      <webMaster>mail@mail.com</webMaster>
+      <brand>
+         <name>Moulin de Valdonne</name>
+         <image>http://www.moulindevaldonne.com/fileadmin/templates/moulin/img/blanc.gif</image>
+         <item>
+            <gtin>3272036004636</gtin>
+            <name>Sirop Fruits du verger</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_fruitsverger_n.jpg</picture>
+            <description>Une association gourmande et équilibrée de deux fruits simples et d'un fruit tendance, le coing.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-fruits-du-verger/</link>
+         </item>
+         <item>
+            <gtin>3272030036237</gtin>
+            <name>Sirop de Cerise-Mûre</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_cerisemure_n.jpg</picture>
+            <description>Un duo de fruits gourmands qui allie la finesse de la cerise et la fraîcheur de la mûre.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-de-cerise-mure/</link>
+         </item>
+         <item>
+            <gtin>3272030018233</gtin>
+            <name>Sirop de Pêche Abricot</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_pecheabricot_n.jpg</picture>
+            <description>Une alliance originale et gourmande signée Moulin de Valdonne.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-de-peche-abricot/</link>
+         </item>
+         <item>
+            <gtin>3272030054231</gtin>
+            <name>Sirop de Pomme Verte Vanille</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_pommevanille_n.jpg</picture>
+            <description>Un parfum original et désaltérant signé Moulin de Valdonne.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-de-pomme-verte-vanille/</link>
+         </item>
+         <item>
+            <gtin>3272030016239</gtin>
+            <name>Sirop de Fruits Rouges</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_fruitsrouges_n.jpg</picture>
+            <description>De délicieux fruits rouges pour un festival de gourmandise.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-de-fruits-rouges/</link>
+         </item>
+         <item>
+            <gtin>3272036002182</gtin>
+            <name>Sirop Recette Provençale</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_provencal_n.jpg</picture>
+            <description>Découvrez un sirop au goût délicat et parfumé. Vous apprécierez la note des melons juteux, puis la pastèque plus subtile, la fraise arômatique et enfin le cédrat acidulé : une recette inédite à la fois gourmande et rafraichissante. Le cédrat est un agrume typique du bassin méditerranéen aux notes citronnées et acidulées.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-recette-provencale/</link>
+         </item>
+         <item>
+            <gtin>3272036002533</gtin>
+            <name>Sirop de Kiwi-Banane</name>
+            <productLine>Les sirops les recettes</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_kiwibanane_n.jpg</picture>
+            <description>Un délicieux bi-parfum à la gourmandise acidulée.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-les-recettes/les-sirops-recette-70cl/sirop-de-kiwi-banane/</link>
+         </item>
+         <item>
+            <gtin>3272030001235</gtin>
+            <name>Sirop de Menthe verte</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_menthe.jpg</picture>
+            <description>Retrouvez tout le savoir-faire de l'expert des sirops tradition avec ce grand classique des sirops.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-classiques/sirop-de-menthe-verte/</link>
+         </item>
+         <item>
+            <gtin>3272030002232</gtin>
+            <name>Sirop de Grenadine</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_grena_n.jpg</picture>
+            <description>Un air d'enfance avec le parfum préféré des plus petits ! Retrouvez tout le savoir-faire de l'expert des sirops tradition avec ce grand classique des sirops.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-classiques/sirop-de-grenadine/</link>
+         </item>
+         <item>
+            <gtin>3272030007237</gtin>
+            <name>Sirop d'Orgeat</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_orgeat.jpg</picture>
+            <description>Découvrez le goût délicat de l'amande amère, un parfum au bon goût du Sud !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-d-orgeat/</link>
+         </item>
+         <item>
+            <gtin>327203003235</gtin>
+            <name>Sirop de Citron-Vert</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_citron.jpg</picture>
+            <description>Un parfum frais et acidulé à déguster avec de l’eau plate ou gazeuse.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-de-citron-vert/</link>
+         </item>
+         <item>
+            <gtin>3272036001116</gtin>
+            <name>Sirop de Pamplemousse Rose</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_pamplemousse.jpg</picture>
+            <description>Frais et acidulé, il est le compagnon parfait du vin rosé !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-de-pamplemousse-rose/</link>
+         </item>
+         <item>
+            <gtin>3272036001642</gtin>
+            <name>Sirop de Menthe glaciale</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_menthe_glac.jpg</picture>
+            <description>Un parfum à la fraîcheur inégalée !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-de-menthe-glaciale/</link>
+         </item>
+         <item>
+            <gtin>3272036001581</gtin>
+            <name>Sirop d'Agrumes</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_agrumes.jpg</picture>
+            <description>Un sirop d'agrumes gorgé de soleil à base de pamplemousse rose, de citron jaune et vert, et de mandarine. Ce cocktail frais et acidulé est délicieux avec de l'eau plate ou gazeuse.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-d-agrumes/</link>
+         </item>
+         <item>
+            <gtin>3272030009231</gtin>
+            <name>Sirop de Fraise</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_fraise.jpg</picture>
+            <description>Le parfum qui plaît à toute la famille.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-gourmands/sirop-de-fraise/</link>
+         </item>
+         <item>
+            <gtin>3272030014235</gtin>
+            <name>Sirop de Cassis</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_cassis.jpg</picture>
+            <description>Un parfum généreux et acidulé.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-gourmands/sirop-de-cassis/</link>
+         </item>
+         <item>
+            <gtin>3272030008234</gtin>
+            <name>Sirop d'Anis</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_annis.jpg</picture>
+            <description>Le parfum gorgé de soleil qui vous transporte dans l’ambiance du Sud.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-gourmands/sirop-d-anis/</link>
+         </item>
+         <item>
+            <gtin>3272036003103</gtin>
+            <name>Sirop de Caramel Tradition</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/trad_caramel_n_01.jpg</picture>
+            <description>Un grand classique raffiné et gourmand.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-gourmands/sirop-de-caramel-tradition/</link>
+         </item>
+         <item>
+            <gtin>3272036003042</gtin>
+            <name>Sirop de Violette Tradition</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_violette_n.jpg</picture>
+            <description>Une saveur inoubliable revisitée tout en finesse et en gourmandise.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-gourmands/sirop-de-violette-tradition/</link>
+         </item>
+         <item>
+            <gtin>3272036004810</gtin>
+            <name>Sirop Orangeade</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_orangeade_n.jpg</picture>
+            <description>Toute l'authenticité de l'orangeade dans ce parfum gourmand et estival.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-orangeade/</link>
+         </item>
+         <item>
+            <gtin>3272036004841</gtin>
+            <name>Sirop Citronnade</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_citronnade_n_01.jpg</picture>
+            <description>Un parfum rafraîchissant et gourmand.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-rafraichissants/sirop-citronnade/</link>
+         </item>
+         <item>
+            <gtin>3272036004872</gtin>
+            <name>Sirop Framboise</name>
+            <productLine>Les sirops plaisirs</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/rec_framboise_n.jpg</picture>
+            <description>Un parfum frais et acidulé, à déguster avec de l'eau plate ou de l'eau pétillante.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-plaisirs-70cl/les-classiques/sirop-framboise/</link>
+         </item>
+         <item>
+            <gtin>3272036002717</gtin>
+            <name>Sirop à Idées Violette</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/id_cocktail_violette_01.jpg</picture>
+            <description>Une saveur inoubliable revisitée pour un usage en cocktails(*) ou en aromatisation des vins blancs.(*)L'abus d'alcool est dangereux pour la santé. A consommer avec modération.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/cocktails/sirop-a-idees-violette/</link>
+         </item>
+         <item>
+            <gtin>3272036002779</gtin>
+            <name>Sirop de Coco</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/id_cocktail_coco_01.jpg</picture>
+            <description>Un parfum d'exotisme idéal en usage cocktails(*). (*)L'abus d'alcool est dangereux pour la santé. A consommer avec modération</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/cocktails/sirop-de-coco/</link>
+         </item>
+         <item>
+            <gtin>3272036002687</gtin>
+            <name>Sirop de Bubble gum</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/id_cocktail_bubblegum_01.jpg</picture>
+            <description>Une saveur régressive qui rappelle l'enfance. Particulièrement adaptée en usage shooter(*). (*)L'abus d'alcool est dangereux pour la santé. A consommer avec modération.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/cocktails/sirop-de-bubble-gum/</link>
+         </item>
+         <item>
+            <gtin>3272036002748</gtin>
+            <name>Sirop de Framboise-Rose</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/id_cocktail_framboise_01.jpg</picture>
+            <description>Une association inédite et raffinée spécialement pensée pour l'usage en cocktails(*) / aromatisation des vins blancs. (*)L'abus d'alcool est dangereux pour la santé. A consommer avec modération.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/cocktails/sirop-de-framboise-rose/</link>
+         </item>
+         <item>
+            <gtin>3272036005176</gtin>
+            <name>Sirop Glam Berry</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/cocktail_glamberry_02.jpg</picture>
+            <description>Le premier sirop avec des paillettes ! Indispensable pour faire scintiller tous vos cocktails et partager des apéritifs festifs ! (*)L'abus d'alcool est dangereux pour la santé. A consommer avec modération. </description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/cocktails/sirop-glam-berry/</link>
+         </item>
+         <item>
+            <gtin>3272036002892</gtin>
+            <name>Sirop à Idées Caramel</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/id_boiss_ch_caramel_01.jpg</picture>
+            <description>L'allié gourmand et incontournable pour la confection de vos shooters(*). Aussi un parfum malin pour agrémenter vos boissons chaudes. (*)L'abus d'alcool est dangereux pour la santé. A consommer avec modération. </description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/boissons-chaudes/sirop-a-idees-caramel/</link>
+         </item>
+         <item>
+            <gtin>3272036004964</gtin>
+            <name>Sirop à Idées Fraise Milkshake</name>
+            <productLine>Les sirops à idées</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>250</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/id_culinaire_milkshakes_fraise_01.jpg</picture>
+            <description>Un délicieux milkshake facile à préparer : Ajoutez du lait très frais, shakez et dégustez ! </description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-a-idees/cocktails/sirop-a-idees-fraise-milkshake/</link>
+         </item>
+         <item>
+            <gtin>3272036004575</gtin>
+            <name>Sirop de Grenadine Bio</name>
+            <productLine>Les sirops Bio</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/sbio_grenadine_n.jpg</picture>
+            <description>La Grenadine version bio. Tout le savoir-faire de Moulin de Valdonne dans un sirop bio et gourmand !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-bio/les-sirops-bio/sirop-de-grenadine-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036004452</gtin>
+            <name>Sirop de Pomme Grenade Bio</name>
+            <productLine>Les sirops Bio</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/sbio_pommegrenade_n_01.jpg</picture>
+            <description>Découvrez le mélange d’un fruit tendance, la grenade, et de pomme, désaltérante et gourmande. Tout le savoir-faire de Moulin de Valdonne dans un sirop bio et gourmand !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-bio/les-sirops-bio/sirop-de-pomme-grenade-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036004605</gtin>
+            <name>Sirop de Pêche bio</name>
+            <productLine>Les sirops Bio</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/sbio_peche_n.jpg</picture>
+            <description>La Pêche version bio. Tout le savoir-faire de Moulin de Valdonne dans un sirop bio et gourmand !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-bio/les-sirops-bio/sirop-de-peche-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036004483</gtin>
+            <name>Sirop de Cerise Griotte Bio</name>
+            <productLine>Les sirops Bio</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>700</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/sbio_cerisegriotte_n.jpg</picture>
+            <description>Un parfum qui allie la gourmandise de la Cerise au caractère acidulé de la Griotte. Tout le savoir-faire de Moulin de Valdonne dans un sirop bio et gourmand !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-bio/les-sirops-bio/sirop-de-cerise-griotte-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036004544</gtin>
+            <name>Sirop de Menthe Bio</name>
+            <productLine>Les sirops Bio</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/sbio_menthe_n.jpg</picture>
+            <description>La Menthe version bio, toute en transparence (de par l’absence de colorant) ! Tout le savoir-faire de Moulin de Valdonne dans un sirop bio et gourmand !</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-bio/les-sirops-bio/sirop-de-menthe-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036004513</gtin>
+            <name>Sirop de Citron Bio</name>
+            <productLine>Les sirops Bio</productLine>
+            <gpc>10000201</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/sbio_citron_n_01.jpg</picture>
+            <description>Le Citron version Bio. Un grand classique qui saura vous désaltérer avec finesse.</description>
+            <link>http://www.moulindevaldonne.com/nos-sirops/les-sirops-bio/les-sirops-bio/sirop-de-citron-bio/</link>
+         </item>
+         <item>
+            <gtin>3272030358230</gtin>
+            <name>Pur jus Raisin blanc Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_raisin.jpg</picture>
+            <description>Un jus de fruits vitaminé 100% bio à consommer pour se faire du bien à tout moment de la journée !</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/pur-jus-raisin-blanc-bio/</link>
+         </item>
+         <item>
+            <gtin>3272030350234</gtin>
+            <name>Pur jus d'Orange Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_orange.jpg</picture>
+            <description>Un jus de fruits vitaminé 100% bio à consommer pour se faire du bien à tout moment de la journée !</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/pur-jus-d-orange-bio/</link>
+         </item>
+         <item>
+            <gtin>3272030353235</gtin>
+            <name>Pur jus de Pomme Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_pomme.jpg</picture>
+            <description>Un jus de fruits vitaminé 100% bio à consommer pour se faire du bien à tout moment de la journée !</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/pur-jus-de-pomme-bio/</link>
+         </item>
+         <item>
+            <gtin>3272030366235</gtin>
+            <name>Jus de Carotte Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_carotte.jpg</picture>
+            <description>Un jus de fruits vitaminé 100% bio à consommer pour se faire du bien à tout moment de la journée !</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/jus-de-carotte-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036001147</gtin>
+            <name>Capital VITALITE Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_cap_vit.jpg</picture>
+            <description>Moulin de Valdonne vous propose les jus de fruits Capital qui allient plaisir, bien-être et bio ! La vitamine C contenue dans ce cocktail vous aide à faire le plein de vitalité et de tonus.</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/capital-vitalite-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036001673</gtin>
+            <name>Capital FIBRES Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_cap_fib.jpg</picture>
+            <description>Moulin de Valdonne vous propose les jus de fruits Capital qui allient plaisir, bien-être et bio ! Consommée dans le cadre d'une alimentation variée, cette boisson constitue une source de fibres.</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/capital-fibres-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036001703</gtin>
+            <name>Capital ANTIOXYDANT Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_cap_anti.jpg</picture>
+            <description>Moulin de Valdonne vous propose les jus de fruits Capital qui allient plaisir, bien-être et bio ! Les jus de fruits mis en œuvre dans cette recette ont été choisis pour leur richesse en polyphénols, micronutriments reconnus pour leurs propriétés antioxydantes.</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/capital-antioxydant-bio/</link>
+         </item>
+         <item>
+            <gtin>3272030367232</gtin>
+            <name>Capital PRUNEAU Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_cap_pru.jpg</picture>
+            <description>Moulin de Valdonne vous propose les jus de fruits Capital qui allient plaisir, bien-être et bio ! Retrouvez toutes les vertus du pruneau dans ce délicieux nectar à consommer dès le petit déjeuner ou à tout moment de la journée.</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/capital-pruneau-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036002458</gtin>
+            <name>Capital LEGUMES Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_legume_01.jpg</picture>
+            <description>Moulin de Valdonne vous propose une gamme de jus de fruits qui allie plaisir, bien-être et bio ! Le jus de légumes vous aide à varier votre alimentation en vous apportant 1 des 5 portions de fruits et légumes recommandés par jour par les nutritionnistes*.</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/capital-legumes-bio/</link>
+         </item>
+         <item>
+            <gtin>3272036002984</gtin>
+            <name>Capital Cranberry Bio</name>
+            <productLine>Les Jus</productLine>
+            <gpc>10000220</gpc>
+            <measure>
+               <ml>750</ml>
+               <floz></floz>
+               <g></g>
+               <oz></oz>
+               <abv></abv>
+               <abw></abw>
+            </measure>
+            <packaging>
+               <description>bouteille verre</description>
+               <internalUnit>1</internalUnit>
+            </packaging>
+            <picture>http://www.moulindevaldonne.com/uploads/tx_commerce/jus_bio_cranberry_01.jpg</picture>
+            <description>L'authentique goût de l'incontournable petit baie rouge au caractère très rafraîchissant !</description>
+            <link>http://www.moulindevaldonne.com/nos-jus/les-jus-de-fruit-bio/capital-cranberry-bio/</link>
+         </item>
+      </brand>
+   </manufacturer>
+</pss>

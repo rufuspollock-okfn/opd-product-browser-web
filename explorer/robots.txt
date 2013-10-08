@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: http://www.product-open-data.com/sitemap.xml
