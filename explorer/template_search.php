@@ -158,7 +158,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 			<h4>Nutrition Facts - U.S. Food and Drug Administration</h4>	
 			<div class="label">            
 
-            <b>Manufacturer sourcing</b> : <a href = "<?=$VALUE_SOURCE?>" target="_blank" rel="nofollow">Access to the source if information</b></a><br/>
+            <b>Manufacturer sourcing</b> : <a href = "<?=$VALUE_SOURCE?>" target="_blank" rel="nofollow">Access to the source of information</b></a><br/>
             <b>Synchronization date</b> : <?=$VALUE_SYNC_DT?>					
 						
                         <hr/>

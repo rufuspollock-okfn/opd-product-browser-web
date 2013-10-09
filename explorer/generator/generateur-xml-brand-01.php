@@ -13,6 +13,7 @@
 	
 	$URL_Base = "http://www.product-open-data.com/";
 	$generate_brand_items = 1;
+	$DataFolder = "../";
 	
 	
 	// -----------------------------------------------------------------------------------------------------------	
@@ -30,7 +31,7 @@
 		}
 		
 		//$SQL = "SELECT * FROM brand where brand_cd = 46";
-		$SQL = "SELECT * FROM brand where brand_nm like 'aquafina%'";
+		$SQL = "SELECT * FROM brand where brand_nm like 'saffr%'";
 		//$SQL = "SELECT * FROM brand";
 		$DataSet_liste_brand = mysql_query($SQL);	
 		While ($Record_liste_brand = mysql_fetch_array($DataSet_liste_brand)) {	
@@ -59,7 +60,7 @@
 				$GROUP_NM = "";
 			}
 	
-			$FileName 						= "../../POD-Website/data/product-brand-".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT);
+			$FileName 						= $DataFolder."data/product-brand-".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT);
 		
 			$Corps .= "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 		
@@ -162,7 +163,7 @@
 	$i = 1;
 	foreach(range('a','z') as $lettre) {
 
-		$FileName 						= "../../POD-Website/data/product-brand-list-".$i;
+		$FileName 						= $DataFolder."data/product-brand-list-".$i;
 		$Corps = "";
 		$Corps .= "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 		
@@ -209,7 +210,7 @@
 	
 	} // foreach
 
-		$FileName 						= "../../POD-Website/data/product-brand-list-27";
+		$FileName 						= $DataFolder."data/product-brand-list-27";
 		$Corps = "";
 		$Corps .= "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 		
