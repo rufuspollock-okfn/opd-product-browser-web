@@ -86,7 +86,7 @@
 		$NbGTIN = $Record["NB"];
 		
 	} else {
-		$NbGTIN = "920131";
+		$NbGTIN = "920698";
 	}
 	
 	$NbGTIN = str_pad($NbGTIN,11,"0",STR_PAD_LEFT);
