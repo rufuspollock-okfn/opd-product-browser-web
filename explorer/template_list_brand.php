@@ -1,5 +1,5 @@
 <img style="float: right; margin-left: 30px;" title="PSS product simple syndication" src="<DOSSIER_IMG>navigate_02.png" alt="pss product simple syndication" />
-<h1>Navigate with Brand</h1>
+<h1>Browse by Brands</h1>
 
 The POD database is public. Go to "Projects & Download" to download it.<br/>
 <br/><br/>
@@ -41,12 +41,12 @@ The POD database is public. Go to "Projects & Download" to download it.<br/>
     </tr>
 <!--COUPER_ICI-->
     	<td>
+        
         <a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?><?=EXTENSION?>">
-			<? if (file_exists($VALUE_IMG)) { ?> 
-                <img src="<DOSSIER_IMG>brand/<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.jpg" border="0" width="125px" title="Brand - <?=$VALUE_BRAND_NM?>" alt="Brand - <?=$VALUE_BRAND_NM?>" /> 
-            <? } else { ?> 
-                <img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG>coming-soon.jpg" border="0" width="125px" /> 
-            <? } ?>
+        	<img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_IMG?>" width="125px" title="Brand - <?=$VALUE_BRAND_NM?>" alt="Brand - <?=$VALUE_BRAND_NM?>" onerror="this.src='images/coming-soon.jpg';" />
+			     
+
+           
         </a>
         </td> 
 <!--COUPER_ICI-->

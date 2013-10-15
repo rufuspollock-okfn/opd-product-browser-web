@@ -1,4 +1,4 @@
-<img style="float: right; margin: 30px;" title="PSS product simple syndication" src="<DOSSIER_IMG>pss.png" alt="pss product simple syndication" width="80" height="105" />
+<img style="float: right; margin: 30px;" title="PSS product simple syndication" src="images/pss.png" alt="pss product simple syndication" width="80" height="105" />
 <h1>PSS 0.02 Specification</h1>
 
 <h2>Contents</h2>
@@ -302,5 +302,5 @@
 
 <p>The first version of PSS is clearly focused on the food &amp; beverage products so it will probably updated to fit with characterisitcs to other kind of products. Some elements are currently not refering to codification (brand, type of packaging,...), the addition of standard codification is important.</p>
 <h2>License and authorship<a name="licenseAndAuthorship"></a></h2>
-<img src="http://www.product-open-data.com/<DOSSIER_IMG>creativecommons.png" style="float:right;" hspace="15px"  />
+<img src="http://www.product-open-data.com/images/creativecommons.png" style="float:right;" hspace="15px"  />
 <p>This document is authored by the Philippe Plagnol and is offered under the terms of the Creative Commons <a href="http://creativecommons.org/licenses/by-sa/2.0/" rel="nofollow" target="_blank">Attribution/Share Alike</a> license, based on an original RSS specification published by the <a href="http://cyber.law.harvard.edu/rss/rss.html" target="_blank">Berkman Center for Internet &amp; Society at Harvard Law School authored by Dave Winer</a>.</p>

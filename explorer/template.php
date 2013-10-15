@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		
@@ -18,7 +18,7 @@
 		
 		<base href="<?=SITE_BASE?>" />
 				
-		<link type="image/gif" rel="icon" href="<?=DOSSIER_IMG?>favicon.ico"  />
+		<link type="image/gif" rel="icon" href="images/favicon.ico"  />
 		<link rel="stylesheet" type="text/css" href="ressources/menu_assets/Style.css" />
 		
 		<style type="text/css" translate="none"> 
@@ -56,7 +56,7 @@
 				font-weight:bold;
 				font-size:18px;
 				padding-left:40px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_01_ar.png);
+				background-image: url(images/bc_01_ar.png);
 				background-repeat: no-repeat;
 				background-position: 0px 0px;					
 			}
@@ -66,7 +66,7 @@
 				color:#e18137;
 										
 				padding-left:40px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_02.png);
+				background-image: url(images/bc_02.png);
 				background-repeat: no-repeat;
 				background-position: 0px 0px;	
 					
@@ -84,7 +84,9 @@
 			
 			a:active {text-decoration: none;color:#000000;}
 			
-			img{ border:0px; }
+			img{ 
+				border:0px;
+			}
 
 			#news2 {
 				margin-top: 10px;
@@ -126,17 +128,17 @@
 			ul { list-style-image: none; }
 			
 			#count-gtin {list-style-type:none;padding:0px;margin:10px 0px 2px 0px; height:30px}
-			#count-gtin .d0 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 0 no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d1 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -180px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d2 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -360px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d3 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -540px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d4 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -720px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d5 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -900px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d6 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -1080px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d7 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -1260px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d8 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -1440px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .d9 {float:left;background:url(<?=DOSSIER_IMG?>filmstrip.png) 0 -1620px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
-			#count-gtin .seperator {float:left;background:url(<?=DOSSIER_IMG?>comma.png) 0px 20px no-repeat;width:4px;height:30px}
+			#count-gtin .d0 {float:left;background:url(images/filmstrip.png) 0 0 no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d1 {float:left;background:url(images/filmstrip.png) 0 -180px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d2 {float:left;background:url(images/filmstrip.png) 0 -360px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d3 {float:left;background:url(images/filmstrip.png) 0 -540px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d4 {float:left;background:url(images/filmstrip.png) 0 -720px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d5 {float:left;background:url(images/filmstrip.png) 0 -900px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d6 {float:left;background:url(images/filmstrip.png) 0 -1080px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d7 {float:left;background:url(images/filmstrip.png) 0 -1260px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d8 {float:left;background:url(images/filmstrip.png) 0 -1440px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .d9 {float:left;background:url(images/filmstrip.png) 0 -1620px no-repeat;width:16px;height:30px;margin:0px 1px 0px 0px;}
+			#count-gtin .seperator {float:left;background:url(images/comma.png) 0px 20px no-repeat;width:4px;height:30px}
 			
 			#search-gtin-top {
 				padding-left:0px;
@@ -268,7 +270,7 @@
 				padding-left: 30px; 
 				padding-bottom:5px;
 				
-				background-image: url(<?=DOSSIER_IMG?>puce_03.png);
+				background-image: url(images/puce_03.png);
 				background-repeat: no-repeat;
 				background-position: right top, 0px 0px;			
 			}	
@@ -279,7 +281,7 @@
 				margin-right: 2px;	
 				padding-top:0px; 
 				
-				background-image: url(<?=DOSSIER_IMG?>puce_03.png);
+				background-image: url(images/puce_03.png);
 				background-repeat: no-repeat;
 				background-position: right top, 0px 0px;			
 			}			
@@ -291,7 +293,7 @@
 				padding-right:38px; 
 				margin-right: 2px;	
 				
-				background-image: url(<?=DOSSIER_IMG?>bc_01_ar.png);
+				background-image: url(images/bc_01_ar.png);
 				background-repeat: no-repeat;
 				background-position: right center, 0px 0px;			
 			}
@@ -303,7 +305,7 @@
 				padding-right:40px; 
 				margin-right: 30px;	
 				
-				background-image: url(<?=DOSSIER_IMG?>bc_02_ar.png);
+				background-image: url(images/bc_02_ar.png);
 				background-repeat: no-repeat;
 				background-position: right center, 0px 0px;	
 			}
@@ -316,7 +318,7 @@
 				padding-right:40px; 
 				margin-right: 60px;	
 				
-				background-image: url(<?=DOSSIER_IMG?>bc_03_ar.png);
+				background-image: url(images/bc_03_ar.png);
 				background-repeat: no-repeat;
 				background-position: right center,  0px 0px;	
 			}
@@ -342,7 +344,7 @@
 				padding-left: 30px; 
 				padding-bottom:5px;
 
-				background-image: url(<?=DOSSIER_IMG?>puce_03.png);
+				background-image: url(images/puce_03.png);
 				background-repeat: no-repeat;
 				background-position: 10px 0px;			
 			}	
@@ -351,7 +353,7 @@
 			
 				padding-left:20px; 
 				padding-top:0px; 
-				background-image: url(<?=DOSSIER_IMG?>puce_03.png);
+				background-image: url(images/puce_03.png);
 				background-repeat: no-repeat;
 				background-position: 2px 0px;			
 			}			
@@ -361,7 +363,7 @@
 				color:#cc2d32;	
 			
 				padding-left:40px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_01.png);
+				background-image: url(images/bc_01.png);
 				background-repeat: no-repeat;
 				background-position: 2px 0px;			
 			}
@@ -371,7 +373,7 @@
 				color:#e18137;
 										
 				padding-left:70px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_02.png);
+				background-image: url(images/bc_02.png);
 				background-repeat: no-repeat;
 				background-position: 30px 0px;	
 			}
@@ -382,7 +384,7 @@
 				color:#879b30;
 				
 				padding-left:100px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_03.png);
+				background-image: url(images/bc_03.png);
 				background-repeat: no-repeat;
 				background-position: 60px 0px;	
 			}
@@ -395,7 +397,7 @@
 				color:#879b30;
 				
 				padding-left:40px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_03.png);
+				background-image: url(images/bc_03.png);
 				background-repeat: no-repeat;
 				background-position: 0px 0px;	
 			}
@@ -407,7 +409,7 @@
 				color:#879b30;
 
 				padding-left:40px; 
-				background-image: url(<?=DOSSIER_IMG?>bc_03.png);
+				background-image: url(images/bc_03.png);
 				background-repeat: no-repeat;
 				background-position: 0px 0px;	
 			}
@@ -1275,7 +1277,7 @@ width: 80px;
 				<tr>
 					<td width="200px" style="vertical-align:top;padding-left:0px;">
 				
-					<a href='<?=LINK_HOME?><?=EXTENSION?>'>	<img src="<?=DOSSIER_IMG?>pod_logo_200px.png" name="<?=$VALUE_SiteName?>" border="0" style="padding-bottom:10px;"/> </a>
+					<a href='<?=LINK_HOME?><?=EXTENSION?>'>	<img src="images/pod_logo_200px.png" name="<?=$VALUE_SiteName?>" border="0" style="padding-bottom:10px;"/> </a>
 
 
 							
@@ -1363,7 +1365,7 @@ width: 80px;
                         <br/>
 						<!--
 						<br/>
-						<img src="<?=DOSSIER_IMG?>ecologie.jpg" />
+						<img src="images/ecologie.jpg" />
 						<div style="width:100%; text-align:center;" ><b><?=SITE_ECO_SLOGAN?></b></div>
 						-->
 						
@@ -1371,7 +1373,7 @@ width: 80px;
 
               			
                         
-						<img  src="<DOSSIER_IMG>ecologie.jpg" style="margin-top:10px;" alt=""/>
+						<img  src="images/ecologie.jpg" style="margin-top:10px;" alt=""/>
 						
                         
 
@@ -1399,7 +1401,7 @@ width: 80px;
 						<div id="search-gtin-top" >
 							
 							<form name="formulaire" enctype="multipart/form-data" method="post" action="search/" >	
-							<img align="center" src="<?=DOSSIER_IMG?>search.png" />	<b>Search a GTIN-13 Code</b>
+							<img align="center" src="images/search.png" />	<b>Search a GTIN-13 Code</b>
 								<input name="gtin" class="search-texte" type="text" value="" size="13" />  
 								<input type="button" class="search-bouton"  onclick="submit()" value=">" /> 	
 							</form>
@@ -1418,7 +1420,7 @@ width: 80px;
 								<!--
 							<div>			
 								<a href="https://groups.google.com/forum/#!forum/product-open-data" target="_blank">
-									<img src="<?=DOSSIER_IMG?>pod-forum-03.png" />
+									<img src="images/pod-forum-03.png" />
 								</a>
 							</div>	
 							<div>
@@ -1440,15 +1442,15 @@ width: 80px;
 					<td id="volet_droit">	
                     
                     <a href="http://www.okfn.org" target="_blank" rel="nofollow" >
-           <img src="<DOSSIER_IMG>logos/logo-okfn-text.jpg" style="margin-bottom:10px;" />
+           <img src="images/logos/logo-okfn-text.jpg" style="margin-bottom:10px;" />
          </a>
                     
                         <!-- Open Data Link -->
-                        <a href="http://opendefinition.org/" target="_blank" rel="nofollow"><img alt="This material is Open Data" border="0" src="<?=DOSSIER_IMG?>od_80x15_blue.png" /></a>
+                        <a href="http://opendefinition.org/" target="_blank" rel="nofollow"><img alt="This material is Open Data" border="0" src="images/od_80x15_blue.png" /></a>
                         <!-- /Open Data Link -->  
                         <br/>
                     
-						<img src="<?=DOSSIER_IMG?>world-01.jpg" /> 
+						<img src="images/world-01.jpg" /> 
 						
                        
 							

@@ -7,21 +7,21 @@
 <div id="navigate-gpc">
 <table>
     <tr>
-    	<td><a href="brand-list-1/" ><img src="<DOSSIER_IMG>navigate-brand.jpg" /></a></td>
+    	<td><a href="brand-list-1/" ><img src="images/navigate-brand.jpg" /></a></td>
         <td>
             <h2>by Brands</h2>
         	<a href="brand-list-1/" >Access to the list</a>
         </td>
     </tr>
     <tr>
-    	<td><a href="group-list/" ><img src="<DOSSIER_IMG>navigate-group.jpg" /></a></td>
+    	<td><a href="group-list/" ><img src="images/navigate-group.jpg" /></a></td>
         <td>
             <h2>by Groups</h2>
         	<a href="group-list/" >Access to the list</a>
         </td>
     </tr>
     <tr>
-    	<td><a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/#?x=group_nm&y.serie.expr=pkg_unit&y.serie.func=COUNT&timescale=year&analyzesort=serie&chart=bar&tab=analyze"  target="_blank" rel="nofollow"><img src="<DOSSIER_IMG>navigate-ods.png" /></a></td>
+    	<td><a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/#?x=group_nm&y.serie.expr=pkg_unit&y.serie.func=COUNT&timescale=year&analyzesort=serie&chart=bar&tab=analyze"  target="_blank" rel="nofollow"><img src="images/navigate-ods.png" /></a></td>
         <td>
             <h2>OpenDataSoft</h2>
             

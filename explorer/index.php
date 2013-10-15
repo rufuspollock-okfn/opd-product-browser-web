@@ -13,13 +13,20 @@
 	define('DOSSIER_RESSOURCES',				URL_BASE."ressources/");
 
 	define('DOSSIER_DOCS',						"docs/");	
+	
+
 	if($_SERVER['HTTP_HOST'] == "localhost") {
-		define('DOSSIER_IMG',					"../../../images/");
+		//define('DOSSIER_IMG',					"images/");
+		define('DOSSIER_IMG',					"http://product.okfn.org.s3.amazonaws.com/images/");
+	
 	} else {
-		define('DOSSIER_IMG',					"images/");
+		//define('DOSSIER_IMG',					"http://www.product-open-data.com/images/");
+		define('DOSSIER_IMG',					"http://product.okfn.org.s3.amazonaws.com/images/");	
+
 	}
-	define('DOSSIER_IMG_LANG',					DOSSIER_IMG."lang/");
-	define('DOSSIER_IMG_COUNTRY',				DOSSIER_IMG."country/");
+	
+	define('DOSSIER_IMG_LANG',					"images/lang/");
+	define('DOSSIER_IMG_COUNTRY',				"images/country/");
 
 	//======================================================================================================== 
 	// Variables
@@ -197,23 +204,11 @@
 				$GLN_ADDR_CITY 				= $Record_GLN["GLN_ADDR_CITY"];
 				$GLN_COUNTRY_ISO_CD 		= $Record_GLN["GLN_COUNTRY_ISO_CD"];
 				
-				if(file_exists(DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg")) { 
-					$IMG_GTIN = DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg"; 
-				} else {
-					$IMG_GTIN = DOSSIER_IMG."coming-soon.jpg";
-				}
 				
-				if(file_exists(DOSSIER_IMG."brand/".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".jpg")) { 
-					$IMG_BRAND = DOSSIER_IMG."brand/".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".jpg"; 
-				} else {
-					$IMG_BRAND = DOSSIER_IMG."coming-soon.jpg";
-				}
-				
-				if(file_exists(DOSSIER_IMG."gpc/".$GPC_S_CD.".jpg")) { 
-					$IMG_GPC = DOSSIER_IMG."gpc/".$GPC_S_CD.".jpg"; 
-				} else {
-					$IMG_GPC = DOSSIER_IMG."coming-soon.jpg";
-				}
+				$IMG_GTIN 	= DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg"; 
+				$IMG_BRAND 	= DOSSIER_IMG."brand/".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".jpg"; 
+				$IMG_GPC 	= "images/gpc/".$GPC_S_CD.".jpg"; 
+			
 				
 				$Corps .= 	Template("template_search",3,$Params=array(
 				
@@ -276,6 +271,8 @@
 				$CHOL_DV 					= $Record_NUS["CHOL_DV"];		
 				$SOD_MG 					= $Record_NUS["SOD_MG"];
 				$SOD_DV 					= $Record_NUS["SOD_DV"];
+				$POT_MG 					= $Record_NUS["POT_MG"];
+				$POT_DV 					= $Record_NUS["POT_DV"];
 				$TOT_CARB_G 				= $Record_NUS["TOT_CARB_G"];
 				$TOT_CARB_DV 				= $Record_NUS["TOT_CARB_DV"];
 				$DIET_FIBER_G 				= $Record_NUS["DIET_FIBER_G"];
@@ -310,6 +307,8 @@
 						"VALUE_CHOL_DV"				=> $CHOL_DV,	
 						"VALUE_SOD_MG"				=> $SOD_MG,
 						"VALUE_SOD_DV"				=> $SOD_DV,
+						"VALUE_POT_MG"				=> $POT_MG,
+						"VALUE_POT_DV"				=> $POT_DV,
 						"VALUE_TOT_CARB_G"			=> $TOT_CARB_G,
 						"VALUE_TOT_CARB_DV"			=> $TOT_CARB_DV,
 						"VALUE_DIET_FIBER_G"		=> $DIET_FIBER_G,
@@ -405,176 +404,6 @@
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		case 108: // display html files
-
-			if($m > 0) {
-	
-				$URL_Base = "http://www.product-open-data.com/";
-				if($_SERVER['SERVER_NAME'] == "localhost" ){
-					$URL_Base_Replace 	= "";
-				} else {
-					$URL_Base_Replace 	= "";
-				}
-	
-				if(!file_exists("pss/pss-gln-".$m.".xml")) {
-					$Corps = "<br/>Content not available";
-				} else {
-				
-					$PssFile = file_get_contents("pss/pss-gln-".$m.".xml");
-					//echo $PssFile;
-					$xml = new SimpleXMLElement($PssFile);
-		
-					$GLN_RETURN_CODE 			= $xml->gln->gepir_rc;
-					$GLN_CD 					= $xml->gln->code;
-					$GLN_NM 					= $xml->gln->name;
-					$GLN_ADDR_02 				= $xml->gln->address_1;
-					$GLN_ADDR_03 				= $xml->gln->address_2;
-					$GLN_ADDR_04 				= $xml->gln->address_3;
-					$GLN_ADDR_POSTALCODE 		= $xml->gln->address_cp;
-					$GLN_ADDR_CITY 				= $xml->gln->address_city;
-					$GLN_COUNTRY_ISO_CD 		= $xml->gln->address_country;
-					
-					$GLN_IMG 					= str_replace($URL_Base,$URL_Base_Replace,$xml->gln->image);
-					
-					$Corps .= 	Template("template_list_manufacturer_item",1,$Params=array(
-						
-						"VALUE_GLN_RETURN_CODE"			=> $GLN_RETURN_CODE,
-		
-						"VALUE_GLN_CD"					=> $GLN_CD,
-						"VALUE_GLN_NM"					=> $GLN_NM,
-						"VALUE_GLN_ADDR_02"				=> $GLN_ADDR_02,
-						"VALUE_GLN_ADDR_03"				=> $GLN_ADDR_03,
-						"VALUE_GLN_ADDR_04"				=> $GLN_ADDR_04,
-						"VALUE_GLN_ADDR_POSTALCODE"		=> $GLN_ADDR_POSTALCODE,
-						"VALUE_GLN_ADDR_CITY"			=> $GLN_ADDR_CITY,
-						"VALUE_GLN_COUNTRY_ISO_CD"		=> $GLN_COUNTRY_ISO_CD,
-						
-						"VALUE_GLN_IMG"					=> $GLN_IMG
-					));
-		
-					$Corps .= 	Template("template_list_manufacturer_item",2,$Params=array(
-					));		
-					
-					$Corps .= 	Template("template_list_manufacturer_item",3,$Params=array(
-					));							
-		
-					foreach($xml->gln as $gln){ 				
-						foreach($gln->brand as $brand){ 	
-							$GCP_CD						= trim($brand->gcp);		
-							$BRAND_CD					= trim($brand->code);	
-							$BRAND_NM					= trim($brand->name);	
-							$BRAND_TYPE_NM			    = trim($brand->type);
-							$BRAND_LINK					= trim($brand->link);
-							
-							$BRAND_IMG					= str_replace($URL_Base,$URL_Base_Replace,$brand->image); 
-
-							if($PREVIOUS_GCP_CD != $GCP_CD) { 
-								$Corps .= 	Template("template_list_manufacturer_item",5,$Params=array(
-								));		
-								$Corps .= "<h3>GCP ".$GCP_CD."</h3>";  
-								$Corps .= 	Template("template_list_manufacturer_item",3,$Params=array(
-								));	
-							}
-							
-							$Corps .= Template("template_list_manufacturer_item",4,$Params=array(
-								"VALUE_GCP_CD"					=> $GCP_CD,
-								"VALUE_BRAND_CD"				=> $BRAND_CD,	
-								"VALUE_BRAND_NM"				=> $BRAND_NM,	
-								"VALUE_BRAND_TYPE_NM"			=> $BRAND_TYPE_NM,
-								"VALUE_BRAND_LINK"				=> $BRAND_LINK,
-								
-								"VALUE_BRAND_IMG"				=> $BRAND_IMG
-							));	
-							
-
-							$PREVIOUS_GCP_CD			= $GCP_CD;	
-						}
-					}
-					
-					$Corps .= 	Template("template_list_manufacturer_item",5,$Params=array(
-					));
-					
-					$Corps .= 	Template("template_list_manufacturer_item",6,$Params=array(
-					));
-		
-					$Corps .= 	Template("template_list_manufacturer_item",7,$Params=array(
-					));	
-					
-					foreach($xml->gln as $gln) {			
-						foreach($gln->brand as $brand) { 
-							$GCP_CD						= trim($brand->gcp);	
-							$BRAND_CD					= trim($brand->code);	
-							$BRAND_NM					= trim($brand->name);		
-							foreach($brand->item as $item) { 	
-			
-								$GTIN_CD 					= $item->gtin;									
-								$GTIN_NM 					= $item->name;
-								
-								$GTIN_PRODUCT_LINE 			= $item->productLine;
-								
-								$GTIN_M_G 					= $item->measure->g;
-								$GTIN_M_OZ 					= $item->measure->oz;
-								$GTIN_M_ML 					= $item->measure->ml;
-								$GTIN_M_FLOZ 				= $item->measure->floz;
-								$GTIN_M_ABV 				= $item->measure->abv;
-								$GTIN_M_ABW 				= $item->measure->abw;
-								
-								$GTIN_PKG_UNIT 				= $item->packaging->internalUnit;
-								
-								$GTIN_IMG					= str_replace($URL_Base,$URL_Base_Replace,$item->image);
-
-
-								if($PREVIOUS_GCP_CD != $GCP_CD) { 
-									$Corps .= 	Template("template_list_manufacturer_item",5,$Params=array(
-									));		
-									$Corps .= "<h3>GCP ".$GCP_CD."</h3>";  
-									$Corps .= 	Template("template_list_manufacturer_item",3,$Params=array(
-									));	
-								}
-								
-								$Corps .= 	Template("template_list_manufacturer_item",8,$Params=array(
-									"VALUE_GTIN_CD"					=> $GTIN_CD,
-									"VALUE_GTIN_NM"					=> $GTIN_NM,
-									"VALUE_GCP_CD"					=> $GCP_CD,
-									
-									"VALUE_BRAND_NM"				=> $BRAND_NM,
-									"VALUE_PRODUCT_LINE"			=> $GTIN_PRODUCT_LINE,
-									
-									"VALUE_M_G"						=> $GTIN_M_G,
-									"VALUE_M_OZ"					=> $GTIN_M_OZ,
-									"VALUE_M_ML"					=> $GTIN_M_ML,
-									"VALUE_M_FLOZ"					=> $GTIN_M_FLOZ,
-									"VALUE_M_ABV"					=> $GTIN_M_ABV,
-									"VALUE_M_ABW"					=> $GTIN_M_ABW,
-									"VALUE_PKG_UNIT"				=> $GTIN_PKG_UNIT,
-									
-									"VALUE_GTIN_IMG"				=> $GTIN_IMG
-								));	
-								
-
-								$PREVIOUS_GCP_CD			= $GCP_CD;	
-									
-							}
-						}
-					}
-			
-					$Corps .= 	Template("template_list_manufacturer_item",9,$Params=array(
-					));	
-					
-					$Corps .= 	Template("template_list_manufacturer_item",10,$Params=array(
-					));	
-				
-				} // if
-			
-			} else {
-				
-					$Corps .= 	Template("template_list_manufacturer",1,$Params=array(
-					));						
-								
-			} // if
-				
-			break;
-		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 		case 106: // display html files
 			
 			$Corps 		= file_get_contents("template_pss-history.php");
@@ -587,180 +416,17 @@
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		case 110: // 
-
-			$URL_Base = "http://www.product-open-data.com/";
-			if($_SERVER['SERVER_NAME'] == "localhost" ){
-				$URL_Base_Replace 	= "";
-			} else {
-				$URL_Base_Replace 	= "";
-			}
-
-			if($m > 0) {
-	
-				if(!file_exists("data/product-gpc-".$m.".xml")) {
-					$Corps = "<br/>Content not available";
-				} else {
-					
-					$Corps .= 	Template("template_list_gpc_item",1,$Params=array(
-					));	
-				
-					$PssFile = file_get_contents("data/product-gpc-".$m.".xml");
-					//echo $PssFile;
-					$xml = new SimpleXMLElement($PssFile);
-					
-					foreach($xml->item as $item) { 	
-	
-						$GTIN_CD 					= $item->gtin;	
-						$GCP_CD 					= $item->gcp;								
-						$GTIN_NM 					= $item->name;
-						
-						$BRAND_NM 					= $item->brand;
-						
-						$GTIN_PRODUCT_LINE 			= $item->productLine;
-						
-						$GTIN_M_G 					= $item->measure->g;
-						$GTIN_M_OZ 					= $item->measure->oz;
-						$GTIN_M_ML 					= $item->measure->ml;
-						$GTIN_M_FLOZ 				= $item->measure->floz;
-						$GTIN_M_ABV 				= $item->measure->abv;
-						$GTIN_M_ABW 				= $item->measure->abw;
-						
-						$GTIN_PKG_UNIT 				= $item->packaging->internalUnit;
-						
-						$GTIN_IMG					= str_replace($URL_Base,$URL_Base_Replace,$item->image);
-
-						/*
-						if($PREVIOUS_GCP_CD != $GCP_CD) { 
-							$Corps .= 	Template("template_list_gpc_item",5,$Params=array(
-							));		
-							$Corps .= "<h3>GCP ".$GCP_CD."</h3>";  
-							$Corps .= 	Template("template_list_gpc_item",3,$Params=array(
-							));	
-						}
-						*/
-						
-						$Corps .= 	Template("template_list_gpc_item",2,$Params=array(
-							"VALUE_GTIN_CD"					=> $GTIN_CD,
-							"VALUE_GTIN_NM"					=> $GTIN_NM,
-							"VALUE_GCP_CD"					=> $GCP_CD,
-							
-							"VALUE_BRAND_NM"				=> $BRAND_NM,
-							"VALUE_PRODUCT_LINE"			=> $GTIN_PRODUCT_LINE,
-							
-							"VALUE_M_G"						=> $GTIN_M_G,
-							"VALUE_M_OZ"					=> $GTIN_M_OZ,
-							"VALUE_M_ML"					=> $GTIN_M_ML,
-							"VALUE_M_FLOZ"					=> $GTIN_M_FLOZ,
-							"VALUE_M_ABV"					=> $GTIN_M_ABV,
-							"VALUE_M_ABW"					=> $GTIN_M_ABW,
-							"VALUE_PKG_UNIT"				=> $GTIN_PKG_UNIT,
-							
-							"VALUE_GTIN_IMG"				=> $GTIN_IMG
-						));	
-						
-
-						$PREVIOUS_GCP_CD			= $GCP_CD;	
-							
-					}
-		
-					$Corps .= 	Template("template_list_gpc_item",3,$Params=array(
-					));	
-				
-				} // if
-			
-			} else {
-				
-				if(!file_exists("data/product-gpc-list.xml")) {
-					$Corps = "<br/>Content not available";
-				} else {
-					
-					$Corps .= 	Template("template_list_gpc",1,$Params=array(
-					));	
-				
-					$PssFile = file_get_contents("data/product-gpc-list.xml");
-					//echo $PssFile;
-					$xml = new SimpleXMLElement($PssFile);
-					
-					foreach($xml->s as $s) { 	
-						$Corps .= 	Template("template_list_gpc",2,$Params=array(
-							"VALUE_GPC_CD" => $s->s_cd,
-							"VALUE_GPC_NM" => $s->s_nm
-						));	
-						
-						$Corps .= 	Template("template_list_gpc",3,$Params=array(
-						));							
-						
-						foreach($s->f as $f) { 	
-							$Corps .= 	Template("template_list_gpc",4,$Params=array(
-								"VALUE_GPC_CD" => $f->f_cd,
-								"VALUE_GPC_NM" => $f->f_nm
-							));	
-							
-							$Corps .= 	Template("template_list_gpc",5,$Params=array(
-							));							
-							
-							foreach($f->c as $c) { 
-								$Corps .= 	Template("template_list_gpc",6,$Params=array(
-									"VALUE_GPC_CD" => $c->c_cd,
-									"VALUE_GPC_NM" => $c->c_nm
-								));	
-								
-								$Corps .= 	Template("template_list_gpc",7,$Params=array(
-								));							
-									
-								foreach($c->b as $b) { 	
-								
-									$Corps .= 	Template("template_list_gpc",8,$Params=array(
-										"VALUE_GPC_CD" => $b->b_cd,
-										"VALUE_GPC_NM" => $b->b_nm
-									));	
-
-								
-								} // foreach	
-								
-				
-								$Corps .= 	Template("template_list_gpc",9,$Params=array(
-								));	
-
-								$Corps .= 	Template("template_list_gpc",10,$Params=array(
-								));		
-							} // foreach
-							$Corps .= 	Template("template_list_gpc",11,$Params=array(
-							));	
-
-							$Corps .= 	Template("template_list_gpc",12,$Params=array(
-							));	
-						} // foreach
-						$Corps .= 	Template("template_list_gpc",13,$Params=array(
-						));	
-
-						$Corps .= 	Template("template_list_gpc",14,$Params=array(
-						));	
-					} // foreach
-					$Corps .= 	Template("template_list_gpc",15,$Params=array(
-					));	
-					
-				} // if
-							
-			} // if
-
-			break;
-		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 		case 111: // 
 			
 			$Corps 		= file_get_contents("template_navigate.php");
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		case 112: // 
+		case 112: //  Browse by brand
 
-			$URL_Base = "http://www.product-open-data.com/";
-			if($_SERVER['SERVER_NAME'] == "localhost" ){
-				$URL_Base_Replace 	= "../../../";
-			} else {
-				$URL_Base_Replace 	= "";
-			}
+			$URL_Base = "http://www.product-open-data.com/images/";
+			$URL_Base_Replace 	= DOSSIER_IMG;
+
 
 			if($m > 0) {
 	
@@ -773,8 +439,11 @@
 					//echo $PssFile;
 					$xml = new SimpleXMLElement($PssFile);
 					
+					//echo $xml->brand->image;
+					$BRAND_IMG					= str_replace($URL_Base,$URL_Base_Replace,$xml->brand->image);
+					
 					$Corps .= 	Template("template_list_brand_item",1,$Params=array(
-						"VALUE_BRAND_IMG"		=> $xml->brand->image,
+						"VALUE_BRAND_IMG"		=> $BRAND_IMG,
 						"VALUE_BRAND_NM"		=> $xml->brand->name,
 						"VALUE_BRAND_TYPE_NM"	=> $xml->brand->type,
 						"VALUE_BRAND_LINK"		=> $xml->brand->link,
@@ -865,7 +534,7 @@
 							
 					}
 		
-					$Corps .= 	Template("template_list_gpc_item",3,$Params=array(
+					$Corps .= 	Template("template_list_brand_item",3,$Params=array(
 					));	
 				
 				} // if
@@ -889,12 +558,26 @@
 						$i=0;
 						foreach($xml->brand as $brand) {
 							
+							
+							$IMG	= DOSSIER_IMG."brand/".str_pad($brand->code,8,"0",STR_PAD_LEFT).".jpg";
+							/*
+							if(@fopen($IMG, 'r'))
+							{
+							  $IMG_FLAG = 1;
+							  
+							}
+							else
+							{
+							   $IMG_FLAG = 0;
+							}
+							*/
 									
 							$Corps_temp_1 .= 	Template("template_list_brand",5,$Params=array(
 								"VALUE_BRAND_CD" 		=> $brand->code,
 								"VALUE_BRAND_LINK" 		=> $brand->link,
 								"VALUE_BRAND_NM" 		=> $brand->name,
-								"VALUE_IMG"				=> DOSSIER_IMG."brand/".str_pad($brand->code,8,"0",STR_PAD_LEFT).".jpg"
+								"VALUE_IMG"				=> $IMG,
+								"VALUE_IMG_FLAG"		=> $IMG_FLAG
 							));	
 							
 							$Corps_temp_2 .= 	Template("template_list_brand",6,$Params=array(
@@ -1003,14 +686,10 @@
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		case 114: // 
+		case 114: // Browse by groups
 
-			$URL_Base = "http://www.product-open-data.com/";
-			if($_SERVER['SERVER_NAME'] == "localhost" ){
-				$URL_Base_Replace 	= "../../../";
-			} else {
-				$URL_Base_Replace 	= "";
-			}
+			$URL_Base = "http://www.product-open-data.com/images/";
+			$URL_Base_Replace 	= DOSSIER_IMG;
 
 			if($n > 0) {
 	
@@ -1023,8 +702,10 @@
 					//echo $PssFile;
 					$xml = new SimpleXMLElement($PssFile);
 					
+					$GROUP_IMG					= str_replace($URL_Base,$URL_Base_Replace,$xml->group->image);
+					
 					$Corps .= 	Template("template_list_group_item",1,$Params=array(
-						"VALUE_GROUP_IMG"		=> $xml->group->image,
+						"VALUE_GROUP_IMG"		=> $GROUP_IMG,
 						"VALUE_GROUP_CD"		=> $xml->group->code,
 						"VALUE_GROUP_NM"		=> $xml->group->name,
 						"VALUE_GROUP_LINK"		=> $xml->group->link,
@@ -1181,6 +862,13 @@
 		case 115: // 
 			
 			$Corps 		= file_get_contents("template_smartphone.php");
+
+			break;
+			
+		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+		case 116: // 
+			
+			$Corps 		= file_get_contents("template_nutrition_us.php");
 
 			break;
 		

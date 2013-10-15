@@ -15,13 +15,7 @@ RewriteRule ^pss-change-notes(.*)$ index.php?l=en&p=105
 RewriteRule ^pss-history(.*)$ index.php?l=en&p=106
 RewriteRule ^pss-profile(.*)$ index.php?l=en&p=107
 
-RewriteRule ^manufacturer-list(.*)$ index.php?l=en&p=108
-RewriteRule ^product-list-([0-9]+)(.*)$ index.php?l=en&p=108&m=$1
-
 RewriteRule ^tweets(.*)$ index.php?l=en&p=109
-
-RewriteRule ^gpc-list(.*)$ index.php?l=en&p=110
-RewriteRule ^product-gpc-list-([0-9]+)(.*)$ index.php?l=en&p=110&m=$1
 
 RewriteRule ^navigate(.*)$ index.php?l=en&p=111
 
@@ -34,6 +28,8 @@ RewriteRule ^group-list(\/)$ index.php?l=en&p=114
 RewriteRule ^product-group-list-([0-9]+)(.*)$ index.php?l=en&p=114&n=$1
 
 RewriteRule ^smartphone(.*)$ index.php?l=en&p=115
+
+RewriteRule ^nutrition_us(.*)$ index.php?l=en&p=116
 
 RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+(\/)?$ index.php?l=$1&p=1
 RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+\/?([0-9]+)?([a-z0-9A-Z,_-]+)?(.*)$ index.php?l=$1&p=$2 [QSA,L]

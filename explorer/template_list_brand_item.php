@@ -1,4 +1,4 @@
-<h1>Navigate with GPC - Product list by brand</h1>
+<h1>Browse by Brands - Product list </h1>
 
 The POD database is public. Go to "Projects & Download" to download it.
 
@@ -8,7 +8,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 
             <table border="0" cellspacing="0px" cellpadding="0px">
             <tr>
-                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_BRAND_IMG?>" title="<?=$VALUE_BRAND_NM?>" alt="<?=$VALUE_BRAND_NM?>" /></td>
+                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px;background-image:url('images/coming-soon.jpg');" src="<?=$VALUE_BRAND_IMG?>" title="<?=$VALUE_BRAND_NM?>" alt="<?=$VALUE_BRAND_NM?>" /></td>
                 <td width="450px">
                 	<h4>Brand</h4>
 					<b>Brand name</b> : <?=$VALUE_BRAND_NM?><br/>
@@ -35,19 +35,16 @@ The POD database is public. Go to "Projects & Download" to download it.
                         
                 <?
 					}
-				?>                
-            
-					<? if (file_exists($VALUE_GTIN_IMG)) { ?> 
-                        <img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_GTIN_IMG?>" alt="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?>" title="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?> " />
-                    <? } else { ?> 
-                        <img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG>coming-soon.jpg" /> 
-                    <? } ?>
+				?>      
+                <div style="background-image:url('images/coming-soon.jpg');">          
+                <img style="margin: 0px; padding:0px; border:#CCCCCC solid 1px;"  width ="150px" height="150px" src="<?=$VALUE_GTIN_IMG?>" alt="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?>" title="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?> " />
+                </div>  
                 </td>
                 <td width="450px">
                     <img style="float: right; margin-left: 20px;width:50px;" src="<?=$VALUE_GPC_S_IMG?>" alt="<?=$VALUE_GPC_S_NM?>" /> 
                     <h4><? if ($VALUE_PRODUCT_LINE != '') echo "<b>".$VALUE_PRODUCT_LINE."</b> - "; ?><?=$VALUE_GTIN_NM?></h4>
                     
-                     <? if($VALUE_REG_C != "") {?> <b>Registration</b> : <img style="margin-bottom:-1px;" src="<DOSSIER_IMG>country/<?=strtolower($VALUE_REG_C)?>.png" /> <?=$VALUE_REG_N?> <br/><? } ?>  
+                     <? if($VALUE_REG_C != "") {?> <b>Registration</b> : <img style="margin-bottom:-1px;" src="images/country/<?=strtolower($VALUE_REG_C)?>.png" /> <?=$VALUE_REG_N?> <br/><? } ?>  
                     <b>GTIN Code </b> : <span style="font-family:'Courier New', Courier, monospace;"><?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?> </span>  <br/>
                     <? if($VALUE_GCP_CD != "") {?> <b>GCP Code</b> &nbsp;: <span style="font-family:'Courier New', Courier, monospace;"> <?=str_pad($VALUE_GCP_CD,13,"*",STR_PAD_RIGHT)?> </span>
 

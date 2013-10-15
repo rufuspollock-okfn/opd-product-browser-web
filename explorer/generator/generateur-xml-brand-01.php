@@ -31,7 +31,7 @@
 		}
 		
 		//$SQL = "SELECT * FROM brand where brand_cd = 46";
-		$SQL = "SELECT * FROM brand where brand_nm like 'saffr%'";
+		$SQL = "SELECT * FROM brand where brand_nm like 'bush%'";
 		//$SQL = "SELECT * FROM brand";
 		$DataSet_liste_brand = mysql_query($SQL);	
 		While ($Record_liste_brand = mysql_fetch_array($DataSet_liste_brand)) {	
@@ -74,7 +74,7 @@
 				"VALUE_GROUP_NM" 		=> $GROUP_NM
 			));							
 					
-			$SQL = "select * from gtin A, gs1_prefix B where left(A.GTIN_CD,3) = B.PREFIX_CD and brand_cd =".$BRAND_CD." order by B.COUNTRY_ISO_CD, A.product_line, A.pkg_unit, A.m_g, A.m_oz, A.m_ml, A.m_floz, A.gtin_nm";
+			$SQL = "select * from gtin A, gs1_prefix B where left(A.GTIN_CD,3) = B.PREFIX_CD and brand_cd =".$BRAND_CD." order by B.COUNTRY_ISO_CD, A.product_line desc, A.gtin_nm, A.pkg_unit, A.m_g, A.m_oz, A.m_ml, A.m_floz";
 			$DataSet 	= mysql_query($SQL);
 			While($Record 	= mysql_fetch_array($DataSet)) {		
 								

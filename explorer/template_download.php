@@ -55,7 +55,7 @@ If a link doesn't work, please send me an email (philippe.plagnol@product-open-d
         <td>
              <ul>
                  <li><b>POD Database Specifications</b> Excel file 2013.10.08 :&nbsp;<a href="docs/POD-SPECS-2013.10.08_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
-                 <li><b>POD Database</b> gzipped SQL file (MySQL) 2013.10.08 v1 :&nbsp;<a href="docs/pod_web_2013.10.08_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.
+                 <li><b>POD Database</b> gzipped SQL file (MySQL) 2013.10.11 v1 :&nbsp;<a href="docs/pod_web_2013.10.11_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.
                  </li>    
              </ul>    
         </td>

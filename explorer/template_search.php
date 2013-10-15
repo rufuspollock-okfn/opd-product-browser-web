@@ -19,7 +19,10 @@ The POD database is public. Go to "Projects & Download" to download it.
 	<tr>
 		<td width="150px">
         	
-			<img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_IMG_GTIN?>" />
+
+            <object data="<?=$VALUE_IMG_GTIN?>">
+				<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/coming-soon.jpg"  />
+            </object>
 		</td>
 		<td width="450px">
 			<h4>GTIN data</h4>
@@ -66,7 +69,9 @@ The POD database is public. Go to "Projects & Download" to download it.
 	<tr>
 
 		<td>
-			<img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_IMG_BRAND?>" />
+             <object data="<?=$VALUE_IMG_BRAND?>">
+				<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/coming-soon.jpg"  />
+            </object>
 		</td>
 		<td>
 			<h4>Brand Data</h4>
@@ -84,8 +89,9 @@ The POD database is public. Go to "Projects & Download" to download it.
 	<tr>
     
 		<td>
-			<img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_IMG_GPC?>" />
-            
+        	<object data="<?=$VALUE_IMG_GPC?>">
+				<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/coming-soon.jpg"  />
+            </object>
 		</td>
 		<td>
 			<h4>GPC Classification</h4>
@@ -152,7 +158,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 
 	<tr>
 		<td>
-			<img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG>nutrition.jpg" />
+			<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/nutrition.jpg" />
 		</td>
 		<td>
 			<h4>Nutrition Facts - U.S. Food and Drug Administration</h4>	
@@ -179,6 +185,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 						<table id="label" width="100%" class="border-label-1"><tr ><td >&nbsp;&nbsp;&nbsp; Trans Fat <?=$VALUE_TRANS_FAT_G?>g</td><td align="right">-</td></tr></table>
 						<table id="label" width="100%" class="border-label-1"><tr ><td ><b>Cholosterol</b> <?=$VALUE_CHOL_MG?>mg</td><td align="right"><?=$VALUE_CHOL_DV?>%</td></tr></table>
                         <table id="label" width="100%" class="border-label-1"><tr ><td ><b>Sodium</b> <?=$VALUE_SOD_MG?>mg</td><td align="right"><?=$VALUE_SOD_DV?>%</td></tr></table>
+                        <table id="label" width="100%" class="border-label-1"><tr ><td ><b>Potassium</b> <?=$VALUE_POT_MG?>mg</td><td align="right"><?=$VALUE_POT_DV?>%</td></tr></table>
 						<table id="label" width="100%" class="border-label-1"><tr ><td ><b>Total Carbohydrate</b> <?=$VALUE_TOT_CARB_G?>g</td><td align="right"><?=$VALUE_TOT_CARB_DV?>%</td></tr></table>
                         <table id="label" width="100%" class="border-label-1"><tr ><td >&nbsp;&nbsp;&nbsp; Dietary Fiber <?=$VALUE_DIET_FIBER_G?>g</td><td align="right"><?=$VALUE_DIET_FIBER_DV?>%</td></tr></table>
 						<table id="label" width="100%" class="border-label-1"><tr ><td >&nbsp;&nbsp;&nbsp; Sugars <?=$VALUE_SUGARS_G?>g</td><td align="right">-</td></tr></table>
@@ -208,7 +215,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 <!--COUPER_ICI-->
 	<tr>
 		<td>
-			<img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG>gln.jpg" />
+			<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/gln.jpg" />
 		</td>
 		<td>
 			<h4>GLN Data (Supply Chain)</h4>				

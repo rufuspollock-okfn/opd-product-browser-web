@@ -29,6 +29,34 @@ $(function(){
 
 
 <hr />
+
+
+
+    <table width="100%">
+        <tr>
+            <td width="50%" style="background:#FFF;font-size:24px;">
+            				<div align="center"><a href="brand-list-1/" ><b>Browse by Brands</b></a></div></td>
+            <td width="50%" style="background:#FFF;font-size:24px;">
+            				<div align="center"><a href="group-list/"><b>Browse by Groups</b></a></div></td>
+    	</tr>
+        <tr>
+            <td width="50%" style="background:#FFF" >
+            				<div align="center"><a href="brand-list-1/" >
+            				  <img style="margin-bottom:10px;margin-top:10px;" src="images/navigate-brand.jpg" /> 
+           				    </a>
+		    </div></td>
+            <td width="50%" style="background:#FFF">
+            				<div align="center"><a href="group-list/">
+            				  <img style="margin-bottom:10px;margin-top:10px;" src="images/navigate-group.jpg" />
+           				    </a>
+		    </div></td>
+    	</tr>
+    </table>
+
+<hr /> 
+<a href="nutrition_us" ><img src="images/Nutrition_ban.png" border="0" style="margin-top:0px" /></a>
+<hr />
+
 <div style="text-align:center;">
 
 
@@ -37,29 +65,29 @@ $(function(){
         <tr>
             <td width="20%" style="background:#FFF" >
             				<a href="navigate/" >
-							<img src="<DOSSIER_IMG>navigate_02.png" /> 
+							<img src="images/navigate_02.png" /> 
 							</a>
             </td>
             <td width="20%" style="background:#FFF">
             				<a href="data-quality/">
-							<img src="<DOSSIER_IMG>DataQuality.png" /> 
+							<img src="images/DataQuality.png" /> 
 							</a>
             
             </td>
             <td width="20%" style="background:#FFF">
            					<a href="http://product.okfn.org/smartphone-apps/" >
-							<img src="<DOSSIER_IMG>smartphone.jpg" /> 
+							<img src="images/smartphone.jpg" /> 
 							</a>
             </td>
             <td width="20%" style="background:#FFF">
            					<a href="download/" >
-							<img src="<DOSSIER_IMG>download.png" /> 
+							<img src="images/download.png" /> 
 							</a>
             </td>
 
             <td width="20%" style="background:#FFF">
             				<a href="http://lists.okfn.org/mailman/listinfo/product" target="_blank">
-							<img src="<DOSSIER_IMG>pod-forum.png" /> 
+							<img src="images/pod-forum.png" /> 
 							</a>
             </td>
 
@@ -101,41 +129,12 @@ $(function(){
     </table>
 
 <hr />
-<a href="navigate" ><img src="<DOSSIER_IMG>navigate_ban_01.png" border="0" style="margin-top:8px" /></a>
-
-
-    <table width="100%">
-        <tr>
-            <td width="50%" style="background:#FFF" >
-            				<a href="brand-list-1/" >
-								<img style="margin-bottom:10px;margin-top:20px;" src="<DOSSIER_IMG>navigate-brand.jpg" /> 
-							</a>
-            </td>
-            <td width="50%" style="background:#FFF">
-            				<a href="group-list/">
-								<img style="margin-bottom:10px;margin-top:20px;" src="<DOSSIER_IMG>navigate-group.jpg" />
-							</a>
-            
-            </td>
-    </tr>
-        <tr>
-            <td width="50%" style="background:#FFF">
-            				<a href="brand-list-1/" ><b>Navigate by Brands</b></a>
-            </td>
-            <td width="50%" style="background:#FFF">
-            				<a href="group-list/"><b>Navigate by Groups</b></a>
-            
-            </td>
-    </tr>
-    </table>
-
-<hr /> 
 		<table>
         <tr>
             <td width="50%" style="background:#FFF">
             				
                             <a href="http://icecat.us/" target="_blank" rel="nofollow" >
-                            <img src="<DOSSIER_IMG>logos/logo_icecat.jpg" style="margin-bottom:10px;" /> <br/>
+                            <img src="images/logos/logo_icecat.jpg" style="margin-bottom:10px;" /> <br/>
                             <b>Open Data for High Tech products</b></a>
             </td>
             <td width="50%" style="background:#FFF">
@@ -150,13 +149,13 @@ $(function(){
         <tr>
             <td width="50%" style="background:#FFF" >
             				<a href="http://www.pod.lsa-conso.fr" target="_blank" rel="nofollow" >
-								<img src="<DOSSIER_IMG>logos/logo-lsa-200.png" />
+								<img src="images/logos/logo-lsa-200.png" />
 							</a>
             </td>
             <td width="50%" style="background:#FFF">
 
             				 <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/#?x=group_nm&y.serie.expr=pkg_unit&y.serie.func=COUNT&timescale=year&analyzesort=serie&chart=bar&tab=analyze" target="_blank" rel="nofollow" >
-								<img src="<DOSSIER_IMG>logos/logo-ods.png" />
+								<img src="images/logos/logo-ods.png" />
 							</a>
             
             </td>

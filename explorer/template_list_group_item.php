@@ -1,4 +1,4 @@
-<h1>Navigate with GPC - Product list by brand</h1>
+<h1>Browse by Groups - Brand list</h1>
 
 The POD database is public. Go to "Projects & Download" to download it.
 
@@ -8,7 +8,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 
             <table border="0" cellspacing="0px" cellpadding="0px">
             <tr>
-                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_GROUP_IMG?>" title="<?=$VALUE_GROUP_NM?>" alt="<?=$VALUE_GROUP_NM?>" /></td>
+                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_GROUP_IMG?>" title="<?=$VALUE_GROUP_NM?>" alt="<?=$VALUE_GROUP_NM?>" onerror="this.src='images/coming-soon.jpg';"  /></td>
                 <td width="450px">
                 	<h4>Group</h4>
 					<b>Group name</b> : <?=$VALUE_GROUP_NM?><br/><br/>
@@ -24,13 +24,10 @@ The POD database is public. Go to "Projects & Download" to download it.
 	<!--COUPER_ICI-->
         <tr>
             <td width="150px">
-                <? if (file_exists($VALUE_BRAND_IMG)) { ?> 
+              
                 	<a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.html" > 
-                    <img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_BRAND_IMG?>" alt="<?=$VALUE_BRAND_NM?>" title="<?=$VALUE_BRAND_NM?>" />
+                    <img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_BRAND_IMG?>" alt="<?=$VALUE_BRAND_NM?>" title="<?=$VALUE_BRAND_NM?>" onerror="this.src='images/coming-soon.jpg';"  />
                     </a>
-                <? } else { ?> 
-                	<img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG>coming-soon.jpg" /> 
-				<? } ?>
             </td>
             <td width="450px">
                 <h4><?=$VALUE_BRAND_NM?></h4>
