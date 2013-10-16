@@ -6,7 +6,7 @@ POD database now contains nutrition facts for products commercialized in the U.S
 <br/>
 Standard Food labels exist in other countries (Australia, Hong Kong, UK,...) and nutrition information of these countries will be added soon. Europe will use a standard label end 2014 only (<a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF" target="_blank" rel="nofollow"> European law n° 1169/2011 - 25 Oct. 2011</a>).
 <br/><br/>
-POD only uses <b>Trusted Source of Data</b> using data provided by manfacturers. The source and the date of synchronization are always indicated.
+POD only uses <b>Trusted Source of Data</b> provided by manfacturers. The source and the date of synchronization are always indicated.
 <br/><br/>
 The list below show all the brands added into the database:
 <br/><br/>
