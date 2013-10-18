@@ -17,6 +17,8 @@ RewriteRule ^pss-profile(.*)$ index.php?l=en&p=107
 
 RewriteRule ^tweets(.*)$ index.php?l=en&p=109
 
+RewriteRule ^open-gepir(.*)$ index.php?l=en&p=110
+
 RewriteRule ^navigate(.*)$ index.php?l=en&p=111
 
 RewriteRule ^brand-list-([0-9]+)(\/)$ index.php?l=en&p=112&n=$1

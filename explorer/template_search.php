@@ -218,7 +218,10 @@ The POD database is public. Go to "Projects & Download" to download it.
 			<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/gln.jpg" />
 		</td>
 		<td>
-			<h4>GLN Data (Supply Chain)</h4>				
+			<h4>Owner of the GCP</h4>
+            
+            Source : <a href="http://gepir.gs1.org/v32/xx/about.aspx?Lang=en-US" target="_blank" rel="nofollow">GEPIR</a>	
+            <br/><br/>			
 
 			<? if($VALUE_GLN_RETURN_CODE == 0 ) {  ?>
             
@@ -228,8 +231,10 @@ The POD database is public. Go to "Projects & Download" to download it.
                 
                 <? } else { ?>
 			
+            		<b>GCP Code</b> : <span style="font-family:'Courier New', Courier, monospace;"><?=$VALUE_GCP_CD?></span>
+                        <br/><br/>
                     <b>GLN Code</b> : <span style="font-family:'Courier New', Courier, monospace;"><?=$VALUE_GLN_CD?></span><br/>
-                    <b>GLN Name</b> : <?=$VALUE_GLN_NM?><br/>
+                    <b>GLN Name</b> : <?=$VALUE_GLN_NM?><br/><br/>
                     <? if($VALUE_GLN_ADDR_02 != "") echo $VALUE_GLN_ADDR_02."<br/>"; ?>
                     <? if($VALUE_GLN_ADDR_03 != "") echo $VALUE_GLN_ADDR_03."<br/>"; ?>
                     <? if($VALUE_GLN_ADDR_04 != "") echo $VALUE_GLN_ADDR_04."<br/>"; ?>

@@ -189,8 +189,8 @@
 				}
 	
 	
-				$DataSet_GLN = mysql_query("SELECT * FROM gs1_gcp where GCP_CD = '".$GCP_CD."'");
-				//$DataSet_GLN = mysql_query("select * from gs1_gcp where '".$GCP_CD."' like concat(gcp_cd,'%') order by length(gcp_cd) asc");
+				// GCP length between 6 and 12 digits
+				$DataSet_GLN = mysql_query("SELECT * FROM gs1_gcp WHERE gcp_cd in (left('".$gtin."',6), left('".$gtin."',7),left('".$gtin."',8),left('".$gtin."',9),left('".$gtin."',10),left('".$gtin."',11),left('".$gtin."',12))");
 				$Record_GLN = mysql_fetch_array($DataSet_GLN);
 	
 				$GLN_RETURN_CODE 			= $Record_GLN["RETURN_CODE"];
@@ -328,6 +328,8 @@
 				
 				$Corps .= 	Template("template_search",5,$Params=array(				
 					"VALUE_GLN_RETURN_CODE"			=> $GLN_RETURN_CODE,
+					
+					"VALUE_GCP_CD"					=> $GCP_CD,
 	
 					"VALUE_GLN_CD"					=> $GLN_CD,
 					"VALUE_GLN_NM"					=> $GLN_NM,
@@ -413,6 +415,40 @@
 		case 109: // display tweets
 			
 			$Corps 		= file_get_contents("template_tweets.php");
+
+			break;
+		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+		case 110: // display Open GEPIR Stats
+
+			$SQL = "select distinct gln_cd from gs1_gcp";
+			$DataSet 		= mysql_query($SQL);
+			$VALUE_NB_GLN  	= number_format(mysql_num_rows($DataSet), 0, '.', ' ');		
+			
+			
+			$SQL = "select * from gs1_gcp";
+			$DataSet 	= mysql_query($SQL);
+			$VALUE_NB_GCP	= number_format(mysql_num_rows($DataSet), 0, '.', ' ');		
+
+			$Erreurs = array(
+				'0' => 	" No error",
+				'1' => 	" Missing or invalid parameters",
+				'2' => " Prefix never allocated",
+				'3' => " No exact match on GLN",
+				'5' => " Unknown country code",
+				'8' => " No catalogue exists",
+				'9' => " Company information withheld",
+				'10' => " Prefix no longer subscribed",
+				'11' => " Country not on the GEPIR network",
+				'13' => " Illegal Number",
+				'14' => " Daily request limit exceeded",
+				'99' => " Server error	"	
+				);
+
+			
+			$Corps .= 	Template("template_open_gepir",1,$Params=array(
+						"VALUE_NB_GLN"					=> $VALUE_NB_GLN ,
+						"VALUE_NB_GCP"					=> $VALUE_NB_GCP				
+			));	
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
