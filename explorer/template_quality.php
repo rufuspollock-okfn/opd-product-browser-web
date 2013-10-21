@@ -1,16 +1,17 @@
-
+<img style="float: right; margin-left: 30px;" title="Data Quality" src="images/DataQuality.png" alt="Data Quality" />
     
-    <h1>POD Database Quality</h1>
+    <h1>Database Quality</h1>
 
-	<form name="formulaire" enctype="multipart/form-data" method="post" action="data-quality/" >	
-		<select name="s">
-        	<option value="1" <? if( $VALUE_S == 1) echo "selected"; ?> > GCP - GEPIR Return code</option>
-            <option value="2" <? if( $VALUE_S == 2) echo "selected"; ?> > GTIN - GPC Segment</option>
-            <option value="3" <? if( $VALUE_S == 3) echo "selected"; ?> > GTIN - Brand</option>
-        </select>
-		<input type="button" class="search-bouton"  onclick="submit()" value=">" /> 	
-	</form>
-    <br/>
+	<ul>
+    <li>GCP - <a href="data-quality-1.html">GEPIR Return code</a></li>
+    <li>GCP - <a href="data-quality-4.html">Length per prefix</a></li>
+    <li>GTIN - <a href="data-quality-2.html">GPC Segment</a></li>
+    <li>GTIN - <a href="data-quality-3.html">Brand</a></li>
+    </ul>
+
+<!--COUPER_ICI-->  
+    <h1><?=$VALUE_H1?></h1>
+    <a href="data-quality/"><< Return to the Data Quality menu</a><br /><br />
     Data provded by icecat.fr are out of scope.
     <hr/>
    	

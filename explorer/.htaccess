@@ -8,7 +8,10 @@ RewriteRule ^/$ index.php?l=en&p=1
 
 RewriteRule ^search(.*)$ index.php?l=en&p=100
 RewriteRule ^pss-specification(.*)$ index.php?l=en&p=101
-RewriteRule ^data-quality(.*)$ index.php?l=en&p=102
+
+RewriteRule ^data-quality(\/)$ index.php?l=en&p=102
+RewriteRule ^data-quality-([0-9]+)(.*)$ index.php?l=en&p=102&s=$1
+
 RewriteRule ^terms-of-use(.*)$ index.php?l=en&p=103
 RewriteRule ^download(.*)$ index.php?l=en&p=104
 RewriteRule ^pss-change-notes(.*)$ index.php?l=en&p=105

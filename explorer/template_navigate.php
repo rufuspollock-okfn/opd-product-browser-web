@@ -1,4 +1,4 @@
-<img style="float: right; margin-left: 30px;" title="PSS product simple syndication" src="<DOSSIER_IMG>navigate_02.png" alt="pss product simple syndication" />
+<img style="float: right; margin-left: 30px;" title="PSS product simple syndication" src="images/navigate_02.png" alt="Navigate" />
 <h1>Navigate into POD database</h1>
 
 <p>The POD database is public. Go to "Projects & Download" to download it.</p>
