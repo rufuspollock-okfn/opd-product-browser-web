@@ -650,21 +650,43 @@
 						$Corps .= 	'<h1>GCP - Length per prefix</h1>';
 						$Corps .= 	'<a href="data-quality/"><< Return to the Data Quality menu</a><br /><br />';
 						$Corps .= 	'<table>';
-						$Corps .= 	'<tr><td style="padding:5px"><b>Prefix</b></td><td style="padding:5px"><b>Length</b></td><td style="padding:5px"><b>Number of GCP</b></td><td style="padding:5px;width:250px;"><b>GS1 Member Organization</b></td></tr>';
+						$Corps .= 	'<tr>';
+						$Corps .= 		'<td style="padding:5px"><b>Prefix</b></td>';
+						$Corps .= 		'<td style="padding:5px"><b>Length</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:60px;"><b>Number of GCP  with a Return Code = 0</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:60px;"><b>Number of GCP in base</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:60px;""><b>%</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:200px;"><b>GS1 Member Organization</b></td>';
+						$Corps .= 	'</tr>';
 					
-						$SQL = "SELECT substring(A.gcp_cd,1,3) as prefix, length(A.GCP_CD) as length, count(A.GCP_CD) as nb, B.prefix_nm, B.country_iso_cd as country FROM `gs1_gcp` A, gs1_prefix B where substring(A.gcp_cd,1,3) = B.prefix_cd group by substring(A.gcp_cd,1,3), length(A.gcp_cd)";
+						$SQL = "SELECT substring(A.gcp_cd,1,3) as prefix, length(A.GCP_CD) as length, count(A.GCP_CD) as nb, count(distinct (case when A.return_code = 0 > 0 then A.GCP_CD end)) as nb2, B.prefix_nm, B.country_iso_cd as country FROM `gs1_gcp` A, gs1_prefix B where substring(A.gcp_cd,1,3) = B.prefix_cd and B.country_iso_cd <>'' group by substring(A.gcp_cd,1,3), length(A.gcp_cd)";
 						$DataSet = mysql_query($SQL);	
-						While ($Record = mysql_fetch_array($DataSet)) {		
+						While ($Record = mysql_fetch_array($DataSet)) {	
 						
 							$prefix 		= $Record["prefix"];	
 							$length 		= $Record["length"];
 							$nb 			= $Record["nb"];
+							$nb_rc_0 		= $Record["nb2"];
 							$prefix_nm 		= $Record["prefix_nm"];
 							$country 		= $Record["country"];
 							
+							$perc_num 		= $nb_rc_0 / $nb * 100;
+							$perc			= number_format($perc_num, 2, '.', ' ');
 							$nb 			= number_format($nb, 0, '.', ' ');
+							$nb_rc_0  		= number_format($nb_rc_0 , 0, '.', ' ');
 							
-							$Corps .= 	'<tr><td align="right">'.$prefix.'</td><td align="right">'.$length.'</td><td align="right">'.$nb.'</td><td>&nbsp;&nbsp;&nbsp;<img align="center" src="'.DOSSIER_IMG_COUNTRY.strtolower($country).'.png" /> '.$prefix_nm.'</td></tr>';
+							$Corps .= 	'<tr>';
+							$Corps .= 		'<td style="padding:2px" align="right">'.$prefix.'</td>';
+							$Corps .= 		'<td style="padding:2px" align="right">'.$length.'</td>';
+							$Corps .= 		'<td style="padding:2px" align="right">'.$nb_rc_0.'</td>';
+							$Corps .= 		'<td style="padding:2px" align="right">'.$nb.'</td>';
+							if($perc_num > 2) {
+								$Corps .= 		'<td style="padding:2px" align="right">'.$perc.' %</td>';
+							} else {
+								$Corps .= 		'<td style="padding:2px;color:red;" align="right">'.$perc.' %</td>';
+							}
+							$Corps .= 		'<td style="padding:2px" >&nbsp;&nbsp;&nbsp;<img align="center" src="'.DOSSIER_IMG_COUNTRY.strtolower($country).'.png" /> '.$prefix_nm.'</td>';
+							$Corps .= 	'</tr>';
 							
 						}
 						

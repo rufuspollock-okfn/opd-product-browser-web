@@ -12,8 +12,7 @@
 <!--COUPER_ICI-->  
     <h1><?=$VALUE_H1?></h1>
     <a href="data-quality/"><< Return to the Data Quality menu</a><br /><br />
-    Data provded by icecat.fr are out of scope.
-    <hr/>
+
    	
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
