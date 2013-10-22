@@ -1,11 +1,19 @@
 <?
+
+
 	if($_SERVER['HTTP_HOST'] == "localhost") {
 		define('URL_BASE',						"D:/Programmes/wamp/www/github/products/explorer/");	
 		define('SITE_BASE',						"http://localhost/github/products/explorer/");	
 		
 	} else {
-		define('URL_BASE',						"");
-		define('SITE_BASE',						"http://www.product-open-data.com/");	
+		
+		if($_SERVER['HTTP_HOST'] == "pod.okserver.org") {
+			define('URL_BASE',						"");
+			define('SITE_BASE',						"http://pod.okserver.org/");	
+		} else {
+			define('URL_BASE',						"");
+			define('SITE_BASE',						"http://www.product-open-data.com/");				
+		}
 	}
 	
 	define('EXTENSION',							".html");
@@ -665,26 +673,35 @@
 						
 							$prefix 		= $Record["prefix"];	
 							$length 		= $Record["length"];
-							$nb 			= $Record["nb"];
+							$nb_num 		= $Record["nb"];
 							$nb_rc_0 		= $Record["nb2"];
 							$prefix_nm 		= $Record["prefix_nm"];
 							$country 		= $Record["country"];
 							
-							$perc_num 		= $nb_rc_0 / $nb * 100;
+							$perc_num 		= $nb_rc_0 / $nb_num * 100;
 							$perc			= number_format($perc_num, 2, '.', ' ');
-							$nb 			= number_format($nb, 0, '.', ' ');
+							$nb 			= number_format($nb_num, 0, '.', ' ');
 							$nb_rc_0  		= number_format($nb_rc_0 , 0, '.', ' ');
+							
+						
 							
 							$Corps .= 	'<tr>';
 							$Corps .= 		'<td style="padding:2px" align="right">'.$prefix.'</td>';
 							$Corps .= 		'<td style="padding:2px" align="right">'.$length.'</td>';
 							$Corps .= 		'<td style="padding:2px" align="right">'.$nb_rc_0.'</td>';
-							$Corps .= 		'<td style="padding:2px" align="right">'.$nb.'</td>';
+							
+							if(pow(10,$length-3) == $nb_num) { // if all gcp have been checked, green background
+								$Corps .= 		'<td style="padding:2px;background-color:rgb(190, 247, 190);" align="right">'.$nb.'</td>';
+							} else {
+								$Corps .= 		'<td style="padding:2px" align="right">'.$nb.'</td>';
+							}
+							
 							if($perc_num > 2) {
 								$Corps .= 		'<td style="padding:2px" align="right">'.$perc.' %</td>';
 							} else {
 								$Corps .= 		'<td style="padding:2px;color:red;" align="right">'.$perc.' %</td>';
 							}
+							
 							$Corps .= 		'<td style="padding:2px" >&nbsp;&nbsp;&nbsp;<img align="center" src="'.DOSSIER_IMG_COUNTRY.strtolower($country).'.png" /> '.$prefix_nm.'</td>';
 							$Corps .= 	'</tr>';
 							

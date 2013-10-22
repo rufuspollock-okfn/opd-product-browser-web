@@ -1,4 +1,4 @@
-<img style="float: right; margin-left: 30px;" title="PSS product simple syndication" src="<DOSSIER_IMG>navigate_02.png" alt="pss product simple syndication" />
+<img style="float: right; margin-left: 30px;" title="PSS product simple syndication" src="images/navigate_02.png" alt="pss product simple syndication" />
 <h1>Browse by Brands</h1>
 
 The POD database is public. Go to "Projects & Download" to download it.<br/>
