@@ -4,7 +4,7 @@
 
 	<ul>
     <li>GCP - <a href="data-quality-1.html">GEPIR Return code</a></li>
-    <li>GCP - <a href="data-quality-4.html">Length per prefix</a></li>
+   <!-- <li>GCP - <a href="data-quality-4.html">Length per prefix</a></li>-->
     <li>GTIN - <a href="data-quality-2.html">GPC Segment</a></li>
     <li>GTIN - <a href="data-quality-3.html">Brand</a></li>
     </ul>

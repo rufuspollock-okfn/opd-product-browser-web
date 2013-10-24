@@ -44,7 +44,11 @@
 	$p = ((isset($_GET['p']))  && ($_GET['p']>0) ) ? $_GET['p'] : 0; //&& (ctype_digit($_GET['']))
 	$m = ((isset($_GET['m']))  && ($_GET['m']>0) ) ? $_GET['m'] : 0; //&& (ctype_digit($_GET['']))
 	$n = ((isset($_GET['n']))  && ($_GET['n']>0) ) ? $_GET['n'] : 0; //&& (ctype_digit($_GET['']))
+	//$s = ((isset($_GET['s']))  && ($_GET['s']>0) ) ? $_GET['s'] : 0; //&& (ctype_digit($_GET['']))
+	
 	$Language = (isset($_GET['l'])) ?  $_GET['l'] : "en";
+	
+	//echo "p: ".$_GET['p']." - s: ".$_GET['s']." - m: ".$_GET['m'];
 	
 	define('SITE_LANG',					$Language);
 
@@ -374,14 +378,16 @@
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 		case 102: // display html files
 			
-			if(isset($_GET['s'])) 			$s			= (int)trim($_GET['s']);
-			if(!is_int($s)) {
+			
+			
+
+			if($m == 0) {
 
 				$Corps .= 	Template("template_quality",1,$Params=array(
 				));	
 			
 			} else {
-				switch ($s) {
+				switch ($m) {
 					case 1:
 	
 	
@@ -411,7 +417,7 @@
 						$Record = mysql_fetch_array($DataSet);
 						$NbTotal = $Record["NB"];
 							
-						$SQL = "SELECT return_code, count(*) as NB FROM gs1_gcp group by return_code";
+						$SQL = "SELECT return_code, count(*) as NB FROM gs1_gcp where return_code not in (0,2) group by return_code";
 						$DataSet = mysql_query($SQL);	
 						$Number = mysql_num_rows($DataSet);
 						$i = 1;
@@ -661,10 +667,11 @@
 						$Corps .= 	'<tr>';
 						$Corps .= 		'<td style="padding:5px"><b>Prefix</b></td>';
 						$Corps .= 		'<td style="padding:5px"><b>Length</b></td>';
-						$Corps .= 		'<td style="padding:5px;width:60px;"><b>Number of GCP  with a Return Code = 0</b></td>';
-						$Corps .= 		'<td style="padding:5px;width:60px;"><b>Number of GCP in base</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:60px;"><b>Number of GCP  with a GEPIR Return Code = 0</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:60px;"><b>Number of GCP</b></td>';
 						$Corps .= 		'<td style="padding:5px;width:60px;""><b>%</b></td>';
 						$Corps .= 		'<td style="padding:5px;width:200px;"><b>GS1 Member Organization</b></td>';
+						$Corps .= 		'<td style="padding:5px;width:60px;""><b>Number of barcode that can be assigned (per GCP)</b></td>';
 						$Corps .= 	'</tr>';
 					
 						$SQL = "SELECT substring(A.gcp_cd,1,3) as prefix, length(A.GCP_CD) as length, count(A.GCP_CD) as nb, count(distinct (case when A.return_code = 0 > 0 then A.GCP_CD end)) as nb2, B.prefix_nm, B.country_iso_cd as country FROM `gs1_gcp` A, gs1_prefix B where substring(A.gcp_cd,1,3) = B.prefix_cd and B.country_iso_cd <>'' group by substring(A.gcp_cd,1,3), length(A.gcp_cd)";
@@ -678,10 +685,19 @@
 							$prefix_nm 		= $Record["prefix_nm"];
 							$country 		= $Record["country"];
 							
+							$SQL = "SELECT gcp_nb from gs1_gcp_nb where prefix_cd = '".$prefix."' and gcp_length = ".$length;
+							$DataSet2 = mysql_query($SQL);	
+							$Record2 = mysql_fetch_array($DataSet2);
+							
+							$gcp_nb 		= $Record2["gcp_nb"];
+							
+							$nb_max_product = pow(10,12 - $length);
 							$perc_num 		= $nb_rc_0 / $nb_num * 100;
+							
 							$perc			= number_format($perc_num, 2, '.', ' ');
 							$nb 			= number_format($nb_num, 0, '.', ' ');
 							$nb_rc_0  		= number_format($nb_rc_0 , 0, '.', ' ');
+							$nb_max_product = number_format($nb_max_product , 0, '.', ' ');
 							
 						
 							
@@ -690,7 +706,7 @@
 							$Corps .= 		'<td style="padding:2px" align="right">'.$length.'</td>';
 							$Corps .= 		'<td style="padding:2px" align="right">'.$nb_rc_0.'</td>';
 							
-							if(pow(10,$length-3) == $nb_num) { // if all gcp have been checked, green background
+							if($gcp_nb == $nb_num) { // if all gcp have been checked, green background
 								$Corps .= 		'<td style="padding:2px;background-color:rgb(190, 247, 190);" align="right">'.$nb.'</td>';
 							} else {
 								$Corps .= 		'<td style="padding:2px" align="right">'.$nb.'</td>';
@@ -703,6 +719,7 @@
 							}
 							
 							$Corps .= 		'<td style="padding:2px" >&nbsp;&nbsp;&nbsp;<img align="center" src="'.DOSSIER_IMG_COUNTRY.strtolower($country).'.png" /> '.$prefix_nm.'</td>';
+							$Corps .= 		'<td style="padding:2px" align="right">'.$nb_max_product.'</td>';
 							$Corps .= 	'</tr>';
 							
 						}

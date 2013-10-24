@@ -14,7 +14,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 					<b>Group name</b> : <?=$VALUE_GROUP_NM?><br/><br/>
                     <b>Website</b> : <a href="http://<?=$VALUE_GROUP_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_GROUP_LINK?></a><br/>  
                     <br/>
-                    <img src="<DOSSIER_IMG>35px-Wikipedia-logo.png" /> <a href="http://en.wikipedia.org/wiki/<?=$VALUE_GROUP_WIKI_EN?>" target="_blank" rel="nofollow">See the article on Wikipedia</a><br/> 
+                    <img src="images/35px-Wikipedia-logo.png" /> <a href="http://en.wikipedia.org/wiki/<?=$VALUE_GROUP_WIKI_EN?>" target="_blank" rel="nofollow">See the article on Wikipedia</a><br/> 
                 </td>
             </tr>
             </table>   

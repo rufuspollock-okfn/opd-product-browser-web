@@ -145,6 +145,8 @@ $(function(){
     </table>
 <hr />
 
+<h2 style="background-position:0px 0px;text-align:left;padding-left:50px;">They use Open Product Data</h2>
+
     <table width="100%">
         <tr>
             <td width="50%" style="background:#FFF" >
@@ -154,15 +156,15 @@ $(function(){
             </td>
             <td width="50%" style="background:#FFF">
 
-            				 <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/#?x=group_nm&y.serie.expr=pkg_unit&y.serie.func=COUNT&timescale=year&analyzesort=serie&chart=bar&tab=analyze" target="_blank" rel="nofollow" >
+            				 <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/" target="_blank" rel="nofollow" >
 								<img src="images/logos/logo-ods.png" />
 							</a>
             
             </td>
-    </tr>
+        </tr>
         <tr>
             <td width="50%" style="background:#FFF">
-            				
+                            
                             <a href="http://www.pod.lsa-conso.fr" target="_blank" rel="nofollow" >
                             <b>>>> Access to the service</b>
                             </a>
@@ -170,25 +172,64 @@ $(function(){
                         
             </td>
             <td width="50%" style="background:#FFF">
-            				
-                            <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/#?x=group_nm&y.serie.expr=pkg_unit&y.serie.func=COUNT&timescale=year&analyzesort=serie&chart=bar&tab=analyze" target="_blank" rel="nofollow" >
+                            
+                            <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/" target="_blank" rel="nofollow" >
                             <b>>>> Access to the service</b></a>
                             <br/><br/>
                           
             </td>
-    </tr>
+        </tr>
         <tr>
             <td width="50%" style="background:#FFF;vertical-align:text-top;">
-            				
+                            
                             
                              LSA, France's largest product information magazin, use barcode as a new way to access product information (a new communication channel)
             </td>
             <td width="50%" style="background:#FFF;vertical-align:text-top;">
-            				
+                            
                             
                              Search / BI system using POD database. "OpenDataSoft is a turnkey platform over the cloud designed to make simple to re-use data through API & apps models".
             </td>
-    </tr>
+        </tr>
+        <tr>
+            <td width="50%" style="background:#FFF" >
+            				<a href="https://mingle.io/explore?f=product" target="_blank" rel="nofollow" >
+								<img src="images/logos/logo-mingle.io.png" />
+							</a>
+            </td>
+            <td width="50%" style="background:#FFF">
+
+            				
+            
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" style="background:#FFF">
+                            
+                            <a href="https://mingle.io/explore?f=product" target="_blank" rel="nofollow" >
+                            <b>>>> Access to the service</b>
+                            </a>
+                            <br/><br/>
+                        
+            </td>
+            <td width="50%" style="background:#FFF">
+                            
+                            
+                          
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" style="background:#FFF;vertical-align:text-top;">
+                            
+                             Search / BI system using POD database. "mingle.io makes Open Data available at your fingertips through a single query API - elegant and expressive".
+                            
+            </td>
+            <td width="50%" style="background:#FFF;vertical-align:text-top;">
+                            
+                            
+                             
+            </td>
+        </tr>
     </table>
 
 
@@ -196,15 +237,7 @@ $(function(){
                
 
 
-<hr />
-	<div id="search-gtin" style="font-size:28px;">
-                                <form name="formulaire" enctype="multipart/form-data" method="post" action="search/" >	
-                                    <b>Search a GTIN-13 Code</b>
-                                    <input name="gtin" class="search-texte" type="text" value="" size="13" style="font-size:20px;width:230px;"/>  
-                                    <input type="button" class="search-bouton" onclick="submit()" value=">" style="font-size:20px;width:30px;"/> 	
-                                </form>
-                            </div>
-                            <hr/>					
+				
 
 </div>
 
