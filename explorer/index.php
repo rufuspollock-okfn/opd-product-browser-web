@@ -9,7 +9,8 @@
 		
 		if($_SERVER['HTTP_HOST'] == "pod.okserver.org") {
 			define('URL_BASE',						"");
-			define('SITE_BASE',						"http://pod.okserver.org/");	
+			//define('SITE_BASE',					"http://pod.okserver.org/");
+			define('SITE_BASE',						"http://www.product-open-data.com/");
 		} else {
 			define('URL_BASE',						"");
 			define('SITE_BASE',						"http://www.product-open-data.com/");				
@@ -398,9 +399,9 @@
 						$GRAPHE_Separateur = '';
 			
 						$Erreurs = array(
-							'0' => "No error",
+							//'0' => "No error",
 							'1' => "  Missing or invalid parameters",
-							'2' => " Prefix never allocated",
+							//'2' => " Prefix never allocated",
 							'3' => " No exact match on GLN",
 							'5' => " Unknown country code",
 							'8' => " No catalogue exists",
@@ -409,17 +410,19 @@
 							'11' => " Country not on the GEPIR network",
 							'13' => " Illegal Number",
 							'14' => " Daily request limit exceeded",
-							'99' => " Server error	"	
+							'99' => " Server error"	
 							);
 						
-						$SQL = "SELECT count(*) as NB FROM gs1_gcp";
+						$SQL = "SELECT count(*) as NB FROM gs1_gcp where return_code not in (0,2)";
 						$DataSet = mysql_query($SQL);	
 						$Record = mysql_fetch_array($DataSet);
 						$NbTotal = $Record["NB"];
+						
 							
 						$SQL = "SELECT return_code, count(*) as NB FROM gs1_gcp where return_code not in (0,2) group by return_code";
 						$DataSet = mysql_query($SQL);	
 						$Number = mysql_num_rows($DataSet);
+						
 						$i = 1;
 						While ($Record = mysql_fetch_array($DataSet)) {	
 						
@@ -709,7 +712,11 @@
 							if($gcp_nb == $nb_num) { // if all gcp have been checked, green background
 								$Corps .= 		'<td style="padding:2px;background-color:rgb(190, 247, 190);" align="right">'.$nb.'</td>';
 							} else {
-								$Corps .= 		'<td style="padding:2px" align="right">'.$nb.'</td>';
+								if($length > 7) {
+									$Corps .= 		'<td style="padding:2px;background-color:rgb(213, 211, 211);" align="right">'.$nb.'</td>';
+								} else {
+									$Corps .= 		'<td style="padding:2px" align="right">'.$nb.'</td>';
+								}
 							}
 							
 							if($perc_num > 2) {

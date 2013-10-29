@@ -1523,11 +1523,11 @@ width: 80px;
           </div>
         </div>
     </div>
-	
+	  
 	</body>
 
+<? if ($_SERVER['HTTP_HOST'] != 'localhost') {?> 
 <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37935806-1']);
   _gaq.push(['_setDomainName', 'product-open-data.com']);
@@ -1538,6 +1538,7 @@ width: 80px;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+ <? } ?>
 
 </script>
 </html>

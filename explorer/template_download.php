@@ -18,7 +18,8 @@ Please visit first the page explaining <a href="terms-of-use">the terms of use</
              <ul>
                  <li><b>POD Database Specifications</b> Excel file 2013.10.08 :&nbsp;<a href="docs/POD-SPECS-2013.10.08_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
                  <li><b>POD Database</b> gzipped SQL file (MySQL) 2013.10.16 v1 :&nbsp;<a href="docs/pod_web_2013.10.16_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.
-                 </li>    
+                 </li>
+                 <li><b>POD Website (PHP)</b><a href="https://github.com/okfn/products" target="_blank" rel="nofollow"> Direct access to Github</a></li> 
              </ul>    
         </td>
     </tr>

@@ -38,3 +38,5 @@ RewriteRule ^nutrition_us(.*)$ index.php?l=en&p=116
 
 RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+(\/)?$ index.php?l=$1&p=1
 RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+\/?([0-9]+)?([a-z0-9A-Z,_-]+)?(.*)$ index.php?l=$1&p=$2 [QSA,L]
+
+RewriteRule ^product/([0-9]+)$ rest.php?p=$1
