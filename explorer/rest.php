@@ -37,6 +37,7 @@
 	// 0 : GTIN-13 found
 	// 1 : GTIN-13 is not in the database
 	// 2 : GTIN-13 is not valid
+	// 3 : GTIN-13 is not in the database but GLN found
 
 
 	// GET----------------------------------------------------------------------
@@ -54,12 +55,13 @@
 		$Record 	= mysql_fetch_array($DataSet);		
 		
 		if(mysql_num_rows($DataSet) == 0) {
+
 			// the gtin-13 is not in the database
 			$Rest_code = 1;
 
 		} else {
 
-			
+			// the gtin-13 is in the database
 			$Rest_code = 0;
 
 			$GTIN_NM 					= $Record["GTIN_NM"];
@@ -165,32 +167,13 @@
 		
 				$BRAND_TYPE_NM					= trim($Record_BRAND["BRAND_TYPE_NM"]);
 			}
-		
-		
-			// GCP length between 6 and 12 digits
-			$DataSet_GLN = mysql_query("SELECT * FROM gs1_gcp WHERE gcp_cd in (left('".$gtin."',6), left('".$gtin."',7),left('".$gtin."',8),left('".$gtin."',9),left('".$gtin."',10),left('".$gtin."',11),left('".$gtin."',12))");
-			$Record_GLN = mysql_fetch_array($DataSet_GLN);
-		
-			$GLN_RETURN_CODE 			= $Record_GLN["RETURN_CODE"];
-		
-			$GLN_CD 					= $Record_GLN["GLN_CD"];
-			$GLN_NM 					= $Record_GLN["GLN_NM"];
-			$GLN_ADDR_02 				= $Record_GLN["GLN_ADDR_02"];
-			$GLN_ADDR_03 				= $Record_GLN["GLN_ADDR_03"];
-			$GLN_ADDR_04 				= $Record_GLN["GLN_ADDR_04"];
-			$GLN_ADDR_POSTALCODE 		= $Record_GLN["GLN_ADDR_POSTALCODE"];
-			$GLN_ADDR_CITY 				= $Record_GLN["GLN_ADDR_CITY"];
-			$GLN_COUNTRY_ISO_CD 		= $Record_GLN["GLN_COUNTRY_ISO_CD"];
-			
-			
+
 			$IMG_GTIN 			= DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg"; 
 			$IMG_BRAND 			= DOSSIER_IMG."brand/".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".jpg"; 
 			$IMG_GPC 			= DOSSIER_IMG2."gpc/".$GPC_S_CD.".jpg"; 
 			$IMG_COMING_SOON 	= DOSSIER_IMG2."coming-soon.jpg"; 
-			
-		
-			
-			
+
+
 			$data['gtin'] = array(	 		
 				"code"					=> $gtin,
 				"name"					=> $GTIN_NM,
@@ -241,26 +224,47 @@
 								)
 		
 			);
-			
-			$data['gepir'] = array(	 
-				"return-code"			=> array (
-											"code" 			=> $GLN_RETURN_CODE,
-											"name"			=> $GepirReturnCode[$GLN_RETURN_CODE]
-											),
-				"source"				=> "GEPIR",
-				"gln"					=> array (
-											"code" 			=> $GLN_CD,
-											"name"			=> $GLN_NM,
-											"address-1"		=> $GLN_ADDR_02,
-											"address-2"		=> $GLN_ADDR_03,
-											"address-3"		=> $GLN_ADDR_04,
-											"cp"			=> $GLN_ADDR_POSTALCODE,
-											"city"			=> $GLN_ADDR_CITY,
-											"country"		=> $GLN_COUNTRY_ISO_CD
-											)
-			);
-			
+		
 		} // if	
+
+		// GCP length between 6 and 12 digits
+		$DataSet_GLN = mysql_query("SELECT * FROM gs1_gcp WHERE gcp_cd in (left('".$gtin."',6), left('".$gtin."',7),left('".$gtin."',8),left('".$gtin."',9),left('".$gtin."',10),left('".$gtin."',11),left('".$gtin."',12))");
+		$Record_GLN = mysql_fetch_array($DataSet_GLN);
+
+		if($Rest_code == 1 && mysql_num_rows($DataSet_GLN) > 0) {
+			// the gtin-13 is not in the database but gln information exists for this gtin-13
+			$Rest_code = 3;
+		}
+	
+		$GLN_RETURN_CODE 			= $Record_GLN["RETURN_CODE"];
+	
+		$GLN_CD 					= $Record_GLN["GLN_CD"];
+		$GLN_NM 					= $Record_GLN["GLN_NM"];
+		$GLN_ADDR_02 				= $Record_GLN["GLN_ADDR_02"];
+		$GLN_ADDR_03 				= $Record_GLN["GLN_ADDR_03"];
+		$GLN_ADDR_04 				= $Record_GLN["GLN_ADDR_04"];
+		$GLN_ADDR_POSTALCODE 		= $Record_GLN["GLN_ADDR_POSTALCODE"];
+		$GLN_ADDR_CITY 				= $Record_GLN["GLN_ADDR_CITY"];
+		$GLN_COUNTRY_ISO_CD 		= $Record_GLN["GLN_COUNTRY_ISO_CD"];
+			
+
+		$data['gepir'] = array(	 
+			"return-code"			=> array (
+										"code" 			=> $GLN_RETURN_CODE,
+										"name"			=> $GepirReturnCode[$GLN_RETURN_CODE]
+										),
+			"source"				=> "GEPIR",
+			"gln"					=> array (
+										"code" 			=> $GLN_CD,
+										"name"			=> $GLN_NM,
+										"address-1"		=> $GLN_ADDR_02,
+										"address-2"		=> $GLN_ADDR_03,
+										"address-3"		=> $GLN_ADDR_04,
+										"cp"			=> $GLN_ADDR_POSTALCODE,
+										"city"			=> $GLN_ADDR_CITY,
+										"country"		=> $GLN_COUNTRY_ISO_CD
+										)
+		);
 		
 		// trace of the GTIN 
 		
