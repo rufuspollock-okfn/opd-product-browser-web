@@ -179,6 +179,7 @@
 				$DataSet_BRAND = mysql_query($SQL);
 				$Record_BRAND = mysql_fetch_array($DataSet_BRAND);
 	
+				$BSIN 						= $Record_BRAND["BSIN"];
 				$BRAND_NM					= $Record_BRAND["BRAND_NM"];
 				$GROUP_CD					= $Record_BRAND["GROUP_CD"];
 				$BRAND_TYPE_CD			    = $Record_BRAND["BRAND_TYPE_CD"];
@@ -258,6 +259,7 @@
 					"VALUE_GPC_C_NM"				=> $GPC_C_NM,
 					"VALUE_GPC_B_NM"				=> $GPC_B_NM,
 					
+					"VALUE_BSIN"					=> $BSIN,
 					"VALUE_BRAND_NM"				=> $BRAND_NM,	
 					"VALUE_BRAND_TYPE_NM"			=> $BRAND_TYPE_NM,
 					"VALUE_BRAND_LINK"				=> $BRAND_LINK,					
@@ -398,28 +400,22 @@
 			
 						$GRAPHE_Separateur = '';
 			
-						$Erreurs = array(
-							//'0' => "No error",
-							'1' => "  Missing or invalid parameters",
-							//'2' => " Prefix never allocated",
-							'3' => " No exact match on GLN",
-							'5' => " Unknown country code",
-							'8' => " No catalogue exists",
-							'9' => " Company information withheld",
-							'10' => " Prefix no longer subscribed",
-							'11' => " Country not on the GEPIR network",
-							'13' => " Illegal Number",
-							'14' => " Daily request limit exceeded",
-							'99' => " Server error"	
-							);
+						$Erreurs = array();
 						
-						$SQL = "SELECT count(*) as NB FROM gs1_gcp where return_code not in (0,2)";
+						$SQL = "SELECT * FROM gs1_gcp_rc where return_code not in (0,2,101)";
+						$DataSet = mysql_query($SQL);	
+						While ($Record = mysql_fetch_array($DataSet)) {	
+							$Erreurs[$Record["RETURN_CODE"]] = $Record["RETURN_NAME"];	
+						}
+						
+									
+						$SQL = "SELECT count(*) as NB FROM gs1_gcp where return_code not in (0,2,10)";
 						$DataSet = mysql_query($SQL);	
 						$Record = mysql_fetch_array($DataSet);
 						$NbTotal = $Record["NB"];
 						
 							
-						$SQL = "SELECT return_code, count(*) as NB FROM gs1_gcp where return_code not in (0,2) group by return_code";
+						$SQL = "SELECT return_code, count(*) as NB FROM gs1_gcp where return_code not in (0,2,10,101) group by return_code";
 						$DataSet = mysql_query($SQL);	
 						$Number = mysql_num_rows($DataSet);
 						
@@ -432,17 +428,13 @@
 							
 							if($i < $Number) {
 								
-								$VALUE_PIE 		.= $GRAPHE_Separateur."['".$ReturnCode." - ".$Erreurs[$ReturnCode]."<br/> (".number_format($Nb, 0, '.', ' ').")', ".number_format(100*($Nb/$NbTotal), 0, '.', ' ')."]"; 
-								$List[$ReturnCode]["cd"]	 = $ReturnCode;
-								$List[$ReturnCode]["nm"]	 = $Erreurs[$ReturnCode];
+								$VALUE_PIE 		.= $GRAPHE_Separateur."[' Code ".$ReturnCode."<br/>(".number_format($Nb, 0, '.', ' ').")', ".number_format(100*($Nb/$NbTotal), 0, '.', ' ')."]"; 
 								$PERC = $PERC + number_format(100*($Nb/$NbTotal), 0, '.', ' ');
 								$GRAPHE_Separateur 	= ",";
 								
 							} else {
 								
-								$VALUE_PIE 		.= $GRAPHE_Separateur."['".$ReturnCode." - ".$Erreurs[$ReturnCode]."<br/> (".number_format($Nb, 0, '.', ' ').")', ".(100 - $PERC)."]"; 
-								$List[$ReturnCode]["cd"]	 = $ReturnCode;
-								$List[$ReturnCode]["nm"]	 = $Erreurs[$ReturnCode];
+								$VALUE_PIE 		.= $GRAPHE_Separateur."[' Code ".$ReturnCode."<br/>(".number_format($Nb, 0, '.', ' ').")', ".(100 - $PERC)."]"; 
 								$GRAPHE_Separateur 	= ",";					
 							}
 							
@@ -460,22 +452,20 @@
 							
 						));	
 			
-						if(isset($List)) { 
-						
-							$Corps .= 	Template("template_quality",3,$Params=array(
+						$Corps .= 	Template("template_quality",3,$Params=array(
+						));	
+		
+						foreach($Erreurs as $cle=>$valeur) {
+							$Corps .= 	Template("template_quality",4,$Params=array(
+								"VALUE_CD"					=> $cle,
+								"VALUE_NM"					=> $valeur
 							));	
-			
-							foreach($List as $element) {
-								$Corps .= 	Template("template_quality",4,$Params=array(
-									"VALUE_CD"					=> $element["cd"],
-									"VALUE_NM"					=> $element["nm"]
-								));	
-							}
-			
-							$Corps .= 	Template("template_quality",5,$Params=array(
-							));	
+						}
+		
+						$Corps .= 	Template("template_quality",5,$Params=array(
+						));	
 					   
-						} 
+
 					
 					break;
 					case 2:
@@ -701,8 +691,6 @@
 							$nb 			= number_format($nb_num, 0, '.', ' ');
 							$nb_rc_0  		= number_format($nb_rc_0 , 0, '.', ' ');
 							$nb_max_product = number_format($nb_max_product , 0, '.', ' ');
-							
-						
 							
 							$Corps .= 	'<tr>';
 							$Corps .= 		'<td style="padding:2px" align="right">'.$prefix.'</td>';

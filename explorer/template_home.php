@@ -156,7 +156,7 @@ $(function(){
             </td>
             <td width="50%" style="background:#FFF">
 
-            				 <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/" target="_blank" rel="nofollow" >
+            				 <a href="http://pod.opendatasoft.com" target="_blank" rel="nofollow" >
 								<img src="images/logos/logo-ods.png" />
 							</a>
             
@@ -173,7 +173,7 @@ $(function(){
             </td>
             <td width="50%" style="background:#FFF">
                             
-                            <a href="http://pod.opendatasoft.com/explore/dataset/gtin_denorm/" target="_blank" rel="nofollow" >
+                            <a href="http://pod.opendatasoft.com" target="_blank" rel="nofollow" >
                             <b>>>> Access to the service</b></a>
                             <br/><br/>
                           

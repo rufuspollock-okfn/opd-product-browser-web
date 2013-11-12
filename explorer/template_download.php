@@ -10,32 +10,49 @@ Please visit first the page explaining <a href="terms-of-use">the terms of use</
 </p>
 
 
-<h2>POD Database</h2>
+<h2>Dump and Zip to download</h2>
 <table style="background-color: #f0eeee; ; width: 100%;" border="0" cellspacing="5" cellpadding="5" align="center">
 <tbody>
     <tr>
         <td>
              <ul>
-                 <li><b>POD Database Specifications</b> Excel file 2013.10.08 :&nbsp;<a href="docs/POD-SPECS-2013.10.08_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
-                 <li><b>POD Database</b> gzipped SQL file (MySQL) 2013.10.16 v1 :&nbsp;<a href="docs/pod_web_2013.10.16_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.
-                 </li>
-                 <li><b>POD Website (PHP)</b><a href="https://github.com/okfn/products" target="_blank" rel="nofollow"> Direct access to Github</a></li> 
+                <li><b>POD Database - Specifications</b> Excel file 2013.11.08 :&nbsp;<a href="docs/POD-SPECS-2013.11.08_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
+                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.11.08 v1 :&nbsp;<a href="docs/pod_web_2013.11.08_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
+                <li><b>Pictures - Group</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_brand_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li> 
+                <li><b>Pictures - Brand</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_brand_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li>  
+                <li><b>Pictures - GLN</b>  (2013.05.29) :&nbsp;<a href="docs/pod_pictures_gln_2013.05.06_01.zip" target="_blank" rel="nofollow">Direct download</a></li>  
+                <li><b>Pictures - GTIN</b>  (2013.08.29) :&nbsp;<a href="docs/pod_pictures_gtin_2013.08.29_01.zip" target="_blank" rel="nofollow">Direct download</a> (2.6 Gb)</li>                   
              </ul>    
         </td>
     </tr>
 </tbody>
 </table>
 
-<h2>POD Pictures</h2>
+<h2>API</h2>
 <table style="background-color: #f0eeee; ; width: 100%;" border="0" cellspacing="5" cellpadding="5" align="center">
 <tbody>
     <tr>
         <td>
         <ul>
-            <li><b>Groups pictures</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_brand_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li> 
-            <li><b>Brand pictures</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_brand_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li>  
-            <li><b>GLN pictures</b>  (2013.05.29) :&nbsp;<a href="docs/pod_pictures_gln_2013.05.06_01.zip" target="_blank" rel="nofollow">Direct download</a></li>  
-            <li><b>GTIN pictures</b>  (2013.08.29) :&nbsp;<a href="docs/pod_pictures_gtin_2013.08.29_01.zip" target="_blank" rel="nofollow">Direct download</a> (2.6 Gb)</li>  
+            <li><b>POD API</b> - coming soon</li> 
+            <li><b>OpenDataSoft</b><a href="http://pod.opendatasoft.com" target="_blank" rel="nofollow"> > Direct access</a></li> 
+            <li><b>mingle.io</b><a href="https://mingle.io/explore?f=pod" target="_blank" rel="nofollow"> > Direct access</a></li> 
+        </ul>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+
+<h2>Participate on Github</h2>
+<table style="background-color: #f0eeee; ; width: 100%;" border="0" cellspacing="5" cellpadding="5" align="center">
+<tbody>
+    <tr>
+        <td>
+        <ul>
+            <li><b>Github - POD Website (PHP)</b><a href="https://github.com/okfn/product-browser-web" target="_blank" rel="nofollow"> > Direct access</a></li> 
+            <li><b>Github - POD Android App</b><a href="https://github.com/okfn/product-browser-android" target="_blank" rel="nofollow"> > Direct access</a></li> 
+            <li><b>Github - POD Apple App</b><a href="https://github.com/okfn/product-browser-ios" target="_blank" rel="nofollow"> > Direct access</a></li> 
         </ul>
         </td>
     </tr>

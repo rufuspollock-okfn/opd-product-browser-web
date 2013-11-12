@@ -806,7 +806,7 @@ padding-left: 0px;
 padding-right: 0px;
 padding-top: 0px;
 position: relative;
-width: 295px;
+width: 405px;
 z-index: 999;
 					
 				}
@@ -970,6 +970,45 @@ text-align: left;
 text-decoration: none;
 text-shadow: none;
 width: 80px;
+				}
+				
+				
+				#menu-item-5 {
+color: rgb(51, 51, 51);
+display: list-item;
+float: left;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 66px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+text-align: left;
+width: 110px;
+z-index: auto;
+				}
+
+				#menu-item-5  a {				
+color: rgb(93, 93, 93);
+cursor: auto;
+display: block;
+float: none;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+padding-bottom: 22px;
+padding-left: 9px;
+padding-right: 9px;
+padding-top: 24px;
+text-align: left;
+text-decoration: none;
+text-shadow: none;
+width: 92px;
 				}
 			
 				.okfn-ribbon {
@@ -1211,6 +1250,7 @@ width: 80px;
                                   <nav class="nav-collapse collapse">
                                   		<ul id="nav" class="nav">
                                         	<li id="menu-item-1" ><a href="http://product.okfn.org/">Home</a></li> 	
+                                            <li id="menu-item-5" ><a href="http://product.okfn.org/advisory-board/">Advisory Board</a></li>
                                         	<li id="menu-item-2" ><a href="http://product.okfn.org/blog/">Blog</a></li> 
                                             <li id="menu-item-3" ><a href="http://product.okfn.org/barcode-gs1/">Resources</a></li>
                                             <li id="menu-item-4" ><a title="POD &#8211; Product Open Data" href="http://www.product-open-data.com">Browse Data</a></li> 
@@ -1373,14 +1413,15 @@ width: 80px;
 
               			
                         
-						<img  src="images/ecologie.jpg" style="margin-top:10px;" alt=""/>
+						
 						
                         
-
-      
+						<a href="https://play.google.com/store/apps/details?id=org.okfn.pod" target="_blank" rel="nofollow">
+      					<img  src="images/Google-Play-200.png" style="margin-top:10px;" alt=""/>
+                        </a>
                         
-
-
+<br/>
+<img  src="images/ecologie.jpg" style="margin-top:10px;" alt=""/>
 
 						
 						

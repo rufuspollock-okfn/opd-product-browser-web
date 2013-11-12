@@ -31,6 +31,13 @@
 	//======================================================================================================== 
 
 
+	// -------------------------------------------------------------------------
+	// Return Code list
+	//
+	// 0 : GTIN-13 found
+	// 1 : GTIN-13 is not in the database
+	// 2 : GTIN-13 is not valid
+
 
 	// GET----------------------------------------------------------------------
 	$gtin = ((isset($_GET['p']))  && ($_GET['p']>0) ) ? $_GET['p'] : 0; //&& (ctype_digit($_GET['']))
@@ -39,7 +46,7 @@
 	if ((check_gtin($gtin) == 0 ) || ($gtin == 0)){ 
 		// the gtin-13 is not valid
 		$Rest_code = 2;
-
+		
 	} else {
 		
 		$SQL = "select * from gtin where gtin_cd = '".$gtin."'";
@@ -47,7 +54,7 @@
 		$Record 	= mysql_fetch_array($DataSet);		
 		
 		if(mysql_num_rows($DataSet) == 0) {
-
+			// the gtin-13 is not in the database
 			$Rest_code = 1;
 
 		} else {
@@ -215,23 +222,22 @@
 			
 			$data['gpc'] = array(	
 				"img"			=> $IMG_GPC, 
-				"img-default"	=> $IMG_COMING_SOON,
 				"segment" 		=> array (
 									"code" 	=> $GPC_S_CD,
-									"nom"	=> $GPC_S_NM
+									"name"	=> $GPC_S_NM
 								
 								),
 				"family" 		=> array (
 									"code" 	=> $GPC_F_CD,
-									"nom"	=> $GPC_F_NM
+									"name"	=> $GPC_F_NM
 								),
 				"class" 		=> array (
 									"code" 	=> $GPC_C_CD,
-									"nom"	=> $GPC_C_NM
+									"name"	=> $GPC_C_NM
 								),
 				"brick" 		=> array (
 									"code" 	=> $GPC_B_CD,
-									"nom"	=> $GPC_B_NM
+									"name"	=> $GPC_B_NM
 								)
 		
 			);
@@ -254,22 +260,20 @@
 											)
 			);
 			
+		} // if	
 		
-			
-			// trace of the GTIN 
-			
-			$SQL	 				= "select count(*) as NB from search_rest where GTIN_CD = '".$gtin."'";
-			$DataSet_Search_01 		= mysql_query($SQL);
-			$Record_Search_01		= mysql_fetch_array($DataSet_Search_01);
-			if($Record_Search_01["NB"] == 0 ) {
-				$SQL	 				= "insert into search_rest (GTIN_CD,SEARCH_NB) values ('".$gtin."',1)";
-				mysql_query($SQL);				
-			} else {
-				$SQL	 				= "update search_rest set SEARCH_NB = SEARCH_NB + 1 where GTIN_CD = '".$gtin."'";
-				mysql_query($SQL);			
-			}
-			
-		} // if			
+		// trace of the GTIN 
+		
+		$SQL	 				= "select count(*) as NB from search_rest where GTIN_CD = '".$gtin."'";
+		$DataSet_Search_01 		= mysql_query($SQL);
+		$Record_Search_01		= mysql_fetch_array($DataSet_Search_01);
+		if($Record_Search_01["NB"] == 0 ) {
+			$SQL	 				= "insert into search_rest (GTIN_CD,SEARCH_NB) values ('".$gtin."',1)";
+			mysql_query($SQL);				
+		} else {
+			$SQL	 				= "update search_rest set SEARCH_NB = SEARCH_NB + 1 where GTIN_CD = '".$gtin."'";
+			mysql_query($SQL);			
+		}		
 	
 	} // if
 
