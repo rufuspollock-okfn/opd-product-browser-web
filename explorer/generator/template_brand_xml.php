@@ -1,13 +1,14 @@
 <block>
 	<brand>
+    	<bsin><?=$VALUE_BSIN?></bsin>
     	<name><?=$VALUE_BRAND_NM?></name>
         <type><?=$VALUE_BRAND_TYPE_NM?></type>
         <image><?=$VALUE_BRAND_IMG?></image>
         <link><?=$VALUE_BRAND_LINK?></link>
-        <group>
-        	<code><?=$VALUE_GROUP_CD?></code>
-            <name><?=$VALUE_GROUP_NM?></name>
-        </group>
+        <owner>
+        	<code><?=$VALUE_OWNER_CD?></code>
+            <name><?=$VALUE_OWNER_NM?></name>
+        </owner>
     </brand>
 <!--COUPER_ICI-->
     <item>

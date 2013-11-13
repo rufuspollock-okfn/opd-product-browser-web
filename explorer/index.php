@@ -181,16 +181,16 @@
 	
 				$BSIN 						= $Record_BRAND["BSIN"];
 				$BRAND_NM					= $Record_BRAND["BRAND_NM"];
-				$GROUP_CD					= $Record_BRAND["GROUP_CD"];
+				$OWNER_CD					= $Record_BRAND["OWNER_CD"];
 				$BRAND_TYPE_CD			    = $Record_BRAND["BRAND_TYPE_CD"];
 				$BRAND_LINK					= trim($Record_BRAND["BRAND_LINK"]);
 
-				if($GROUP_CD != "") {
-					$SQL = "SELECT * FROM groups where GROUP_CD = ".$GROUP_CD;
-					$DataSet_GROUP = mysql_query($SQL);
-					$Record_GROUP = @mysql_fetch_array($DataSet_GROUP);
+				if($OWNER_CD != "") {
+					$SQL = "SELECT * FROM BRAND_OWNER where OWNER_CD = ".$OWNER_CD;
+					$DataSet_OWNER = mysql_query($SQL);
+					$Record_OWNER = @mysql_fetch_array($DataSet_OWNER);
 			
-					$GROUP_NM					= $Record_GROUP["GROUP_NM"];
+					$OWNER_NM					= $Record_OWNER["OWNER_NM"];
 				
 				}
 				
@@ -220,7 +220,7 @@
 				
 				
 				$IMG_GTIN 	= DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg"; 
-				$IMG_BRAND 	= DOSSIER_IMG."brand/".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".jpg"; 
+				$IMG_BRAND 	= DOSSIER_IMG."brand/".$BSIN.".jpg"; 
 				$IMG_GPC 	= "images/gpc/".$GPC_S_CD.".jpg"; 
 			
 				
@@ -238,8 +238,8 @@
 					
 					"VALUE_PRODUCT_LINE"			=> $PRODUCT_LINE,
 					
-					"VALUE_GROUP_CD"				=> $GROUP_CD,
-					"VALUE_GROUP_NM"				=> $GROUP_NM,
+					"VALUE_OWNER_CD"				=> $OWNER_CD,
+					"VALUE_OWNER_NM"				=> $OWNER_NM,
 					
 					"VALUE_M_G"						=> $GTIN_M_G,
 					"VALUE_M_OZ"					=> $GTIN_M_OZ,
@@ -818,10 +818,11 @@
 					$Corps .= 	Template("template_list_brand_item",1,$Params=array(
 						"VALUE_BRAND_IMG"		=> $BRAND_IMG,
 						"VALUE_BRAND_NM"		=> $xml->brand->name,
+						"VALUE_BSIN"			=> $xml->brand->bsin,
 						"VALUE_BRAND_TYPE_NM"	=> $xml->brand->type,
 						"VALUE_BRAND_LINK"		=> $xml->brand->link,
-						"VALUE_GROUP_CD"		=> $xml->brand->group->code,
-						"VALUE_GROUP_NM"		=> $xml->brand->group->name
+						"VALUE_OWNER_CD"		=> $xml->brand->owner->code,
+						"VALUE_OWNER_NM"		=> $xml->brand->owner->name
 					));	
 					
 					
@@ -932,7 +933,7 @@
 						foreach($xml->brand as $brand) {
 							
 							
-							$IMG	= DOSSIER_IMG."brand/".str_pad($brand->code,8,"0",STR_PAD_LEFT).".jpg";
+						
 							/*
 							if(@fopen($IMG, 'r'))
 							{
@@ -949,7 +950,7 @@
 								"VALUE_BRAND_CD" 		=> $brand->code,
 								"VALUE_BRAND_LINK" 		=> $brand->link,
 								"VALUE_BRAND_NM" 		=> $brand->name,
-								"VALUE_IMG"				=> $IMG,
+								"VALUE_IMG"				=> DOSSIER_IMG."brand/".$brand->bsin.".jpg",
 								"VALUE_IMG_FLAG"		=> $IMG_FLAG
 							));	
 							
@@ -1059,43 +1060,45 @@
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		case 114: // Browse by groups
+		case 114: // Browse by OWNERs
 
 			$URL_Base = "http://www.product-open-data.com/images/";
 			$URL_Base_Replace 	= DOSSIER_IMG;
 
 			if($n > 0) {
 	
-				if(!file_exists("data/product-group-".$n.".xml")) {
+				if(!file_exists("data/product-owner-".$n.".xml")) {
 					$Corps = "<br/>Content not available";
 				} else {	
 					
 				
-					$PssFile = file_get_contents("data/product-group-".$n.".xml");
+					$PssFile = file_get_contents("data/product-owner-".$n.".xml");
 					//echo $PssFile;
 					$xml = new SimpleXMLElement($PssFile);
 					
-					$GROUP_IMG					= str_replace($URL_Base,$URL_Base_Replace,$xml->group->image);
+					$OWNER_IMG					= str_replace($URL_Base,$URL_Base_Replace,$xml->owner->image);
 					
-					$Corps .= 	Template("template_list_group_item",1,$Params=array(
-						"VALUE_GROUP_IMG"		=> $GROUP_IMG,
-						"VALUE_GROUP_CD"		=> $xml->group->code,
-						"VALUE_GROUP_NM"		=> $xml->group->name,
-						"VALUE_GROUP_LINK"		=> $xml->group->link,
-						"VALUE_GROUP_WIKI_EN"	=> $xml->group->wiki->en
+					$Corps .= 	Template("template_list_owner_item",1,$Params=array(
+						"VALUE_OWNER_IMG"		=> $OWNER_IMG,
+						"VALUE_OWNER_CD"		=> $xml->owner->code,
+						"VALUE_OWNER_NM"		=> $xml->owner->name,
+						"VALUE_OWNER_LINK"		=> $xml->owner->link,
+						"VALUE_OWNER_WIKI_EN"	=> $xml->owner->wiki->en
 					));	
 					
 					
 					foreach($xml->item as $item) { 	
 	
-						$BRAND_CD 					= $item->code;								
+						$BRAND_CD 					= $item->code;		
+						$BSIN 						= $item->bsin;							
 						$BRAND_NM 					= $item->name;
 						
 						$BRAND_IMG					= str_replace($URL_Base,$URL_Base_Replace,$item->image);
 						
 
-						$Corps .= 	Template("template_list_group_item",2,$Params=array(
+						$Corps .= 	Template("template_list_owner_item",2,$Params=array(
 							"VALUE_BRAND_CD"				=> $BRAND_CD,
+							"VALUE_BSIN"					=> $BSIN,
 							"VALUE_BRAND_NM"				=> $BRAND_NM,							
 							"VALUE_BRAND_IMG"				=> $BRAND_IMG
 						));	
@@ -1103,58 +1106,58 @@
 							
 					}
 		
-					$Corps .= 	Template("template_list_group_item",3,$Params=array(
+					$Corps .= 	Template("template_list_owner_item",3,$Params=array(
 					));	
 				
 				} // if
 			
 			} else {
 					
-					if(!file_exists("data/product-group-list.xml")) {
+					if(!file_exists("data/product-owner-list.xml")) {
 						$Corps = "<br/>Content not available";
 					} else {
 						
-						$Corps .= 	Template("template_list_group",1,$Params=array(
+						$Corps .= 	Template("template_list_owner",1,$Params=array(
 						));	
 					
 					
-						$PssFile = file_get_contents("data/product-group-list.xml");
+						$PssFile = file_get_contents("data/product-owner-list.xml");
 						//echo $PssFile;
 						$xml = new SimpleXMLElement($PssFile);
 						$i=0;
-						foreach($xml->group as $group) {
+						foreach($xml->owner as $owner) {
 							
-							$IMG = DOSSIER_IMG."group/".str_pad($group->code,6,"0",STR_PAD_LEFT).".jpg";
+							$IMG = DOSSIER_IMG."owner/".str_pad($owner->code,6,"0",STR_PAD_LEFT).".jpg";
 									
-							$Corps_temp_1 .= 	Template("template_list_group",5,$Params=array(
-								"VALUE_GROUP_CD" 		=> $group->code,
-								"VALUE_GROUP_LINK" 		=> $group->link,
-								"VALUE_GROUP_NM" 		=> $group->name,
+							$Corps_temp_1 .= 	Template("template_list_owner",5,$Params=array(
+								"VALUE_OWNER_CD" 		=> $owner->code,
+								"VALUE_OWNER_LINK" 		=> $owner->link,
+								"VALUE_OWNER_NM" 		=> $owner->name,
 								"VALUE_IMG"				=> $IMG
 							));	
 							
-							$Corps_temp_2 .= 	Template("template_list_group",6,$Params=array(
-								"VALUE_GROUP_NM" 		=> $group->name
+							$Corps_temp_2 .= 	Template("template_list_owner",6,$Params=array(
+								"VALUE_OWNER_NM" 		=> $owner->name
 							));	
 	
 							$i++;
 							
 							if($i==4) {
 								
-								$Corps .= 	Template("template_list_group",3,$Params=array(
+								$Corps .= 	Template("template_list_owner",3,$Params=array(
 								));	
 								
 								$Corps .= 	$Corps_temp_1;
 								
-								$Corps .= 	Template("template_list_group",4,$Params=array(
+								$Corps .= 	Template("template_list_owner",4,$Params=array(
 								));			
 								
-								$Corps .= 	Template("template_list_group",3,$Params=array(
+								$Corps .= 	Template("template_list_owner",3,$Params=array(
 								));
 															
 								$Corps .= 	$Corps_temp_2;
 								
-								$Corps .= 	Template("template_list_group",4,$Params=array(
+								$Corps .= 	Template("template_list_owner",4,$Params=array(
 								));	
 								
 								$Corps_temp_1 = '';		
@@ -1167,63 +1170,63 @@
 						
 						if($i==1) {
 							
-							$Corps .= 	Template("template_list_group",3,$Params=array(
+							$Corps .= 	Template("template_list_owner",3,$Params=array(
 							));	
 							
 							$Corps .= 	$Corps_temp_1."<td></td><td></td><td></td>";
 							
-							$Corps .= 	Template("template_list_group",4,$Params=array(
+							$Corps .= 	Template("template_list_owner",4,$Params=array(
 							));			
 							
-							$Corps .= 	Template("template_list_group",3,$Params=array(
+							$Corps .= 	Template("template_list_owner",3,$Params=array(
 							));
 														
 							$Corps .= 	$Corps_temp_2."<td></td><td></td><td></td>";
 							
-							$Corps .= 	Template("template_list_group",4,$Params=array(
+							$Corps .= 	Template("template_list_owner",4,$Params=array(
 							));	
 						}
 
 						if($i==2) {
 							
-							$Corps .= 	Template("template_list_group",3,$Params=array(
+							$Corps .= 	Template("template_list_owner",3,$Params=array(
 							));	
 							
 							$Corps .= 	$Corps_temp_1."<td></td><td></td>";
 							
-							$Corps .= 	Template("template_list_group",4,$Params=array(
+							$Corps .= 	Template("template_list_owner",4,$Params=array(
 							));			
 							
-							$Corps .= 	Template("template_list_group",3,$Params=array(
+							$Corps .= 	Template("template_list_owner",3,$Params=array(
 							));
 														
 							$Corps .= 	$Corps_temp_2."<td></td><td></td>";
 							
-							$Corps .= 	Template("template_list_group",4,$Params=array(
+							$Corps .= 	Template("template_list_owner",4,$Params=array(
 							));	
 						}
 
 						if($i==3) {
 							
-							$Corps .= 	Template("template_list_group",3,$Params=array(
+							$Corps .= 	Template("template_list_owner",3,$Params=array(
 							));	
 							
 							$Corps .= 	$Corps_temp_1."<td></td>";
 							
-							$Corps .= 	Template("template_list_group",4,$Params=array(
+							$Corps .= 	Template("template_list_owner",4,$Params=array(
 							));			
 							
-							$Corps .= 	Template("template_list_group",3,$Params=array(
+							$Corps .= 	Template("template_list_owner",3,$Params=array(
 							));
 														
 							$Corps .= 	$Corps_temp_2."<td></td>";
 							
-							$Corps .= 	Template("template_list_group",4,$Params=array(
+							$Corps .= 	Template("template_list_owner",4,$Params=array(
 							));	
 						}
 						
 							
-						$Corps .= 	Template("template_list_group",2,$Params=array(
+						$Corps .= 	Template("template_list_owner",2,$Params=array(
 						));
 					} // if
 						

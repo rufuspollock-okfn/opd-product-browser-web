@@ -37,7 +37,7 @@ $(function(){
             <td width="50%" style="background:#FFF;font-size:24px;">
             				<div align="center"><a href="brand-list-1/" ><b>Browse by Brands</b></a></div></td>
             <td width="50%" style="background:#FFF;font-size:24px;">
-            				<div align="center"><a href="group-list/"><b>Browse by Groups</b></a></div></td>
+            				<div align="center"><a href="owner-list/"><b>Browse by Owners</b></a></div></td>
     	</tr>
         <tr>
             <td width="50%" style="background:#FFF" >
@@ -46,8 +46,8 @@ $(function(){
            				    </a>
 		    </div></td>
             <td width="50%" style="background:#FFF">
-            				<div align="center"><a href="group-list/">
-            				  <img style="margin-bottom:10px;margin-top:10px;" src="images/navigate-group.jpg" />
+            				<div align="center"><a href="owner-list/">
+            				  <img style="margin-bottom:10px;margin-top:10px;" src="images/navigate-owner.jpg" />
            				    </a>
 		    </div></td>
     	</tr>

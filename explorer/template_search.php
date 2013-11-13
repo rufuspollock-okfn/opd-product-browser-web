@@ -79,7 +79,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 			<? if ($VALUE_BRAND_NM != '') { ?> <b>Brand name</b> : <a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.html" ><?=$VALUE_BRAND_NM?></a> <? } else { ?> The brand will be assigned soon... <? } ?><br/>
             <? if ($VALUE_BRAND_TYPE_NM != '') { ?> <b>Brand type</b> : <?=$VALUE_BRAND_TYPE_NM?> <? } else { ?> The brand type will be assigned soon... <? } ?>
             <br/><br/>
-            <? if ($VALUE_GROUP_NM != '') { ?> <b>Group</b> : <a href="product-group-list-<?=str_pad($VALUE_GROUP_CD,6,"0",STR_PAD_LEFT)?>.html" ><?=$VALUE_GROUP_NM?></a> <? } ?> 
+            <? if ($VALUE_OWNER_NM != '') { ?> <b>Owner</b> : <a href="product-owner-list-<?=str_pad($VALUE_OWNER_CD,6,"0",STR_PAD_LEFT)?>.html" ><?=$VALUE_OWNER_NM?></a> <? } ?> 
             <br/><br/>
             <? if ($VALUE_BRAND_LINK != '') { ?> <b>Website</b> : <a href="http://<?=$VALUE_BRAND_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_BRAND_LINK?></a> <? } ?>
             

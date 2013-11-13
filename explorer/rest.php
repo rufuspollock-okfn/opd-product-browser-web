@@ -146,6 +146,7 @@
 			$DataSet_BRAND = mysql_query($SQL);
 			$Record_BRAND = mysql_fetch_array($DataSet_BRAND);
 		
+			$BSIN						= $Record_BRAND["BSIN"];
 			$BRAND_NM					= $Record_BRAND["BRAND_NM"];
 			$GROUP_CD					= $Record_BRAND["GROUP_CD"];
 			$BRAND_TYPE_CD			    = $Record_BRAND["BRAND_TYPE_CD"];
@@ -169,7 +170,7 @@
 			}
 
 			$IMG_GTIN 			= DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg"; 
-			$IMG_BRAND 			= DOSSIER_IMG."brand/".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".jpg"; 
+			$IMG_BRAND 			= DOSSIER_IMG."brand/".$BSIN.".jpg"; 
 			$IMG_GPC 			= DOSSIER_IMG2."gpc/".$GPC_S_CD.".jpg"; 
 			$IMG_COMING_SOON 	= DOSSIER_IMG2."coming-soon.jpg"; 
 

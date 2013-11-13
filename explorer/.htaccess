@@ -29,8 +29,8 @@ RewriteRule ^product-brand-list-([0-9]+)(.*)$ index.php?l=en&p=112&m=$1
 
 RewriteRule ^supporters(.*)$ index.php?l=en&p=113
 
-RewriteRule ^group-list(\/)$ index.php?l=en&p=114
-RewriteRule ^product-group-list-([0-9]+)(.*)$ index.php?l=en&p=114&n=$1
+RewriteRule ^owner-list(\/)$ index.php?l=en&p=114
+RewriteRule ^product-owner-list-([0-9]+)(.*)$ index.php?l=en&p=114&n=$1
 
 RewriteRule ^smartphone(.*)$ index.php?l=en&p=115
 

@@ -11,10 +11,11 @@ The POD database is public. Go to "Projects & Download" to download it.
                 <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px;background-image:url('images/coming-soon.jpg');" src="<?=$VALUE_BRAND_IMG?>" title="<?=$VALUE_BRAND_NM?>" alt="<?=$VALUE_BRAND_NM?>" /></td>
                 <td width="450px">
                 	<h4>Brand</h4>
+                    <b>BSIN</b> : <?=$VALUE_BSIN?><br/>
 					<b>Brand name</b> : <?=$VALUE_BRAND_NM?><br/>
                     <b>Brand type</b> : <?=$VALUE_BRAND_TYPE_NM?><br/><br/> 
-                    <? if($VALUE_GROUP_NM != "") { ?>
-                    <b>Group</b> : <a  href="product-group-list-<?=str_pad($VALUE_GROUP_CD,6,"0",STR_PAD_LEFT)?>.html" ><?=$VALUE_GROUP_NM?></a><br/><br/> 
+                    <? if($VALUE_OWNER_NM != "") { ?>
+                    <b>Owner</b> : <a  href="product-owner-list-<?=str_pad($VALUE_OWNER_CD,6,"0",STR_PAD_LEFT)?>.html" ><?=$VALUE_OWNER_NM?></a><br/><br/> 
                     <? } ?>
                     <b>Website</b> : <a href="http://<?=$VALUE_BRAND_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_BRAND_LINK?></a><br/>  
                 </td>

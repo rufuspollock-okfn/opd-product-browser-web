@@ -14,10 +14,10 @@
         </td>
     </tr>
     <tr>
-    	<td><a href="group-list/" ><img src="images/navigate-group.jpg" /></a></td>
+    	<td><a href="owner-list/" ><img src="images/navigate-owner.jpg" /></a></td>
         <td>
-            <h2>by Groups</h2>
-        	<a href="group-list/" >Access to the list</a>
+            <h2>by Owners</h2>
+        	<a href="owner-list/" >Access to the list</a>
         </td>
     </tr>
     <tr>
