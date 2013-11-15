@@ -8,7 +8,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 
             <table border="0" cellspacing="0px" cellpadding="0px">
             <tr>
-                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_OWNER_IMG?>" title="<?=$VALUE_OWNER_NM?>" alt="<?=$VALUE_OWNER_NM?>" onerror="this.src='images/coming-soon.jpg';"  /></td>
+                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG><?=$VALUE_OWNER_IMG?>" title="<?=$VALUE_OWNER_NM?>" alt="<?=$VALUE_OWNER_NM?>" onerror="this.src='images/coming-soon.jpg';"  /></td>
                 <td width="450px">
                 	<h4>Owner</h4>
 					<b>Owner name</b> : <?=$VALUE_OWNER_NM?><br/><br/>
@@ -26,7 +26,7 @@ The POD database is public. Go to "Projects & Download" to download it.
             <td width="150px">
               
                 	<a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.html" > 
-                    <img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_BRAND_IMG?>" alt="<?=$VALUE_BRAND_NM?>" title="<?=$VALUE_BRAND_NM?>" onerror="this.src='images/coming-soon.jpg';"  />
+                    <img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG><?=$VALUE_BRAND_IMG?>" alt="<?=$VALUE_BRAND_NM?>" title="<?=$VALUE_BRAND_NM?>" onerror="this.src='images/coming-soon.jpg';"  />
                     </a>
             </td>
             <td width="450px">

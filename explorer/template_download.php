@@ -16,8 +16,8 @@ Please visit first the page explaining <a href="terms-of-use">the terms of use</
     <tr>
         <td>
              <ul>
-                <li><b>POD Database - Specifications</b> Excel file 2013.11.08 :&nbsp;<a href="docs/POD-SPECS-2013.11.08_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
-                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.11.13 v1 :&nbsp;<a href="docs/pod_web_2013.11.13_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
+                <li><b>POD Database - Specifications</b> Excel file 2013.11.13 :&nbsp;<a href="docs/POD-SPECS-2013.11.13_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
+                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.11.14 v1 :&nbsp;<a href="docs/pod_web_2013.11.14_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
                 <li><b>Pictures - Owner</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_owner_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li> 
                 <li><b>Pictures - Brand</b> (2013.11.13) :&nbsp;<a href="docs/pod_pictures_brand_2013.11.13_01.zip" target="_blank" rel="nofollow">Direct download</a></li>
                 <li><b>Pictures - GTIN</b>  (2013.08.29) :&nbsp;<a href="docs/pod_pictures_gtin_2013.08.29_01.zip" target="_blank" rel="nofollow">Direct download</a> (2.6 Gb)</li>                   

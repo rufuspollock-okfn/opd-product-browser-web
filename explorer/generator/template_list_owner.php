@@ -14,8 +14,8 @@ The POD database is public. Go to "Projects & Download" to download it.<br/>
     </tr>
 <!--COUPER_ICI-->
     	<td>
-        <a href="product-owner-list-<?=str_pad($VALUE_OWNER_CD,6,"0",STR_PAD_LEFT)?><?=EXTENSION?>">
-	          <img src="<?=$VALUE_IMG?>" border="0" width="125px" title="Owner - <?=$VALUE_OWNER_NM?>" alt="Owner - <?=$VALUE_OWNER_NM?>" onerror="this.src='images/coming-soon.jpg';" /> 
+        <a href="product-owner-list-<?=str_pad($VALUE_OWNER_CD,6,"0",STR_PAD_LEFT)?>.html">
+	          <img src="<DOSSIER_IMG><?=$VALUE_IMG?>" border="0" width="125px" title="Owner - <?=$VALUE_OWNER_NM?>" alt="Owner - <?=$VALUE_OWNER_NM?>" onerror="this.src='images/coming-soon.jpg';" /> 
 
         </a>
         </td> 

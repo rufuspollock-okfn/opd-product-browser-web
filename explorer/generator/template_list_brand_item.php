@@ -8,7 +8,7 @@ The POD database is public. Go to "Projects & Download" to download it.
 
             <table border="0" cellspacing="0px" cellpadding="0px">
             <tr>
-                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px;background-image:url('images/coming-soon.jpg');" src="<?=$VALUE_BRAND_IMG?>" title="<?=$VALUE_BRAND_NM?>" alt="<?=$VALUE_BRAND_NM?>" /></td>
+                <td width="150px"><img style="margin: 0px; border:#CCCCCC solid 1px;background-image:url('images/coming-soon.jpg');" src="<DOSSIER_IMG><?=$VALUE_BRAND_IMG?>" title="<?=$VALUE_BRAND_NM?>" alt="<?=$VALUE_BRAND_NM?>" /></td>
                 <td width="450px">
                 	<h4>Brand</h4>
                     <b>BSIN</b> : <?=$VALUE_BSIN?><br/>
@@ -42,7 +42,7 @@ The POD database is public. Go to "Projects & Download" to download it.
                                 }
                             ?>      
                             <div style="background-image:url('images/coming-soon.jpg');border:#CCCCCC solid 1px;width:150px;height:150px;border-spacing:0px;">          
-                            <img itemprop="image" style="margin: 0px; padding:0px;"  width ="150px" height="150px" src="<?=$VALUE_GTIN_IMG?>" alt="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?>" title="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?> " />
+                            <img itemprop="image" style="margin: 0px; padding:0px;"  width ="150px" height="150px" src="<DOSSIER_IMG><?=$VALUE_GTIN_IMG?>" alt="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?>" title="<?=$VALUE_BRAND_NM?> - <? if ($VALUE_PRODUCT_LINE != '') echo $VALUE_PRODUCT_LINE." - "; ?><?=$VALUE_GTIN_NM?> <?=$VALUE_GTIN_CD?> <?=$VALUE_UPC_CD?> " />
                             </div>  
                         </td>
                         <td width="450px">

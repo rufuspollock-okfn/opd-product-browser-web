@@ -796,256 +796,28 @@
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 		case 112: //  Browse by brand
-
-			$URL_Base = "http://www.product-open-data.com/images/";
-			$URL_Base_Replace 	= DOSSIER_IMG;
-
-
+		//-------------------------------------------------------------------------------------------------------------------------------------------------------------	
+		
 			if($m > 0) {
 	
 				if(!file_exists("data/product-brand-".$m.".xml")) {
 					$Corps = "<br/>Content not available";
 				} else {
-					
-				
-					$PssFile = file_get_contents("data/product-brand-".$m.".xml");
-					//echo $PssFile;
-					$xml = new SimpleXMLElement($PssFile);
-					
-					//echo $xml->brand->image;
-					$BRAND_IMG					= str_replace($URL_Base,$URL_Base_Replace,$xml->brand->image);
-					
-					$Corps .= 	Template("template_list_brand_item",1,$Params=array(
-						"VALUE_BRAND_IMG"		=> $BRAND_IMG,
-						"VALUE_BRAND_NM"		=> $xml->brand->name,
-						"VALUE_BSIN"			=> $xml->brand->bsin,
-						"VALUE_BRAND_TYPE_NM"	=> $xml->brand->type,
-						"VALUE_BRAND_LINK"		=> $xml->brand->link,
-						"VALUE_OWNER_CD"		=> $xml->brand->owner->code,
-						"VALUE_OWNER_NM"		=> $xml->brand->owner->name
-					));	
-					
-					
-					foreach($xml->item as $item) { 	
-	
-						$GTIN_CD 					= $item->gtin;	
-						$GCP_CD 					= $item->gcp;								
-						$GTIN_NM 					= $item->name;
-						
-						$GPC_S_IMG 					= $item->gpc->image;	
-						$GPC_S_NM 					= $item->gpc->name;	
-						
-						$REG_C						= $item->registration->country;
-						$REG_N						= $item->registration->office;
-						
-						$BRAND_NM 					= $item->brand;
-						
-						$GTIN_PRODUCT_LINE 			= $item->productLine;
-						
-						$GTIN_M_G 					= $item->measure->g;
-						$GTIN_M_OZ 					= $item->measure->oz;
-						$GTIN_M_ML 					= $item->measure->ml;
-						$GTIN_M_FLOZ 				= $item->measure->floz;
-						$GTIN_M_ABV 				= $item->measure->abv;
-						$GTIN_M_ABW 				= $item->measure->abw;
-						
-						$GTIN_PKG_UNIT 				= $item->packaging->internalUnit;
-						
-						$NUTRI_FLAG 				= $item->nutri_flag;
-						
-						$GTIN_IMG					= str_replace($URL_Base,$URL_Base_Replace,$item->image);
-					
-						
-						if(substr($GTIN_CD,0,1) == "0") {
-							//echo $GTIN_CD;
-							$UPC_CD = substr($GTIN_CD,1,12);
-							$HTML_UPC_CD = " / UPC ".$UPC_CD;
-						} else {
-							$HTML_UPC_CD = "";
-						}
-						/*
-						if($PREVIOUS_GCP_CD != $GCP_CD) { 
-							$Corps .= 	Template("template_list_gpc_item",5,$Params=array(
-							));		
-							$Corps .= "<h3>GCP ".$GCP_CD."</h3>";  
-							$Corps .= 	Template("template_list_gpc_item",3,$Params=array(
-							));	
-						}
-						*/
-						$Corps .= 	Template("template_list_brand_item",2,$Params=array(
-							"VALUE_GTIN_CD"					=> $GTIN_CD,
-							"VALUE_UPC_CD"					=> $HTML_UPC_CD,
-							"VALUE_GTIN_NM"					=> $GTIN_NM,
-							"VALUE_GCP_CD"					=> $GCP_CD,
-							
-							"VALUE_GPC_S_IMG" 				=> $GPC_S_IMG,	
-							"VALUE_GPC_S_NM" 				=> $GPC_S_NM,	
-							
-							
-							"VALUE_REG_N"					=> $REG_N,
-							"VALUE_REG_C"					=> $REG_C,
-							
-							"VALUE_BRAND_NM"				=> $BRAND_NM,
-							"VALUE_PRODUCT_LINE"			=> $GTIN_PRODUCT_LINE,
-							
-							"VALUE_M_G"						=> $GTIN_M_G,
-							"VALUE_M_OZ"					=> $GTIN_M_OZ,
-							"VALUE_M_ML"					=> $GTIN_M_ML,
-							"VALUE_M_FLOZ"					=> $GTIN_M_FLOZ,
-							"VALUE_M_ABV"					=> $GTIN_M_ABV,
-							"VALUE_M_ABW"					=> $GTIN_M_ABW,
-							"VALUE_PKG_UNIT"				=> $GTIN_PKG_UNIT,
-							
-							"VALUE_NUTRI_FLAG"				=> $NUTRI_FLAG,
-							
-							"VALUE_GTIN_IMG"				=> $GTIN_IMG
-							
-							
-						));	
-						
-
-						$PREVIOUS_GCP_CD			= $GCP_CD;	
-							
-					}
-		
-					$Corps .= 	Template("template_list_brand_item",3,$Params=array(
-					));	
-				
+					$Corps = file_get_contents("cache/product-brand-".$m.".html");
 				} // if
 			
 			} else {
 				
 				if($n > 0) {
 					
-					
-					if(!file_exists("data/product-brand-list-".$n.".xml")) {
+					if(!file_exists("cache/product-brand-list-".$n.".html")) {
 						$Corps = "<br/>Content not available";
 					} else {
-						
-						$Corps .= 	Template("template_list_brand",1,$Params=array(
+						$Corps .= 	Template("template_list_brand_header",1,$Params=array(
 							"VALUE_N"	=> $n
 						));	
 					
-						$PssFile = file_get_contents("data/product-brand-list-".$n.".xml");
-						//echo $PssFile;
-						$xml = new SimpleXMLElement($PssFile);
-						$i=0;
-						foreach($xml->brand as $brand) {
-							
-							
-						
-							/*
-							if(@fopen($IMG, 'r'))
-							{
-							  $IMG_FLAG = 1;
-							  
-							}
-							else
-							{
-							   $IMG_FLAG = 0;
-							}
-							*/
-									
-							$Corps_temp_1 .= 	Template("template_list_brand",5,$Params=array(
-								"VALUE_BRAND_CD" 		=> $brand->code,
-								"VALUE_BRAND_LINK" 		=> $brand->link,
-								"VALUE_BRAND_NM" 		=> $brand->name,
-								"VALUE_IMG"				=> DOSSIER_IMG."brand/".$brand->bsin.".jpg",
-								"VALUE_IMG_FLAG"		=> $IMG_FLAG
-							));	
-							
-							$Corps_temp_2 .= 	Template("template_list_brand",6,$Params=array(
-								"VALUE_BRAND_NM" 		=> $brand->name
-							));	
-	
-							$i++;
-							
-							if($i==4) {
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));	
-								
-								$Corps .= 	$Corps_temp_1;
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));			
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));
-															
-								$Corps .= 	$Corps_temp_2;
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));	
-								
-								$Corps_temp_1 = '';		
-								$Corps_temp_2 = '';		
-								$i=0;				
-																				
-							} // 3
-						
-						} // foreach
-						
-							if($i==1) {
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));	
-								
-								$Corps .= 	$Corps_temp_1."<td></td><td></td><td></td>";
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));			
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));
-															
-								$Corps .= 	$Corps_temp_2."<td></td><td></td><td></td>";
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));	
-							}
-
-							if($i==2) {
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));	
-								
-								$Corps .= 	$Corps_temp_1."<td></td><td></td>";
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));			
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));
-															
-								$Corps .= 	$Corps_temp_2."<td></td><td></td>";
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));	
-							}
-
-							if($i==3) {
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));	
-								
-								$Corps .= 	$Corps_temp_1."<td></td>";
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));			
-								
-								$Corps .= 	Template("template_list_brand",3,$Params=array(
-								));
-															
-								$Corps .= 	$Corps_temp_2."<td></td>";
-								
-								$Corps .= 	Template("template_list_brand",4,$Params=array(
-								));	
-							}
-						
-							
-						$Corps .= 	Template("template_list_brand",2,$Params=array(
-						));
+						$Corps .= 	file_get_contents("cache/product-brand-list-".$n.".html");
 					} // if
 						
 				} // if							
@@ -1060,178 +832,27 @@
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		case 114: // Browse by OWNERs
-
-			$URL_Base = "http://www.product-open-data.com/images/";
-			$URL_Base_Replace 	= DOSSIER_IMG;
+		// Browse by owners
+		//-------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		case 114: 
 
 			if($n > 0) {
 	
 				if(!file_exists("data/product-owner-".$n.".xml")) {
 					$Corps = "<br/>Content not available";
 				} else {	
-					
-				
-					$PssFile = file_get_contents("data/product-owner-".$n.".xml");
-					//echo $PssFile;
-					$xml = new SimpleXMLElement($PssFile);
-					
-					$OWNER_IMG					= str_replace($URL_Base,$URL_Base_Replace,$xml->owner->image);
-					
-					$Corps .= 	Template("template_list_owner_item",1,$Params=array(
-						"VALUE_OWNER_IMG"		=> $OWNER_IMG,
-						"VALUE_OWNER_CD"		=> $xml->owner->code,
-						"VALUE_OWNER_NM"		=> $xml->owner->name,
-						"VALUE_OWNER_LINK"		=> $xml->owner->link,
-						"VALUE_OWNER_WIKI_EN"	=> $xml->owner->wiki->en
-					));	
-					
-					
-					foreach($xml->item as $item) { 	
-	
-						$BRAND_CD 					= $item->code;		
-						$BSIN 						= $item->bsin;							
-						$BRAND_NM 					= $item->name;
-						
-						$BRAND_IMG					= str_replace($URL_Base,$URL_Base_Replace,$item->image);
-						
-
-						$Corps .= 	Template("template_list_owner_item",2,$Params=array(
-							"VALUE_BRAND_CD"				=> $BRAND_CD,
-							"VALUE_BSIN"					=> $BSIN,
-							"VALUE_BRAND_NM"				=> $BRAND_NM,							
-							"VALUE_BRAND_IMG"				=> $BRAND_IMG
-						));	
-						
-							
-					}
-		
-					$Corps .= 	Template("template_list_owner_item",3,$Params=array(
-					));	
-				
+					$Corps = file_get_contents("cache/product-owner-".$n.".html");
 				} // if
 			
 			} else {
 					
-					if(!file_exists("data/product-owner-list.xml")) {
-						$Corps = "<br/>Content not available";
-					} else {
+				if(!file_exists("data/product-owner-list.xml")) {
+					$Corps = "<br/>Content not available";
+				} else {
+					$Corps = file_get_contents("cache/product-owner-list.html");
+				} // if
 						
-						$Corps .= 	Template("template_list_owner",1,$Params=array(
-						));	
-					
-					
-						$PssFile = file_get_contents("data/product-owner-list.xml");
-						//echo $PssFile;
-						$xml = new SimpleXMLElement($PssFile);
-						$i=0;
-						foreach($xml->owner as $owner) {
-							
-							$IMG = DOSSIER_IMG."owner/".str_pad($owner->code,6,"0",STR_PAD_LEFT).".jpg";
-									
-							$Corps_temp_1 .= 	Template("template_list_owner",5,$Params=array(
-								"VALUE_OWNER_CD" 		=> $owner->code,
-								"VALUE_OWNER_LINK" 		=> $owner->link,
-								"VALUE_OWNER_NM" 		=> $owner->name,
-								"VALUE_IMG"				=> $IMG
-							));	
-							
-							$Corps_temp_2 .= 	Template("template_list_owner",6,$Params=array(
-								"VALUE_OWNER_NM" 		=> $owner->name
-							));	
-	
-							$i++;
-							
-							if($i==4) {
-								
-								$Corps .= 	Template("template_list_owner",3,$Params=array(
-								));	
-								
-								$Corps .= 	$Corps_temp_1;
-								
-								$Corps .= 	Template("template_list_owner",4,$Params=array(
-								));			
-								
-								$Corps .= 	Template("template_list_owner",3,$Params=array(
-								));
-															
-								$Corps .= 	$Corps_temp_2;
-								
-								$Corps .= 	Template("template_list_owner",4,$Params=array(
-								));	
-								
-								$Corps_temp_1 = '';		
-								$Corps_temp_2 = '';		
-								$i=0;				
-																				
-							} // 3
-						
-						} // foreach
-						
-						if($i==1) {
-							
-							$Corps .= 	Template("template_list_owner",3,$Params=array(
-							));	
-							
-							$Corps .= 	$Corps_temp_1."<td></td><td></td><td></td>";
-							
-							$Corps .= 	Template("template_list_owner",4,$Params=array(
-							));			
-							
-							$Corps .= 	Template("template_list_owner",3,$Params=array(
-							));
-														
-							$Corps .= 	$Corps_temp_2."<td></td><td></td><td></td>";
-							
-							$Corps .= 	Template("template_list_owner",4,$Params=array(
-							));	
-						}
-
-						if($i==2) {
-							
-							$Corps .= 	Template("template_list_owner",3,$Params=array(
-							));	
-							
-							$Corps .= 	$Corps_temp_1."<td></td><td></td>";
-							
-							$Corps .= 	Template("template_list_owner",4,$Params=array(
-							));			
-							
-							$Corps .= 	Template("template_list_owner",3,$Params=array(
-							));
-														
-							$Corps .= 	$Corps_temp_2."<td></td><td></td>";
-							
-							$Corps .= 	Template("template_list_owner",4,$Params=array(
-							));	
-						}
-
-						if($i==3) {
-							
-							$Corps .= 	Template("template_list_owner",3,$Params=array(
-							));	
-							
-							$Corps .= 	$Corps_temp_1."<td></td>";
-							
-							$Corps .= 	Template("template_list_owner",4,$Params=array(
-							));			
-							
-							$Corps .= 	Template("template_list_owner",3,$Params=array(
-							));
-														
-							$Corps .= 	$Corps_temp_2."<td></td>";
-							
-							$Corps .= 	Template("template_list_owner",4,$Params=array(
-							));	
-						}
-						
-							
-						$Corps .= 	Template("template_list_owner",2,$Params=array(
-						));
-					} // if
-						
-				} // if							
-													
+			} // if																
 
 			break;
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------
