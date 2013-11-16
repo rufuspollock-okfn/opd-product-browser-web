@@ -800,7 +800,8 @@
 		
 			if($m > 0) {
 	
-				if(!file_exists("data/product-brand-".$m.".xml")) {
+				
+				if(!file_exists("cache/product-brand-".$m.".html")) {
 					$Corps = "<br/>Content not available";
 				} else {
 					$Corps = file_get_contents("cache/product-brand-".$m.".html");
@@ -809,7 +810,6 @@
 			} else {
 				
 				if($n > 0) {
-					
 					if(!file_exists("cache/product-brand-list-".$n.".html")) {
 						$Corps = "<br/>Content not available";
 					} else {
@@ -838,7 +838,7 @@
 
 			if($n > 0) {
 	
-				if(!file_exists("data/product-owner-".$n.".xml")) {
+				if(!file_exists("cache/product-owner-".$n.".html")) {
 					$Corps = "<br/>Content not available";
 				} else {	
 					$Corps = file_get_contents("cache/product-owner-".$n.".html");
@@ -846,7 +846,7 @@
 			
 			} else {
 					
-				if(!file_exists("data/product-owner-list.xml")) {
+				if(!file_exists("cache/product-owner-list.html")) {
 					$Corps = "<br/>Content not available";
 				} else {
 					$Corps = file_get_contents("cache/product-owner-list.html");
