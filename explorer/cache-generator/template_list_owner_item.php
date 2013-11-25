@@ -12,7 +12,7 @@ The POD database is public. Go to "Projects & Download" to download it.
                 <td width="450px">
                 	<h4>Owner</h4>
 					<b>Owner name</b> : <?=$VALUE_OWNER_NM?><br/><br/>
-                    <b>Website</b> : <a href="http://<?=$VALUE_OWNER_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_OWNER_LINK?></a><br/>  
+                    <b>Website</b> : <a href="<?=$VALUE_OWNER_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_OWNER_LINK?></a><br/>  
                     <br/>
                     <img src="images/35px-Wikipedia-logo.png" /> <a href="http://en.wikipedia.org/wiki/<?=$VALUE_OWNER_WIKI_EN?>" target="_blank" rel="nofollow">See the article on Wikipedia</a><br/> 
                 </td>

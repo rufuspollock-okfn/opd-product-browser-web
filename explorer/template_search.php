@@ -81,7 +81,7 @@ The POD database is public. Go to "Projects & Download" to download it.
             <br/><br/>
             <? if ($VALUE_OWNER_NM != '') { ?> <b>Owner</b> : <a href="product-owner-list-<?=str_pad($VALUE_OWNER_CD,6,"0",STR_PAD_LEFT)?>.html" ><?=$VALUE_OWNER_NM?></a> <? } ?> 
             <br/><br/>
-            <? if ($VALUE_BRAND_LINK != '') { ?> <b>Website</b> : <a href="http://<?=$VALUE_BRAND_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_BRAND_LINK?></a> <? } ?>
+            <? if ($VALUE_BRAND_LINK != '') { ?> <b>Website</b> : <a href="<?=$VALUE_BRAND_LINK?>" target="_blank" rel="nofollow"><?=$VALUE_BRAND_LINK?></a> <? } ?>
             
 		</td> 
 	</tr>

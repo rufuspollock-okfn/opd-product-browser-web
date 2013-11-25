@@ -9,7 +9,7 @@
 		<meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
 		<meta http-equiv="Content-Language" content="<?=SITE_LANGUAGE?>" />
 		
-		<? if(SITE_DESCRIPTION != "") { ?><meta http-equiv="description" name="description" content="<?=SITE_DESCRIPTION?> <?=$VALUE_SiteTitle?>"/><? } ?> 
+		<? if(SITE_DESCRIPTION != "") { ?><meta http-equiv="description" name="description" content="The world's largest open product database joins Open Knowledge Foundation and you can get involved!"/><? } ?> 
 		<? if(SITE_KEYWORDS != "") { ?><meta http-equiv="keywords" name="keywords" content="<?=SITE_KEYWORDS?>"/><? } ?>
 		
 		<meta http-equiv="revisit-after" name="Revisit-after" content="2 days" />
@@ -628,7 +628,7 @@
 					line-height: 20px;
 					margin-bottom: 15px;
 					margin-top: 0px;
-					width: 1903px;
+					
 				}
 
 				.navbar {
@@ -641,7 +641,7 @@
 					margin-bottom: 0px;
 					overflow-x: visible;
 					overflow-y: visible;
-					width: 1903px;	
+					
 				}
 				
 				.navbar-inner {
@@ -687,7 +687,7 @@
 					min-height: 40px;
 					padding-left: 0px;
 					padding-right: 0px;
-					width: 1903px;
+					
 				}
 				
 				.container {
@@ -723,7 +723,7 @@
 					padding-top: 0px;
 					text-decoration: none;
 					text-shadow: rgb(255, 255, 255) 0px 1px 0px;
-					width: 223px;
+					
 					
 				}
 				.navbar a {
@@ -761,7 +761,7 @@
 					max-width: 100%;
 					text-shadow: rgb(255, 255, 255) 0px 1px 0px;
 					vertical-align: middle;
-					width: 35px;
+					
 				}
 				
 				.nav-collapse.collapse {
@@ -782,7 +782,7 @@ transition-delay: 0s;
 transition-duration: 0.35s;
 transition-property: height;
 transition-timing-function: ease;
-width: 940px;		
+	
 				}
 				
 				.nav {
@@ -806,7 +806,7 @@ padding-left: 0px;
 padding-right: 0px;
 padding-top: 0px;
 position: relative;
-width: 405px;
+
 z-index: 999;
 					
 				}
@@ -824,7 +824,7 @@ list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
 text-align: left;
-width: 56px;
+
 z-index: auto;
 				}
 				
@@ -848,7 +848,7 @@ padding-top: 24px;
 text-align: left;
 text-decoration: none;
 text-shadow: none;
-width: 38px;
+
 				}
 				
 				#menu-item-2 {
@@ -863,7 +863,7 @@ list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
 text-align: left;
-width: 45px;
+
 z-index: auto;
 				}
 				
@@ -886,7 +886,7 @@ padding-top: 24px;
 text-align: left;
 text-decoration: none;
 text-shadow: none;
-width: 27px;
+
 				}
 
 				#menu-item-3 {
@@ -902,7 +902,7 @@ list-style-position: outside;
 list-style-type: none;
 position: relative;
 text-align: left;
-width: 96px;
+
 z-index: 1000;
 				}
 				
@@ -925,7 +925,7 @@ padding-top: 24px;
 text-align: left;
 text-decoration: none;
 text-shadow: none;
-width: 78px;
+
 				}
 				
 				#menu-item-4 {
@@ -943,7 +943,7 @@ list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
 text-align: left;
-width: 98px;
+
 z-index: auto;
 				}
 
@@ -969,7 +969,7 @@ padding-top: 24px;
 text-align: left;
 text-decoration: none;
 text-shadow: none;
-width: 80px;
+
 				}
 				
 				
@@ -985,7 +985,7 @@ list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
 text-align: left;
-width: 110px;
+
 z-index: auto;
 				}
 
@@ -1008,7 +1008,7 @@ padding-top: 24px;
 text-align: left;
 text-decoration: none;
 text-shadow: none;
-width: 92px;
+
 				}
 			
 				.okfn-ribbon {
@@ -1075,7 +1075,7 @@ width: 92px;
 					padding-right: 0px;
 					padding-top: 0px;
 					text-shadow: none;
-					width: 1903px;
+
 					
 				}
 				
@@ -1102,7 +1102,7 @@ width: 92px;
 					padding-right: 0px;
 					padding-top: 10px;
 					text-shadow: none;
-					width: 1903px;
+
 				}
 				
 				.okf-footer {
@@ -1121,7 +1121,7 @@ width: 92px;
 					padding-right: 0px;
 					padding-top: 15px;
 					text-shadow: none;
-					width: 1903px;
+
 					
 				}
 				
@@ -1242,7 +1242,8 @@ width: 92px;
                                   class="brand" 
                                   href="http://product.okfn.org">
                                   
-                                              <img src="http://product.okfn.org/files/2013/09/cropped-openproduct_601.png" alt="logo" />
+                                              
+                                              <img src="http://product.okfn.org/files/2013/11/cropped-openproduct_301.png" alt="logo">
                                 
                                               Open Product Data                      </a>
                               

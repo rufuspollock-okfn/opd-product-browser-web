@@ -21,7 +21,7 @@
         </td>
     </tr>
     <tr>
-    	<td><a href="pod.opendatasoft.com"  target="_blank" rel="nofollow"><img src="images/navigate-ods.png" /></a></td>
+    	<td><a href="http://pod.opendatasoft.com"  target="_blank" rel="nofollow"><img src="images/navigate-ods.png" /></a></td>
         <td>
             <h2>OpenDataSoft</h2>
             
@@ -29,7 +29,7 @@
             
             POD database has been loaded in their software. The scope of the dataset used is defined by products having brand, GCP and GPC segment assigned (quality level 1) ->  
             
-        	<a href="pod.opendatasoft.com" target="_blank" rel="nofollow">Access to the website</a>
+        	<a href="http://pod.opendatasoft.com" target="_blank" rel="nofollow">Access to the website</a>
         </td>
     </tr>
 

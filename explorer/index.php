@@ -1,42 +1,21 @@
 <?
 
-
+	//echo $_SERVER['HTTP_HOST'];
 	if($_SERVER['HTTP_HOST'] == "localhost") {
 		define('URL_BASE',						"D:/Programmes/wamp/www/github/products/explorer/");	
 		define('SITE_BASE',						"http://localhost/github/products/explorer/");	
-		
 	} else {
-		
-		if($_SERVER['HTTP_HOST'] == "pod.okserver.org") {
 			define('URL_BASE',						"");
-			//define('SITE_BASE',					"http://pod.okserver.org/");
-			define('SITE_BASE',						"http://www.product-open-data.com/");
-		} else {
-			define('URL_BASE',						"");
-			define('SITE_BASE',						"http://www.product-open-data.com/");				
-		}
+			define('SITE_BASE',						"http://".$_SERVER['HTTP_HOST']);
 	}
 	
 	define('EXTENSION',							".html");
-
 	define('DOSSIER_RESSOURCES',				URL_BASE."ressources/");
-
 	define('DOSSIER_DOCS',						"docs/");	
-	
-
-	if($_SERVER['HTTP_HOST'] == "localhost") {
-		//define('DOSSIER_IMG',					"images/");
-		define('DOSSIER_IMG',					"http://product.okfn.org.s3.amazonaws.com/images/");
-	
-	} else {
-		//define('DOSSIER_IMG',					"http://www.product-open-data.com/images/");
-		define('DOSSIER_IMG',					"http://product.okfn.org.s3.amazonaws.com/images/");	
-
-	}
-	
 	define('DOSSIER_IMG_LANG',					"images/lang/");
-	define('DOSSIER_IMG_COUNTRY',				"images/country/");
-
+	define('DOSSIER_IMG_COUNTRY',				"images/country/");	
+	define('DOSSIER_IMG',						"http://product.okfn.org.s3.amazonaws.com/images/");
+	
 	//======================================================================================================== 
 	// Variables
 	//======================================================================================================== 
@@ -391,7 +370,15 @@
 	
 					// Graphe 1 - GCP - GEPIR Return code
 					//-----------------------	
-															
+					if($_SERVER['HTTP_HOST'] == "localhost") {
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, "http://localhost/github/products/explorer/cache-generator/generator-stats-pie-1.php");
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						$output = curl_exec($ch);
+						curl_close($ch);
+					}
+																				
 					if(!file_exists("cache/stats-pie-1.html")) {
 						$Corps = "<br/>Content not available";
 					} else {
@@ -403,7 +390,15 @@
 				
 					// Graphe 2 - GTIN - GPC Segment
 					//-----------------------
-	
+					if($_SERVER['HTTP_HOST'] == "localhost") {
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, "http://localhost/github/products/explorer/cache-generator/generator-stats-pie-2.php");
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						$output = curl_exec($ch);
+						curl_close($ch);
+					}
+						
 					if(!file_exists("cache/stats-pie-2.html")) {
 						$Corps = "<br/>Content not available";
 					} else {
@@ -415,7 +410,15 @@
 					
 					// Graphe 3 - GTIN - Brand
 					//-----------------------
-										
+					if($_SERVER['HTTP_HOST'] == "localhost") {
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, "http://localhost/github/products/explorer/cache-generator/generator-stats-pie-3.php");
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						$output = curl_exec($ch);
+						curl_close($ch);
+					}
+															
 					if(!file_exists("cache/stats-pie-3.html")) {
 						$Corps = "<br/>Content not available";
 					} else {
@@ -428,6 +431,15 @@
 	
 					// STATS - GCP Length
 					//-----------------------
+					
+					if($_SERVER['HTTP_HOST'] == "localhost") {
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, "http://localhost/github/products/explorer/cache-generator/generator-stats-gcp-length.php");
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						$output = curl_exec($ch);
+						curl_close($ch);
+					}
 				
 					if(!file_exists("cache/stats-gcp-length.html")) {
 						$Corps = "<br/>Content not available";
