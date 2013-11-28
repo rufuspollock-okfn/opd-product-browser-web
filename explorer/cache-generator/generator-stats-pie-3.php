@@ -23,7 +23,7 @@
 	$Record = mysql_fetch_array($DataSet);
 	$NbTotal = $Record["NB"];	
 	
-	$SQL = "SELECT count(*) as NB FROM gtin where brand_cd > 0 and brand_cd in (select brand_cd from brand where brand_type_cd = 1 and brand_nm not like '0_%') ";
+	$SQL = "SELECT count(*) as NB FROM gtin where BSIN <> '' and BSIN in (select BSIN from brand where brand_type_cd = 1 and brand_nm not like '0_%') ";
 	$DataSet = mysql_query($SQL);	
 	$Record = mysql_fetch_array($DataSet);
 	$NbBrandType_1 = $Record["NB"];
@@ -32,7 +32,7 @@
 	$VALUE_PIE .= "['Manufacturer-brand<br/> (".number_format($NbBrandType_1, 0, '.', ' ').")', ".$PERC_1."]"; 
 	$VALUE_PIE .= ","; 
 	
-	$SQL = "SELECT count(*) as NB FROM gtin where brand_cd > 0 and brand_cd in (select brand_cd from brand where brand_type_cd = 2) ";
+	$SQL = "SELECT count(*) as NB FROM gtin where BSIN <> '' and BSIN in (select BSIN from brand where brand_type_cd = 2) ";
 	$DataSet = mysql_query($SQL);	
 	$Record = mysql_fetch_array($DataSet);
 	$NbBrandType_2 = $Record["NB"];
@@ -41,7 +41,7 @@
 	$VALUE_PIE .= "['Retailer-brand <br/>(".number_format($NbBrandType_2, 0, '.', ' ').")', ".$PERC_2."]"; 
 	$VALUE_PIE .= ","; 
 	
-	$SQL = "SELECT count(*) as NB FROM gtin where brand_cd > 0 and brand_cd in (select brand_cd from brand where brand_type_cd = 3) ";
+	$SQL = "SELECT count(*) as NB FROM gtin where BSIN <> ' and BSIN in (select BSIN from brand where brand_type_cd = 3) ";
 	$DataSet = mysql_query($SQL);	
 	$Record = mysql_fetch_array($DataSet);
 	$NbBrandType_3 = $Record["NB"];

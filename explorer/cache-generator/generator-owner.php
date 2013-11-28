@@ -37,15 +37,13 @@
 		$SQL = "select * from brand where owner_cd =".$OWNER_CD." order by brand_nm";
 		$DataSet 	= mysql_query($SQL);
 		While($Record 	= mysql_fetch_array($DataSet)) {		
-							
-			$BRAND_CD 					= $Record["BRAND_CD"];		
+								
 			$BSIN 						= $Record["BSIN"];								
 			$BRAND_NM 					= $Record["BRAND_NM"];
 			$BRAND_LINK					= $Record["BRAND_LINK"];
 
 			
 			$Corps .= 	Template("template_list_owner_item",2,$Params=array(
-				"VALUE_BRAND_CD"					=> $BRAND_CD,
 				"VALUE_BSIN"						=> $BSIN,
 				"VALUE_BRAND_NM"					=> $BRAND_NM,
 				"VALUE_BRAND_LINK"					=> $BRAND_LINK,

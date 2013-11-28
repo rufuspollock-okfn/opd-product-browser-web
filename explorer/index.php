@@ -24,6 +24,7 @@
 	$p = ((isset($_GET['p']))  && ($_GET['p']>0) ) ? $_GET['p'] : 0; //&& (ctype_digit($_GET['']))
 	$m = ((isset($_GET['m']))  && ($_GET['m']>0) ) ? $_GET['m'] : 0; //&& (ctype_digit($_GET['']))
 	$n = ((isset($_GET['n']))  && ($_GET['n']>0) ) ? $_GET['n'] : 0; //&& (ctype_digit($_GET['']))
+	$q = ((isset($_GET['q']))  && (strlen($_GET['q']) == 6) ) ? $_GET['q'] : ''; //&& (ctype_digit($_GET['']))
 	//$s = ((isset($_GET['s']))  && ($_GET['s']>0) ) ? $_GET['s'] : 0; //&& (ctype_digit($_GET['']))
 	
 	$Language = (isset($_GET['l'])) ?  $_GET['l'] : "en";
@@ -117,7 +118,7 @@
 				
 				$GTIN_NM 					= $Record["GTIN_NM"];
 				$GCP_CD 					= $Record["GCP_CD"];
-				$BRAND_CD 					= $Record["BRAND_CD"];
+				$BSIN 						= $Record["BSIN"];
 				$PRODUCT_LINE 				= $Record["PRODUCT_LINE"];
 				
 				$GPC_S_CD 					= $Record["GPC_S_CD"];
@@ -136,8 +137,6 @@
 				
 				$GTIN_PKG_UNIT 				= $Record["PKG_UNIT"];
 				
-				if($BRAND_CD == "")  $BRAND_CD = 0;
-	
 				$DataSet_GPC = mysql_query("SELECT * FROM gs1_gpc where GPC_CD = '".$GPC_S_CD."' and GPC_LANG = 'EN'");
 				$Record_GPC = mysql_fetch_array($DataSet_GPC);
 				$GPC_S_NM					= $Record_GPC["GPC_NM"];
@@ -154,11 +153,10 @@
 				$Record_GPC = mysql_fetch_array($DataSet_GPC);
 				$GPC_B_NM					= $Record_GPC["GPC_NM"];
 	
-				$SQL = "SELECT * FROM brand where BRAND_CD = ".$BRAND_CD;
+				$SQL = "SELECT * FROM brand where BSIN = '".$BSIN."'";
 				$DataSet_BRAND = mysql_query($SQL);
 				$Record_BRAND = mysql_fetch_array($DataSet_BRAND);
 	
-				$BSIN 						= $Record_BRAND["BSIN"];
 				$BRAND_NM					= $Record_BRAND["BRAND_NM"];
 				$OWNER_CD					= $Record_BRAND["OWNER_CD"];
 				$BRAND_TYPE_CD			    = $Record_BRAND["BRAND_TYPE_CD"];
@@ -212,7 +210,6 @@
 					"VALUE_GTIN_CD"					=> $gtin,
 					"VALUE_GTIN_NM"					=> $GTIN_NM,
 					"VALUE_GCP_CD"					=> $GCP_CD,
-					"VALUE_BRAND_CD"				=> $BRAND_CD,
 					"VALUE_REF_CD"					=> $REF_CD,
 					
 					"VALUE_PRODUCT_LINE"			=> $PRODUCT_LINE,
@@ -523,13 +520,12 @@
 		case 112: //  Browse by brand
 		//-------------------------------------------------------------------------------------------------------------------------------------------------------------	
 		
-			if($m > 0) {
+			if($q != '') {
 	
-				
-				if(!file_exists("cache/product-brand-".$m.".html")) {
+				if(!file_exists("cache/product-brand-".$q.".html")) {
 					$Corps = "<br/>Content not available";
 				} else {
-					$Corps = file_get_contents("cache/product-brand-".$m.".html");
+					$Corps = file_get_contents("cache/product-brand-".$q.".html");
 				} // if
 			
 			} else {

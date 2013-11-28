@@ -25,7 +25,7 @@ RewriteRule ^open-gepir(.*)$ index.php?l=en&p=110
 RewriteRule ^navigate(.*)$ index.php?l=en&p=111
 
 RewriteRule ^brand-list-([0-9]+)(\/)$ index.php?l=en&p=112&n=$1
-RewriteRule ^product-brand-list-([0-9]+)(.*)$ index.php?l=en&p=112&m=$1
+RewriteRule ^product-brand-list-([A-Z0-9]+)(.*)$ index.php?l=en&p=112&q=$1
 
 RewriteRule ^supporters(.*)$ index.php?l=en&p=113
 

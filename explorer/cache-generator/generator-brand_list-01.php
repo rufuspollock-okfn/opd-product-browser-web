@@ -32,13 +32,12 @@
 		$DataSet_liste_brand = mysql_query($SQL);	
 		While ($Record_liste_brand = mysql_fetch_array($DataSet_liste_brand)) {	
 		
-			$BRAND_CD 			= $Record_liste_brand["BRAND_CD"];
 			$BSIN 				= $Record_liste_brand["BSIN"];
 			$BRAND_NM 			= $Record_liste_brand["BRAND_NM"];
 			$BRAND_LINK 		= $Record_liste_brand["BRAND_LINK"];
 
 			$Corps_temp_1 .= 	Template("template_list_brand",5,$Params=array(
-				"VALUE_BRAND_CD" 		=> $BRAND_CD,
+				"VALUE_BSIN" 			=> $BSIN,
 				"VALUE_BRAND_LINK" 		=> $BRAND_LINK,
 				"VALUE_BRAND_NM" 		=> $BRAND_NM,
 				"VALUE_IMG"				=> "brand/".$BSIN.".jpg"
@@ -163,13 +162,12 @@
 	$DataSet_liste_brand = mysql_query($SQL);	
 	While ($Record_liste_brand = mysql_fetch_array($DataSet_liste_brand)) {	
 	
-		$BRAND_CD 			= $Record_liste_brand["BRAND_CD"];
 		$BSIN 				= $Record_liste_brand["BSIN"];
 		$BRAND_NM 			= $Record_liste_brand["BRAND_NM"];
 		$BRAND_LINK 		= $Record_liste_brand["BRAND_LINK"];
 
 		$Corps_temp_1 .= 	Template("template_list_brand",5,$Params=array(
-			"VALUE_BRAND_CD" 		=> $BRAND_CD,
+			"VALUE_BSIN" 			=> $BSIN,
 			"VALUE_BRAND_LINK" 		=> $BRAND_LINK,
 			"VALUE_BRAND_NM" 		=> $BRAND_NM,
 			"VALUE_IMG"				=> "brand/".$BSIN.".jpg"

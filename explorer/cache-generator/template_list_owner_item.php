@@ -25,7 +25,7 @@ The POD database is public. Go to "Projects & Download" to download it.
         <tr>
             <td width="150px">
               
-                	<a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.html" > 
+                	<a href="product-brand-list-<?=$VALUE_BSIN?>.html" > 
                     <img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG><?=$VALUE_BRAND_IMG?>" alt="<?=$VALUE_BRAND_NM?>" title="<?=$VALUE_BRAND_NM?>" onerror="this.src='images/coming-soon.jpg';"  />
                     </a>
             </td>
@@ -35,7 +35,7 @@ The POD database is public. Go to "Projects & Download" to download it.
                <b>BSIN</b> :  <?=$VALUE_BSIN?><br />
                 <? if($VALUE_BRAND_NM != "") {?> <b>Brand name</b> : <?=$VALUE_BRAND_NM?> <br/><? } ?>
                 <br/><br/>
-                >> <a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.html" > Voir la liste des produits </a>
+                >> <a href="product-brand-list-<?=$VALUE_BSIN?>.html" > Voir la liste des produits </a>
                 
             </td>
     

@@ -33,8 +33,7 @@
 	While ($Record_liste_brand = mysql_fetch_array($DataSet_liste_brand)) {	
 	
 		$Corps = "";
-	
-		$BRAND_CD 			= $Record_liste_brand["BRAND_CD"];
+
 		$BSIN 				= $Record_liste_brand["BSIN"];
 		$BRAND_NM 			= $Record_liste_brand["BRAND_NM"];
 		$BRAND_TYPE_CD 		= $Record_liste_brand["BRAND_TYPE_CD"];
@@ -68,7 +67,7 @@
 			"VALUE_OWNER_NM"		=> $OWNER_NM
 		));		
 				
-		$SQL = "select * from gtin A, gs1_prefix B where left(A.GTIN_CD,3) = B.PREFIX_CD and brand_cd =".$BRAND_CD." order by B.COUNTRY_ISO_CD, A.product_line desc, A.gtin_nm, A.pkg_unit, A.m_g, A.m_oz, A.m_ml, A.m_floz";
+		$SQL = "select * from gtin A, gs1_prefix B where left(A.GTIN_CD,3) = B.PREFIX_CD and BSIN ='".$BSIN."' order by B.COUNTRY_ISO_CD, A.product_line desc, A.gtin_nm, A.pkg_unit, A.m_g, A.m_oz, A.m_ml, A.m_floz";
 		$DataSet 	= mysql_query($SQL);
 		While($Record 	= mysql_fetch_array($DataSet)) {		
 							
@@ -148,7 +147,7 @@
 		$Corps .= 	Template("template_list_brand_item",3,$Params=array(
 		));	
 		
-		$FileName 	= $DataFolder."product-brand-".str_pad($BRAND_CD,8,"0",STR_PAD_LEFT).".html";
+		$FileName 	= $DataFolder."product-brand-".$BSIN.".html";
 		$file = fopen($FileName, 'w');
 		fputs($file, $Corps);
 		fclose($file); 

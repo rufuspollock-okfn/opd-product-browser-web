@@ -42,7 +42,7 @@ The POD database is public. Go to "Projects & Download" to download it.<br/>
 <!--COUPER_ICI-->
     	<td>
         
-        <a href="product-brand-list-<?=str_pad($VALUE_BRAND_CD,8,"0",STR_PAD_LEFT)?>.html">
+        <a href="product-brand-list-<?=$VALUE_BSIN?>.html">
         	<img style="margin: 0px; border:#CCCCCC solid 1px" src="<DOSSIER_IMG><?=$VALUE_IMG?>" width="125px" title="Brand - <?=$VALUE_BRAND_NM?>" alt="Brand - <?=$VALUE_BRAND_NM?>" onerror="this.src='images/coming-soon.jpg';" />
 			     
 
