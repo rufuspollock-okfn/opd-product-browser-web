@@ -79,7 +79,7 @@
 		$NbGTIN = $Record["NB"];
 		
 	} else {
-		$NbGTIN = "918968";
+		$NbGTIN = "920509";
 	}
 	
 	$NbGTIN = str_pad($NbGTIN,11,"0",STR_PAD_LEFT);
@@ -158,9 +158,15 @@
 				$Record_BRAND = mysql_fetch_array($DataSet_BRAND);
 	
 				$BRAND_NM					= $Record_BRAND["BRAND_NM"];
-				$OWNER_CD					= $Record_BRAND["OWNER_CD"];
+				
 				$BRAND_TYPE_CD			    = $Record_BRAND["BRAND_TYPE_CD"];
 				$BRAND_LINK					= trim($Record_BRAND["BRAND_LINK"]);
+				
+				$SQL = "SELECT OWNER_CD FROM brand_owner_bsin where BSIN = '".$BSIN."'";
+				$DataSet = mysql_query($SQL);
+				$Record = mysql_fetch_array($DataSet);		
+				
+				$OWNER_CD					= $Record["OWNER_CD"];		
 
 				if($OWNER_CD != "") {
 					$SQL = "SELECT * FROM BRAND_OWNER where OWNER_CD = ".$OWNER_CD;
@@ -186,6 +192,7 @@
 	
 				$GLN_RETURN_CODE 			= $Record_GLN["RETURN_CODE"];
 	
+				$GCP_CD 					= $Record_GLN["GCP_CD"];
 				$GLN_CD 					= $Record_GLN["GLN_CD"];
 				$GLN_NM 					= $Record_GLN["GLN_NM"];
 				$GLN_ADDR_02 				= $Record_GLN["GLN_ADDR_02"];
@@ -198,8 +205,11 @@
 				
 				$IMG_GTIN 	= DOSSIER_IMG."gtin/gtin-".substr($gtin,0,3)."/".$gtin.".jpg"; 
 				$IMG_BRAND 	= DOSSIER_IMG."brand/".$BSIN.".jpg"; 
-				$IMG_GPC 	= "images/gpc/".$GPC_S_CD.".jpg"; 
-			
+				if($GPC_S_CD == '') {
+					$IMG_GPC 	= "images/coming-soon.jpg";  
+				} else { 
+					$IMG_GPC 	= "images/gpc/".$GPC_S_CD.".jpg";
+				}
 				
 				$Corps .= 	Template("template_search",3,$Params=array(
 				

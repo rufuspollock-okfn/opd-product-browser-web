@@ -90,9 +90,9 @@ The POD database is public. Go to "Projects & Download" to download it.
 	<tr>
     
 		<td>
-        	<object data="<?=$VALUE_IMG_GPC?>">
-				<img style="margin: 0px; border:#CCCCCC solid 1px" src="images/coming-soon.jpg"  />
-            </object>
+
+				<img style="margin: 0px; border:#CCCCCC solid 1px" src="<?=$VALUE_IMG_GPC?>"  />
+
 		</td>
 		<td>
 			<h4>GPC Classification</h4>

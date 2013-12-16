@@ -34,7 +34,7 @@
 			"VALUE_OWNER_WIKI_EN" 	=> $OWNER_WIKI_EN
 		));							
 				
-		$SQL = "select * from brand where owner_cd =".$OWNER_CD." order by brand_nm";
+		$SQL = "select * from brand A, brand_owner_bsin B where A.BSIN = B.BSIN and B.owner_cd =".$OWNER_CD." order by A.brand_nm";
 		$DataSet 	= mysql_query($SQL);
 		While($Record 	= mysql_fetch_array($DataSet)) {		
 								
