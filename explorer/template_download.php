@@ -11,16 +11,40 @@ Please visit first the page explaining <a href="terms-of-use">the terms of use</
 
 
 <h2>Dump and Zip to download</h2>
+
+
+<span style="color:red;"><b>New</b></span>: POD uses now the<span style="color:red;"> <b>BSIN code</b> </span> to assign a brand to a product. Please go at the following address to get a dump of the brand repository : <a href="http://product.okfn.org/brand/">http://product.okfn.org/brand/</a>
+<br/><br/>
 <table style="background-color: #f0eeee; ; width: 100%;" border="0" cellspacing="5" cellpadding="5" align="center">
 <tbody>
     <tr>
         <td>
              <ul>
                 <li><b>POD Database - Specifications</b> Excel file 2013.11.13 :&nbsp;<a href="docs/POD-SPECS-2013.11.13_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
-                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.12.14 v1 :&nbsp;<a href="docs/pod_web_2013.12.14_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
+                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.12.20 v2 :&nbsp;<a href="docs/pod_web_2013.12.20_02.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
                 <li><b>Pictures - Owner</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_owner_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li> 
                 <li><b>Pictures - Brand</b> (2013.11.13) :&nbsp;<a href="docs/pod_pictures_brand_2013.11.13_01.zip" target="_blank" rel="nofollow">Direct download</a></li>
                 <li><b>Pictures - GTIN</b>  (2013.08.29) :&nbsp;<a href="docs/pod_pictures_gtin_2013.08.29_01.zip" target="_blank" rel="nofollow">Direct download</a> (2.6 Gb)</li>                   
+             </ul>    
+        </td>
+    </tr>
+</tbody>
+</table>
+
+<h2>Open GEPIR</h2>
+
+
+
+<table style="background-color: #f0eeee; ; width: 100%;" border="0" cellspacing="5" cellpadding="5" align="center">
+<tbody>
+    <tr>
+        <td>
+             <ul>
+                <li><b>Open GEPIR - Dump</b> gzipped SQL file (MySQL) 2013.12.20 v1 :&nbsp;<a href="docs/gs1_gcp-2013.12.20_01.sql.gz" target="_blank" rel="nofollow">Direct download</a></li>
+                <li><b>Open GEPIR - Dump</b> zipped CSV file 2013.12.20 v1 :&nbsp;<a href="docs/gs1_gcp-2013.12.20_01.zip" target="_blank" rel="nofollow">Direct download</a></li>
+                <li><b>Open GEPIR - GCP length rules</b> Excel file :&nbsp;<a href="docs/pod_gs1_gcp_rules.xlsx" target="_blank" rel="nofollow">Direct download</a></li>
+                <li><b>See global analysis <a href="http://www.product-open-data.com/data-quality-4.html" target="_blank" >here</a></li>    
+                <li><b>See return code analysis <a href="http://www.product-open-data.com/data-quality-1.html" target="_blank" >here</a></li>         
              </ul>    
         </td>
     </tr>

@@ -27,7 +27,7 @@
 	}
 	
 	//$SQL = "SELECT * FROM brand where brand_cd = 46";
-	//$SQL = "SELECT * FROM brand where brand_nm like 'canada%'";
+	//$SQL = "SELECT * FROM brand where brand_nm like 'coca%'";
 	$SQL = "SELECT * FROM brand";
 	$DataSet_liste_brand = mysql_query($SQL);	
 	While ($Record_liste_brand = mysql_fetch_array($DataSet_liste_brand)) {	
@@ -124,7 +124,7 @@
 				"VALUE_REG_C"					=> $REG_C,
 				
 				"VALUE_BRAND_NM"				=> $BRAND_NM,
-				"VALUE_PRODUCT_LINE"			=> $GTIN_PRODUCT_LINE,
+				"VALUE_PRODUCT_LINE"			=> $PL_NM,
 				
 				"VALUE_M_G"						=> $GTIN_M_G,
 				"VALUE_M_OZ"					=> $GTIN_M_OZ,

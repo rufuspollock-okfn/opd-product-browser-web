@@ -1,10 +1,16 @@
-	<h1>GCP - Length per prefix</h1>
-    
+ <h1>GCP - Length per prefix</h1>
+ 
+ This listing is an analysis of GS1 GCP (first digits of the barcode which indicates the owner). You can downlaod the GCP rules <a href="docs/pod_gs1_gcp_rules.xlsx">in Excel format</a> and download Open GEPIR just <a href="download/">here</a>.
+ <br/><br/>
+ Green: all GCP have been scanned<br/>
+ Gray: too many GCP
+ <br/><br/>   
+ 
     <a href="data-quality/"><< Return to the Data Quality menu</a><br /><br />
     <table>
         <tr>
             <td style="padding:5px"><b>Prefix</b></td>
-            <td style="padding:5px"><b>Length</b></td>
+            <td style="padding:5px"><b>GCP <br />Length</b></td>
             <td style="padding:5px;width:60px;"><b>Number of GCP  with a GEPIR Return Code = 0</b></td>
             <td style="padding:5px;width:60px;"><b>Number of GCP</b></td>
             <td style="padding:5px;width:60px;""><b>%</b></td>

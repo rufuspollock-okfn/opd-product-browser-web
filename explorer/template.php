@@ -806,8 +806,9 @@ padding-left: 0px;
 padding-right: 0px;
 padding-top: 0px;
 position: relative;
-
+width: 477px;
 z-index: 999;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 					
 				}
 				
@@ -824,13 +825,13 @@ list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
 text-align: left;
-
 z-index: auto;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				}
 				
 				#menu-item-1 a {
 
-color: rgb(51, 51, 51);
+color: rgb(93, 93, 93);
 cursor: auto;
 display: block;
 float: none;
@@ -846,89 +847,14 @@ padding-left: 9px;
 padding-right: 9px;
 padding-top: 24px;
 text-align: left;
-text-decoration: none;
+text-decoration: none solid rgb(93, 93, 93);
 text-shadow: none;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 				}
+				
 				
 				#menu-item-2 {
-color: rgb(51, 51, 51);
-display: list-item;
-float: left;
-font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: 14px;
-height: 66px;
-line-height: 20px;
-list-style-image: none;
-list-style-position: outside;
-list-style-type: none;
-text-align: left;
-
-z-index: auto;
-				}
-				
-				#menu-item-2 a {
-color: rgb(93, 93, 93);
-cursor: auto;
-display: block;
-float: none;
-font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: 14px;
-height: 20px;
-line-height: 20px;
-list-style-image: none;
-list-style-position: outside;
-list-style-type: none;
-padding-bottom: 22px;
-padding-left: 9px;
-padding-right: 9px;
-padding-top: 24px;
-text-align: left;
-text-decoration: none;
-text-shadow: none;
-
-				}
-
-				#menu-item-3 {
-color: rgb(51, 51, 51);
-display: list-item;
-float: left;
-font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: 14px;
-height: 66px;
-line-height: 20px;
-list-style-image: none;
-list-style-position: outside;
-list-style-type: none;
-position: relative;
-text-align: left;
-
-z-index: 1000;
-				}
-				
-				#menu-item-3 a {
-color: rgb(93, 93, 93);
-cursor: auto;
-display: block;
-float: none;
-font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: 14px;
-height: 20px;
-line-height: 20px;
-list-style-image: none;
-list-style-position: outside;
-list-style-type: none;
-padding-bottom: 22px;
-padding-left: 9px;
-padding-right: 9px;
-padding-top: 24px;
-text-align: left;
-text-decoration: none;
-text-shadow: none;
-
-				}
-				
-				#menu-item-4 {
 -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px inset;
 background-color: rgb(237, 237, 237);
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px inset;
@@ -943,11 +869,11 @@ list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
 text-align: left;
-
 z-index: auto;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				}
 
-				#menu-item-4  a {				
+				#menu-item-2  a {				
 -webkit-box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 8px 0px inset;
 background-color: rgb(229, 229, 229);
 box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 8px 0px inset;
@@ -967,13 +893,12 @@ padding-left: 9px;
 padding-right: 9px;
 padding-top: 24px;
 text-align: left;
-text-decoration: none;
+text-decoration: none solid rgb(93, 93, 93);
 text-shadow: none;
-
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				}
 				
-				
-				#menu-item-5 {
+				#menu-item-3 {
 color: rgb(51, 51, 51);
 display: list-item;
 float: left;
@@ -984,12 +909,13 @@ line-height: 20px;
 list-style-image: none;
 list-style-position: outside;
 list-style-type: none;
+position: relative;
 text-align: left;
-
-z-index: auto;
+z-index: 1000;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				}
-
-				#menu-item-5  a {				
+				
+				#menu-item-3 a {
 color: rgb(93, 93, 93);
 cursor: auto;
 display: block;
@@ -1006,8 +932,131 @@ padding-left: 9px;
 padding-right: 9px;
 padding-top: 24px;
 text-align: left;
-text-decoration: none;
+text-decoration: none solid rgb(93, 93, 93);
 text-shadow: none;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+				}
+
+				#menu-item-4 {
+color: rgb(51, 51, 51);
+display: list-item;
+float: left;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 66px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+position: relative;
+text-align: left;
+z-index: 1000;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+				}
+				
+				#menu-item-4 a {
+color: rgb(93, 93, 93);
+cursor: auto;
+display: block;
+float: none;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+padding-bottom: 22px;
+padding-left: 9px;
+padding-right: 9px;
+padding-top: 24px;
+text-align: left;
+text-decoration: none solid rgb(93, 93, 93);
+text-shadow: none;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				}
+				
+
+				
+				
+				#menu-item-5 {
+color: rgb(51, 51, 51);
+display: list-item;
+float: left;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 66px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+text-align: left;
+z-index: auto;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				}
+
+				#menu-item-5  a {				
+
+color: rgb(93, 93, 93);
+cursor: auto;
+display: block;
+float: none;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+padding-bottom: 22px;
+padding-left: 9px;
+padding-right: 9px;
+padding-top: 24px;
+text-align: left;
+text-decoration: none solid rgb(93, 93, 93);
+text-shadow: none;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				}
+				
+				#menu-item-6 {
+color: rgb(51, 51, 51);
+display: list-item;
+float: left;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 66px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+position: relative;
+text-align: left;
+z-index: 1000;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				}
+
+				#menu-item-6  a {				
+color: rgb(85, 85, 85);
+cursor: auto;
+display: block;
+float: none;
+font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+padding-bottom: 22px;
+padding-left: 9px;
+padding-right: 9px;
+padding-top: 24px;
+text-align: left;
+text-decoration: none solid rgb(85, 85, 85);
+text-shadow: none;
+font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 				}
 			
@@ -1251,16 +1300,12 @@ text-shadow: none;
                                   <nav class="nav-collapse collapse">
                                   		<ul id="nav" class="nav">
                                         	<li id="menu-item-1" ><a href="http://product.okfn.org/">Home</a></li> 	
-                                            <li id="menu-item-5" ><a href="http://product.okfn.org/advisory-board/">Advisory Board</a></li>
-                                        	<li id="menu-item-2" ><a href="http://product.okfn.org/blog/">Blog</a></li> 
-                                            <li id="menu-item-3" ><a href="http://product.okfn.org/barcode-gs1/">Resources</a></li>
-                                            <li id="menu-item-4" ><a title="POD &#8211; Product Open Data" href="http://www.product-open-data.com">Browse Data</a></li> 
-                                        </ul>
-                                     <!-- <ul id="nav" class="nav">
-                                        <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="http://product.okfn.org/">Home</a></li> 
-                                        <li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="http://product.okfn.org/blog/">Blog</a></li> 
-                                        <li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-23 active"><a title="POD &#8211; Product Open Data" href="http://www.product-open-data.com">POD</a></li> 
-                                      </ul>   -->         
+                                            <li id="menu-item-2" ><a title="POD Product Open Data" href="http://www.product-open-data.com">Browse Data</a></li> 
+                                            <li id="menu-item-3" ><a href="http://product.okfn.org/advisory-board/">Community</a></li>
+                                        	<li id="menu-item-4" ><a href="http://product.okfn.org/bsin/">Projects</a></li> 
+                                            <li id="menu-item-5" ><a href="http://product.okfn.org/blog/">Blog</a></li> 
+                                            <li id="menu-item-6" ><a href="http://product.okfn.org/barcode-gs1/">Resources</a></li>
+                                        </ul>      
                                   </nav>
                                 <!-- Disabled until I've got separate images and confirmed link addresses -->
                               </div>

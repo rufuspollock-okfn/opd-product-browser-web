@@ -16,23 +16,23 @@ The list below show all the brands added into the database:
 <table>
 	<tr>
     	<td>
-			<a href="product-brand-list-00003629.html">
-                <img src="<DOSSIER_IMG>brand/00003629.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Izze" alt="Brand - Izze"> 
+			<a href="product-brand-list-BI5TXW.html">
+                <img src="<DOSSIER_IMG>brand/BI5TXW.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Izze" alt="Brand - Izze"> 
             </a>
         </td> 
     	<td>
-			<a href="product-brand-list-00031340.html">
-                <img src="<DOSSIER_IMG>brand/00031340.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Saffron Road" alt="Brand - Saffron Road"> 
+			<a href="product-brand-list-MEJZBY.html">
+                <img src="<DOSSIER_IMG>brand/MEJZBY.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Saffron Road" alt="Brand - Saffron Road"> 
             </a>
         </td> 
     	<td>
-			<a href="product-brand-list-00003495.html"> 
-                <img src="<DOSSIER_IMG>brand/00003495.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Aquafina" alt="Brand - Aquafina"> 
+			<a href="product-brand-list-48MHLZ.html"> 
+                <img src="<DOSSIER_IMG>brand/48MHLZ.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Aquafina" alt="Brand - Aquafina"> 
             </a>
         </td> 
     	<td>
-			<a href="product-brand-list-00002450.html">
-                <img src="<DOSSIER_IMG>brand/00002450.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - CapriSun" alt="Brand - CapriSun"> 
+			<a href="product-brand-list-6LW2P5.html">
+                <img src="<DOSSIER_IMG>brand/6LW2P5.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - CapriSun" alt="Brand - CapriSun"> 
             </a>
         </td> 
 
@@ -54,23 +54,23 @@ The list below show all the brands added into the database:
     </tr>
 	<tr>
     	<td>
-            <a href="product-brand-list-00002602.html">
-                <img src="<DOSSIER_IMG>brand/00002602.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Arnold" alt="Brand - Arnold"> 
+            <a href="product-brand-list-R1TS5M.html">
+                <img src="<DOSSIER_IMG>brand/R1TS5M.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Arnold" alt="Brand - Arnold"> 
             </a>
         </td> 
     	<td>
-			<a href="product-brand-list-00005396.html">
-            	<img src="<DOSSIER_IMG>brand/00005396.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Looza" alt="Brand - Looza"> 
+			<a href="product-brand-list-FCKJ3R.html">
+            	<img src="<DOSSIER_IMG>brand/FCKJ3R.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Looza" alt="Brand - Looza"> 
        		</a>
         </td> 
     	<td>
-			<a href="product-brand-list-00000003.html"> 
-                <img src="<DOSSIER_IMG>brand/00000003.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Washington Fruit &amp; Produce Co." alt="Brand - Washington Fruit &amp; Produce Co."> 
+			<a href="product-brand-list-8RB56Z.html"> 
+                <img src="<DOSSIER_IMG>brand/8RB56Z.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Brand - Washington Fruit &amp; Produce Co." alt="Brand - Washington Fruit &amp; Produce Co."> 
             </a>
         </td> 
     	<td>
-			<a href="product-brand-list-00002692.html"> 
-                <img src="<DOSSIER_IMG>brand/00002692.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Bush's best" alt="Bush's best"> 
+			<a href="product-brand-list-D13UVY.html"> 
+                <img src="<DOSSIER_IMG>brand/D13UVY.jpg" style="margin: 0px; border:#CCCCCC solid 1px" border="0" width="125px" title="Bush's best" alt="Bush's best"> 
             </a>
         </td> 
 
