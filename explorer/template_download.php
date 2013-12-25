@@ -21,7 +21,7 @@ Please visit first the page explaining <a href="terms-of-use">the terms of use</
         <td>
              <ul>
                 <li><b>POD Database - Specifications</b> Excel file 2013.11.13 :&nbsp;<a href="docs/POD-SPECS-2013.11.13_01.xlsx" target="_blank" rel="nofollow">Direct download</a></li>    
-                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.12.20 v2 :&nbsp;<a href="docs/pod_web_2013.12.20_02.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
+                <li><b>POD Database - Dump</b> gzipped SQL file (MySQL) 2013.12.21 v1 :&nbsp;<a href="docs/pod_web_2013.12.21_01.sql.gz" target="_blank" rel="nofollow">Direct download</a> <br/>Use WAMP (www.wampserver.com) and Bigdump (www.ozerov.de/bigdump/) to load the database.</li>
                 <li><b>Pictures - Owner</b> (2013.06.24) :&nbsp;<a href="docs/pod_pictures_owner_2013.06.24_01.zip" target="_blank" rel="nofollow">Direct download</a></li> 
                 <li><b>Pictures - Brand</b> (2013.11.13) :&nbsp;<a href="docs/pod_pictures_brand_2013.11.13_01.zip" target="_blank" rel="nofollow">Direct download</a></li>
                 <li><b>Pictures - GTIN</b>  (2013.08.29) :&nbsp;<a href="docs/pod_pictures_gtin_2013.08.29_01.zip" target="_blank" rel="nofollow">Direct download</a> (2.6 Gb)</li>                   
@@ -42,6 +42,12 @@ Please visit first the page explaining <a href="terms-of-use">the terms of use</
              <ul>
                 <li><b>Open GEPIR - Dump</b> gzipped SQL file (MySQL) 2013.12.20 v1 :&nbsp;<a href="docs/gs1_gcp-2013.12.20_01.sql.gz" target="_blank" rel="nofollow">Direct download</a></li>
                 <li><b>Open GEPIR - Dump</b> zipped CSV file 2013.12.20 v1 :&nbsp;<a href="docs/gs1_gcp-2013.12.20_01.zip" target="_blank" rel="nofollow">Direct download</a></li>
+                <li><b>Open GEPIR - Dump</b> Excel file XLSX - 2013.12.20 v1 :&nbsp;
+                	<a href="docs/GEPIR_US.xlsx" target="_blank" rel="nofollow">GEPIR US</a>
+                     - 
+                    <a href="docs/GEPIR_FR.xlsx" target="_blank" rel="nofollow">GEPIR FR</a>
+                     - 
+                    <a href="docs/GEPIR_OTHER.xlsx" target="_blank" rel="nofollow">GEPIR OTHER COUNTRIES</a>
                 <li><b>Open GEPIR - GCP length rules</b> Excel file :&nbsp;<a href="docs/pod_gs1_gcp_rules.xlsx" target="_blank" rel="nofollow">Direct download</a></li>
                 <li><b>See global analysis <a href="http://www.product-open-data.com/data-quality-4.html" target="_blank" >here</a></li>    
                 <li><b>See return code analysis <a href="http://www.product-open-data.com/data-quality-1.html" target="_blank" >here</a></li>         
