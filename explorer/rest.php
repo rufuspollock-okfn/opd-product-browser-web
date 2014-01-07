@@ -66,7 +66,7 @@
 
 			$GTIN_NM 					= $Record["GTIN_NM"];
 			$GCP_CD 					= $Record["GCP_CD"];
-			$BRAND_CD 					= $Record["BRAND_CD"];
+			$BSIN 						= $Record["BSIN"];
 			$PRODUCT_LINE 				= $Record["PRODUCT_LINE"];
 			
 			$GPC_S_CD 					= $Record["GPC_S_CD"];
@@ -123,8 +123,6 @@
 			if ($GTIN_M_ABV != 0) { $ALCOHOL = $GTIN_M_ABV." % vol."; } 	
 			if ($GTIN_M_ABW != 0) { $ALCOHOL = $GTIN_M_ABW." % vol."; } 	
 			
-			
-			if($BRAND_CD == "")  $BRAND_CD = 0;
 		
 			$DataSet_GPC = mysql_query("SELECT * FROM gs1_gpc where GPC_CD = '".$GPC_S_CD."' and GPC_LANG = 'EN'");
 			$Record_GPC = mysql_fetch_array($DataSet_GPC);
@@ -142,7 +140,7 @@
 			$Record_GPC = mysql_fetch_array($DataSet_GPC);
 			$GPC_B_NM					= $Record_GPC["GPC_NM"];
 		
-			$SQL = "SELECT * FROM brand where BRAND_CD = ".$BRAND_CD;
+			$SQL = "SELECT * FROM brand where BSIN = '".$BSIN."'";
 			$DataSet_BRAND = mysql_query($SQL);
 			$Record_BRAND = mysql_fetch_array($DataSet_BRAND);
 		
@@ -187,7 +185,7 @@
 			);		
 			
 			$data['brand'] = array(	 		
-				"code"					=> $BRAND_CD,
+				"code"					=> $BSIN,
 				"name"					=> $BRAND_NM,
 				"type"					=> $BRAND_TYPE_NM,
 				"link"					=> $BRAND_LINK,	
