@@ -1,14 +1,16 @@
 <h1>Download</h1>
 
-Please visit first the page explaining <a href="terms-of-use">the terms of use</a><br/>
+Follow us on twitter to get informed about new releases : 
 
-<p style="color:red;" > Please use Twitter to be informed of the next releases </p>
-<p>
-
-<a href="https://twitter.com/pod_tweets" class="twitter-follow-button" data-show-count="false" data-size="small" data-show-screen-name="false">Follow @pod_tweets</a>
+<a href="https://twitter.com/openproductdata" class="twitter-follow-button" data-show-count="false" data-size="small" data-show-screen-name="false">Follow @openproductdata</a>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </p>
 
+
+<h2>Terms of use</h2>
+
+Open Product Data is open data, licensed under the <a href="http://opendatacommons.org/licenses/odbl/" target="_blank">Open Data Commons Open Database License (ODbL)</a>.<br/>
+You are free to copy, distribute, transmit and adapt our data, as long as you credit Open Product Data and its contributors. If you alter or build upon our data, you may distribute the result only under the same licence. The full legal code explains your rights and responsibilities.
 
 <h2>Dump and Zip to download</h2>
 

@@ -1423,7 +1423,7 @@ font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 						<!------------------------- SEARCH --------------------------------------------------->	
 						
                         <div id="bloc-forum" style="margin-top:10px;">
-							<a href="https://twitter.com/pod_tweets" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @pod_tweets</a>
+							<a href="https://twitter.com/openproductdata" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @openproductdata</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
                           
@@ -1575,7 +1575,7 @@ font-family:OpenSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 						<br/>
 
 						<div id="bloc-forum">
-							<a href="https://twitter.com/pod_tweets" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @pod_tweets</a>
+							<a href="https://twitter.com/openproductdata" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @openproductdata</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br/><br/	
                             
                           </div>
