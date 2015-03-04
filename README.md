@@ -1,4 +1,4 @@
-Product Open Data 
+Product Open Data
 =================
 
 This is a repository of code, documentation and database scripts for

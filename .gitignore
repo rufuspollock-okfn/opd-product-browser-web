@@ -1,0 +1,6 @@
+/secret/connexion.php
+/explorer/cache/
+/explorer/phpmyadmin/
+/explorer/pplbkp/
+*.zip
+*.gz
