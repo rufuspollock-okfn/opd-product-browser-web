@@ -697,8 +697,11 @@
 					font-size: 14px;
 					height: 66px;
 					line-height: 20px;
+					/*
 					margin-left: 481.5px;
 					margin-right: 481.5px;
+					*/
+					margin: 0 auto;
 					max-width: 940px;
 					width: 940px;
 				}
