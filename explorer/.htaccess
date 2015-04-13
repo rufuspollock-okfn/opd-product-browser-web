@@ -1,40 +1,30 @@
 RewriteEngine On
-
 RewriteCond %{QUERY_STRING} PHPSESSID=.*$
 RewriteRule .* %{REQUEST_URI}? [R=301,L]
-
 RewriteRule ^$ index.php?l=en&p=1
+RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+(\/)?$ index.php?l=$1&p=1
+RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+\/?([0-9]+)?([a-z0-9A-Z,_-]+)?(.*)$ index.php?l=$1&p=$2 [QSA,L]
 RewriteRule ^/$ index.php?l=en&p=1
-
-RewriteRule ^search(.*)$ index.php?l=en&p=100
-RewriteRule ^pss-specification(.*)$ index.php?l=en&p=101
-
+RewriteRule ^brand-list-([0-9]+)(\/)$ index.php?l=en&p=112&n=$1
 RewriteRule ^data-quality(\/)$ index.php?l=en&p=102
 RewriteRule ^data-quality-([0-9]+)(.*)$ index.php?l=en&p=102&s=1
-
-RewriteRule ^terms-of-use(.*)$ index.php?l=en&p=103
 RewriteRule ^download(.*)$ index.php?l=en&p=104
+RewriteRule ^group-list(\/)$ index.php?l=en&p=114
+RewriteRule ^navigate(.*)$ index.php?l=en&p=111
+RewriteRule ^nutrition_us(.*)$ index.php?l=en&p=116
+RewriteRule ^open-gepir(.*)$ index.php?l=en&p=110
+RewriteRule ^owner-list(\/)$ index.php?l=en&p=114
+RewriteRule ^product-brand-list-([A-Z0-9]+)(.*)$ index.php?l=en&p=112&q=$1
+RewriteRule ^product-group-list-([0-9]+)(.*)$ index.php?l=en&p=114&n=$1
+RewriteRule ^product-owner-list-([0-9]+)(.*)$ index.php?l=en&p=114&n=$1
 RewriteRule ^pss-change-notes(.*)$ index.php?l=en&p=105
 RewriteRule ^pss-history(.*)$ index.php?l=en&p=106
 RewriteRule ^pss-profile(.*)$ index.php?l=en&p=107
-
+RewriteRule ^pss-specification(.*)$ index.php?l=en&p=101
+RewriteRule ^search(.*)$ index.php?l=en&p=100
+RewriteRule ^smartphone(.*)$ index.php?l=en&p=115
+RewriteRule ^supporters(.*)$ index.php?l=en&p=113
+RewriteRule ^terms-of-use(.*)$ index.php?l=en&p=103
 RewriteRule ^tweets(.*)$ index.php?l=en&p=109
 
-RewriteRule ^open-gepir(.*)$ index.php?l=en&p=110
 
-RewriteRule ^navigate(.*)$ index.php?l=en&p=111
-
-RewriteRule ^brand-list-([0-9]+)(\/)$ index.php?l=en&p=112&n=$1
-RewriteRule ^product-brand-list-([0-9]+)(.*)$ index.php?l=en&p=112&m=$1
-
-RewriteRule ^supporters(.*)$ index.php?l=en&p=113
-
-RewriteRule ^group-list(\/)$ index.php?l=en&p=114
-RewriteRule ^product-group-list-([0-9]+)(.*)$ index.php?l=en&p=114&n=$1
-
-RewriteRule ^smartphone(.*)$ index.php?l=en&p=115
-
-RewriteRule ^nutrition_us(.*)$ index.php?l=en&p=116
-
-RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+(\/)?$ index.php?l=$1&p=1
-RewriteRule ^(ar|zh|zt|en|fr|ja|es|ru)+\/?([0-9]+)?([a-z0-9A-Z,_-]+)?(.*)$ index.php?l=$1&p=$2 [QSA,L]
