@@ -3,7 +3,7 @@
 	// Require
 	//======================================================================================================== 
 
-	require("../secret/connexion.php");
+	require("secret/connexion.php");
 	require("fonctions.php");
 
 	define('DOSSIER_IMG',	"http://product.okfn.org.s3.amazonaws.com/images/");	
