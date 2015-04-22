@@ -6,7 +6,7 @@
 <br/><br/>
 The GTIN-13 code is the code just below the barcode. if the code is composed of only 12 digits, add a zero in front of the code to get the GTIN-13 number.
 <div align="center">
-<img style="margin: 20px;" src="<DOSSIER_IMG>GTIN_under_barcode.jpg" />
+<img style="margin: 20px;" src="/images/GTIN_under_barcode.jpg" />
 </div>
 
 

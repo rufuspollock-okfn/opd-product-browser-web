@@ -49,7 +49,7 @@
 	// Require
 	//======================================================================================================== 
 
-	require("../secret/connexion.php");
+	require("secret/connexion.php");
 	require("fonctions.php");
 	require(DOSSIER_RESSOURCES."global_".SITE_LANG.".php");
 	
