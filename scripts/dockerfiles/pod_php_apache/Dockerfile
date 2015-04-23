@@ -21,3 +21,4 @@ RUN apt-get update
 RUN apt-get install -y php5-mysql
 RUN docker-php-ext-install mysql
 RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
+RUN ln -s /etc/apache2/mods-available/ratelimit.load /etc/apache2/mods-enabled/
