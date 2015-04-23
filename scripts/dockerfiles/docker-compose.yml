@@ -1,0 +1,14 @@
+db:
+  build: pod_mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=somerootpw
+    - MYSQL_PASSWORD=someuserpw
+
+web:
+  build: pod_php_apache
+  ports:
+    - "18080:80"
+  volumes:
+    - ../../explorer/:/var/www/html/
+  links:
+    - db:pod_db
